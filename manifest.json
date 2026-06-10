@@ -1,0 +1,10 @@
+{
+  "id": "marktile",
+  "name": "marktile",
+  "version": "0.0.47",
+  "minAppVersion": "1.4.0",
+  "description": "Open any .md in tugtile's editor — headings grow while the markdown markers stay. MIT, CJK-friendly.",
+  "author": "CVER Inc.",
+  "authorUrl": "https://cver.net",
+  "isDesktopOnly": false
+}
