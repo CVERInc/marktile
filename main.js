@@ -805,7 +805,8 @@ module.exports = class MarktilePlugin extends Plugin {
     this.app.workspace.onLayoutReady(() => this.app.workspace.getLeavesOfType('markdown').forEach((l) => this.injectMdButton(l)));
   }
   onunload() {
-    this.app.workspace.detachLeavesOfType(VIEW_TYPE);   // Obsidian requirement: don't leave orphaned marktile views
+    // Per Obsidian plugin guidelines: do NOT detachLeavesOfType here — Obsidian reinitializes
+    // open leaves at their original position on update; detaching ourselves causes problems.
     (this._mdBtns || []).forEach(({ view, el }) => { if (el) el.remove(); if (view) delete view._mtBtn; });   // Remove the buttons we injected into native headers
     this._mdBtns = [];
   }
