@@ -65,13 +65,22 @@ function highlightLineParts(line) {
   if (hm) cls += ' tg-h tg-h' + hm[1].length;
   else if (/^>\s?/.test(line)) cls += ' tg-quote';
   else if (/^\s*[-*]\s/.test(line)) cls += ' tg-li';
+  // Each syntax marker (## , &gt; , - , [ ], **, *, ~~, `, [[ ]], @{}) is wrapped in its own <span class="tg-mk">
+  // so a host can hide JUST the markers via CSS (.tugtile-preview .tg-mk{display:none}) while the styling stays —
+  // the basis for a marker-free preview look. tg-mk is transparent to the text round-trip (getText reads
+  // textContent, which still includes the marker chars). The Obsidian plugins never add .tugtile-preview, so
+  // markers stay visible there (their 調味/原味 cycle is unchanged); only a host that opts in hides them. escHtml
+  // has already turned a leading > into &gt; (the quote marker), so match that form.
   const h = escHtml(line)
-    .replace(/^(\s*[-*]\s)(\[[ xX]\])/, (m, p, box) => p + '<span class="tg-check' + (/[xX]/.test(box) ? ' tg-check-done' : '') + '">' + box + '</span>')
-    .replace(/(\*\*[^*\n]+\*\*|\*[^*\s][^*\n]*?\*)/g, (m) => '<span class="' + (m.startsWith('**') ? 'tg-b' : 'tg-i') + '">' + m + '</span>')   // **bold** wins the alternation; single * needs a non-space after it so "a * b" isn't italicised
-    .replace(/(~~[^~\n]+~~)/g, '<span class="tg-strike">$1</span>')
-    .replace(/(`[^`\n]+`)/g, '<span class="tg-code">$1</span>')
-    .replace(/(\[\[[^\]\n]+\]\])/g, '<span class="tg-link">$1</span>')
-    .replace(/(@@?\{[^}\n]*\})/g, '<span class="tg-date">$1</span>')
+    .replace(/^(#{1,6}\s)/, '<span class="tg-mk">$1</span>')   // heading marker
+    .replace(/^(&gt;\s?)/, '<span class="tg-mk">$1</span>')   // blockquote marker
+    .replace(/^(\s*[-*]\s)(\[[ xX]\])/, (m, p, box) => '<span class="tg-mk">' + p + '</span><span class="tg-check' + (/[xX]/.test(box) ? ' tg-check-done' : '') + '"><span class="tg-mk">' + box + '</span></span>')
+    .replace(/^(\s*[-*]\s)/, '<span class="tg-mk">$1</span>')   // plain bullet (heading/quote/checkbox lines already start with a <span>, so this won't match them)
+    .replace(/(\*\*[^*\n]+\*\*|\*[^*\s][^*\n]*?\*)/g, (m) => { const mk = m.startsWith('**') ? '**' : '*'; return '<span class="' + (mk === '**' ? 'tg-b' : 'tg-i') + '"><span class="tg-mk">' + mk + '</span>' + m.slice(mk.length, m.length - mk.length) + '<span class="tg-mk">' + mk + '</span></span>'; })   // **bold** wins the alternation; single * needs a non-space after it so "a * b" isn't italicised
+    .replace(/(~~[^~\n]+~~)/g, (m) => '<span class="tg-strike"><span class="tg-mk">~~</span>' + m.slice(2, -2) + '<span class="tg-mk">~~</span></span>')
+    .replace(/(`[^`\n]+`)/g, (m) => '<span class="tg-code"><span class="tg-mk">`</span>' + m.slice(1, -1) + '<span class="tg-mk">`</span></span>')
+    .replace(/(\[\[[^\]\n]+\]\])/g, (m) => '<span class="tg-link"><span class="tg-mk">[[</span>' + m.slice(2, -2) + '<span class="tg-mk">]]</span></span>')
+    .replace(/(@@?\{)([^}\n]*)(\})/g, (m, op, inner, cl) => '<span class="tg-date"><span class="tg-mk">' + op + '</span>' + inner + '<span class="tg-mk">' + cl + '</span></span>')
     .replace(/(^|[^&\w])(#[^\s#<&]+)/g, '$1<span class="tg-tag">$2</span>')
     .replace(/\t/g, '<span class="tg-tab">\t</span>');   // wrap each literal tab LAST (after the line-start regexes) so CSS can mark tab-vs-space; span is transparent to the text round-trip
   if (/^\s*[-*]\s\[[ xX]\]/.test(line)) cls += ' tg-task' + (/^\s*[-*]\s\[[xX]\]/.test(line) ? ' tg-task-done' : '');
@@ -428,6 +437,20 @@ function mountEditor(contentEl, opts, host) {
     host.attachDatePicker(ta);
     ta.addEventListener('keydown', (e) => {
       if (host.isSubmitKey(e)) { e.preventDefault(); if (opts.onSubmit) opts.onSubmit(); return; }
+      // Undo/redo via OUR snapshot stack (same as the toolbar buttons). The editor rebuilds innerHTML on every
+      // re-highlight, which wipes the contenteditable's native undo — so Cmd+Z must NOT rely on the browser's
+      // native undo (that's why it silently stopped working). preventDefault blocks native; stopPropagation keeps
+      // the board's document-level ⌘Z handler out; the read-only guard mirrors the toolbar (locked = no edits).
+      if ((e.metaKey || e.ctrlKey) && (e.key || '').toLowerCase() === 'z') {
+        e.preventDefault(); e.stopPropagation();
+        if (ed.getAttribute('contenteditable') !== 'false') { if (e.shiftKey) runs.redo(); else runs.undo(); }
+        return;
+      }
+      if ((e.metaKey || e.ctrlKey) && (e.key || '').toLowerCase() === 'y') {   // ⌘/Ctrl+Y = redo (Windows convention)
+        e.preventDefault(); e.stopPropagation();
+        if (ed.getAttribute('contenteditable') !== 'false') runs.redo();
+        return;
+      }
       if (e.key === 'Escape' && opts.onEscape) { e.preventDefault(); opts.onEscape(); return; }   // hosts without a cancel action (marktile) let Escape fall through naturally
       if (e.key === 'Enter' && !e.isComposing && e.keyCode !== 229 && tryListContinue()) e.preventDefault();   // newline-producing Enter (submit already handled above) → continue the list if on one
       if (e.key === 'Tab' && !e.isComposing) {   // insert/remove a literal tab (contenteditable's default Tab just moves focus)
