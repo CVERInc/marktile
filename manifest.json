@@ -1,9 +1,9 @@
 {
   "id": "marktile",
   "name": "marktile",
-  "version": "0.0.47",
+  "version": "0.0.48",
   "minAppVersion": "1.4.0",
-  "description": "Open any .md in tugtile's editor — headings grow while the markdown markers stay. MIT, CJK-friendly.",
+  "description": "A Markdown editor where the markers never hide — headings grow while ## stays put. Pairs with tugtile. CJK-friendly.",
   "author": "CVER Inc.",
   "authorUrl": "https://cver.net",
   "isDesktopOnly": false
