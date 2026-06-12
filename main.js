@@ -24,7 +24,7 @@ const LOCALE = (() => {
   if (lang === 'ko') return 'ko-KR';
   return 'en-US';
 })();
-const TR = {"en-US": {"appName": "tugtile", "brandSuffix": "tugtile-ing", "brandSuffixLocked": "tugtile", "lockToggle": "Lock / unlock board", "lockedNotice": "Board is locked", "undoAction": "Undo", "redoAction": "Redo", "viewSwitchAction": "Switch view (Board / Table)", "boardSettingsAction": "Board settings", "openAsMarkdownAction": "Open as markdown", "archiveAction": "Stash (Archive)", "searchAction": "Search tiles", "emptyNoFile": "Open a board .md with the “Open as tugtile” command.", "fileNotFound": "File not found: {0}", "searchPlaceholder": "Find a tile", "viewBoard": "Board", "viewTable": "Table", "editMarkdown": "Edit raw markdown", "findPlaceholder": "Find", "replacePlaceholder": "Replace", "findPrev": "Previous", "findNext": "Next", "replaceOne": "Replace", "replaceAll": "Replace all", "colTile": "Tile", "colLane": "Lane", "colDate": "Date", "colTags": "Tags", "collapseExpand": "Collapse / expand", "laneActionsAria": "Lane actions (rename / insert / sort / stash / delete…)", "tileActionsAria": "More actions (edit / stash / delete…)", "relDateWrap": " ({0})", "today": "today", "tomorrow": "tomorrow", "yesterday": "yesterday", "dayAfterTomorrow": "in 2 days", "dayBeforeYesterday": "2 days ago", "daysLater": "in {0} days", "daysAgo": "{0} days ago", "yearMonth": "{0}-{1}", "weekdays": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"], "edit": "Edit", "duplicateTile": "Duplicate", "insertTileAbove": "Insert tile above", "insertTileBelow": "Insert tile below", "splitTileMenu": "Split into tiles", "archiveTileMenu": "Stash (Archive)", "moveTileTop": "Move to top", "moveTileBottom": "Move to bottom", "untitledLane": "(untitled)", "moveToLane": "Move to “{0}”", "deleteTileMenu": "Delete", "splitNoNeed": "Only one line — nothing to split.", "splitDone": "Split into {0} tiles", "archivedTile": "Tile stashed", "deletedTile": "Tile deleted", "deletedLane": "Lane deleted", "toastUndoBtn": "Undo", "addTileBtn": "＋ Add a tile", "dropToArchive": "Drop here to stash", "cancel": "Cancel", "save": "Save", "discardConfirm": "Discard your changes?", "editLost": "Tile no longer exists — edit not saved.", "mobileSubmit": "Submit", "addLaneBtn": "＋ Add lane", "addLanePlaceholder": "Lane name — ⏎ to add", "newLane": "New lane", "newBoardName": "New board", "confirmDeleteLane": "This lane has {0} tiles. Delete the whole lane?", "boardListViewOnly": "Use this in Board view", "archivedCompleted": "Stashed {0} completed tiles", "noCompleted": "No completed tiles", "rename": "Rename", "insertLaneBefore": "Insert lane before", "insertLaneAfter": "Insert lane after", "sortTitleAsc": "Sort by tile title A→Z", "sortTitleDesc": "Sort by tile title Z→A", "sortDate": "Sort by date (soonest first)", "sortTag": "Sort by tag", "markLaneComplete": "Mark all in lane complete", "archiveLaneMenu": "Stash all tiles in lane", "deleteLaneMenu": "Delete lane", "confirmArchiveLane": "Stash all {0} tiles in this lane?", "archivedLane": "Stashed {0} tiles from lane", "noLaneToRestore": "tugtile: no lane to restore into — create a lane first", "externalModified": "tugtile: this file was changed elsewhere — reloaded to avoid overwrite (this step was not saved)", "backupFailed": "tugtile: backup failed — write cancelled to protect your data", "writeFailed": "tugtile write failed: {0}", "saved": "Saved", "persistFailed": "tugtile: save failed — {0}", "undoVerb": "undo", "redoVerb": "redo", "noStep": "tugtile: nothing left to {0}", "timeTraveled": "tugtile: {0} done (undo {1} / redo {2})", "archiveTitle": "Stash (Archive)", "archiveEmpty": "No stashed tiles.", "restore": "Restore", "deleteArchived": "Delete", "boardSettingsTitle": "Board settings", "boardSettingsDesc": "Affects only this board (saved with the board file). Blank = follow the global default.", "migrateBtn": "Upgrade to tugtile format", "migrateBtnDesc": "Remove obsidian-kanban markers so this board is tugtile-native. One-way.", "migrateConfirm": "Upgrade this board to tugtile’s own format? It will no longer open in obsidian-kanban, and kanban-only settings will be dropped.", "migrateDone": "Upgraded to tugtile format", "confirm": "Confirm", "setShowCheckboxes": "Show tile checkbox", "setHideCount": "Hide lane count", "setEnterBehavior": "Enter key behavior", "setEnterBehaviorDesc": "shift-enter = Enter submits (CJK friendly); enter = Enter newline", "optEnterSubmit": "Enter submits", "optEnterNewline": "Enter newline", "setNewCardPos": "New tile position", "optAppend": "At lane bottom", "optPrepend": "At lane top", "optPrependCompact": "At lane top (compact)", "setRelativeDate": "Show relative date", "setRelativeDateDesc": "today / tomorrow / in N days", "setDateFormat": "Date storage format", "setDateFormatDesc": "Format written into markdown (e.g. YYYY-MM-DD)", "setDateDisplay": "Date display format", "setDateDisplayDesc": "Format shown on tiles", "setDateTrigger": "Date trigger char", "setDateTriggerDesc": "Default @", "setTimeTrigger": "Time trigger char", "setTimeTriggerDesc": "Default @@", "setLinkDaily": "Link date to daily note", "setLinkDailyDesc": "Write date as @[[..]] linking to the daily note", "setTagAction": "Tag click action", "setTagActionDesc": "What clicking a tag does — search the whole vault, or filter just this board.", "optSearchVault": "Search whole vault", "optFilterBoard": "Filter this board", "setMoveTags": "Move tags to tile footer", "setArchiveWithDate": "Add timestamp on stash", "setMaxArchive": "Max stash size", "setMaxArchiveDesc": "-1 = unlimited", "settingsTitle": "tugtile settings", "settingsDesc": "These are global defaults; a board’s own settings of the same name take precedence.", "gShowCheckboxes": "Show tile checkbox", "gShowCheckboxesDesc": "Show a checkbox at the top-right of each tile (toggles - [ ] / - [x])", "gHideCount": "Hide lane count", "gHideCountDesc": "Don’t show the tile count in the lane header", "gResponsiveBoard": "Responsive board (stack on narrow panes)", "gResponsiveBoardDesc": "On a narrow pane, the board reflows into a single vertical stack.", "gLaneWidth": "Lane width", "gLaneWidthDesc": "Width of every lane — all lanes line up evenly", "gTableDensity": "Table row spacing", "gTableDensityDesc": "Vertical breathing room for each table row", "gFormatTools": "Text formatting buttons", "gFormatToolsDesc": "Which formatting buttons show in the editor", "gInsertTools": "Insert buttons", "gInsertToolsDesc": "Which insert buttons show (code, link, date, time)", "optDenseTight": "Tight", "optDenseMid": "Medium", "optDenseLoose": "Loose", "gEnterSubmit": "Enter submits", "gEnterSubmitDesc": "On: Enter submits, Shift+Enter newline (CJK-friendly default). Off: Enter newline, Shift/⌘+Enter submits", "gPrepend": "Add new tile at top", "gPrependDesc": "Default adds at the bottom; enable to add at the top", "gRelativeDate": "Show relative date", "gRelativeDateDesc": "Show “today / tomorrow / in N days” on tile dates", "gDateDisplay": "Date display format", "gDateDisplayDesc": "moment-style tokens: YYYY / MM / DD (default YYYY-MM-DD)", "gArchiveWithDate": "Add timestamp on stash", "gArchiveWithDateDesc": "Prepend **YYYY-MM-DD HH:mm** to the title when stashing", "gMaxArchive": "Max stash size", "gMaxArchiveDesc": "Max tiles kept in stash (-1 = unlimited; oldest dropped)", "gArchiveHeading": "Stash heading", "gArchiveHeadingDesc": "Heading text for a new stash (archive) section (e.g. Archive, 封存).", "gDanger": "Danger zone", "gReset": "Reset to defaults", "gResetDesc": "Restore the above global settings to defaults", "gResetBtn": "Reset", "cmdToggleView": "tugtile: toggle board / markdown", "cmdOpenAsBoard": "Open as tugtile", "cmdUndo": "tugtile: undo", "cmdRedo": "tugtile: redo", "cmdCreateBoard": "tugtile: create new board", "cmdSearch": "tugtile: search tiles (bindable to Cmd/Ctrl+F)", "cmdArchiveCompleted": "tugtile: stash all completed tiles", "cmdConvertToBoard": "tugtile: convert current note to board", "createBoardHere": "Create tugtile board here", "openAsBoard": "Open as tugtile board", "ribbonTitle": "tugtile board", "ribbonNoFile": "Open a board .md first", "convertFailed": "tugtile convert failed: {0}", "boardCreated": "Board created: {0} (rename it in the file explorer)", "createBoardFailed": "tugtile create board failed: {0}", "mtRibbon": "Edit in marktile", "mtOpenCmd": "marktile: edit current note", "mtNoFile": "Open a .md note first", "mtBackToObsidian": "Back to Obsidian editor", "openInMarktile": "Open in marktile", "mtToTugtile": "Open as tugtile board", "mtBrand": "marktile-ing", "mtBrandLocked": "marktile", "mtEssentialTools": "Essential buttons", "mtEssentialToolsDesc": "Search, undo, redo", "mtInsertToolsDesc": "Which insert buttons to show (code / link)", "mtDefaultEditor": "Make marktile the default Markdown editor", "mtDefaultEditorDesc": "Off by default. When on, .md files open in marktile instead of Obsidian's editor (board files too — hop to tugtile with its button). Reload Obsidian to apply; turn off anytime to restore the native editor.", "mtReloadRequired": "Reload Obsidian to apply", "mtSettings": "marktile settings", "mtSettingsTitle": "marktile settings", "mtSettingsDesc": "marktile opens any .md note in the tile-family editor. Choose which toolbar buttons appear (uncheck all to hide the toolbar entirely), or make marktile your default Markdown editor.", "mtModePlain": "Plain", "mtModeSeasoned": "Seasoned", "expandAllAction": "Expand all", "collapseAllAction": "Collapse all", "expandLanesAction": "Expand lanes", "mtModeToggle": "Toggle Seasoned / Plain", "mtLockToggle": "Lock editor (read-only)", "mtToc": "Table of contents", "mtTocEmpty": "No headings", "edH1": "Heading 1", "edH2": "Heading 2", "edH3": "Heading 3", "edBold": "Bold", "edItalic": "Italic", "edStrike": "Strikethrough", "edBullet": "Bullet list", "edNumber": "Numbered list", "edCheck": "Checklist", "edQuote": "Blockquote", "edCode": "Inline code", "edLink": "Wikilink", "edDate": "Insert date", "edTime": "Insert time", "edFind": "Find / replace"}, "ja-JP": {"appName": "タッグタイル", "brandSuffix": "tugtile-ing（タッグタイル中）", "brandSuffixLocked": "tugtile（タッグタイル）", "lockToggle": "ボードをロック／解除", "lockedNotice": "ボードはロックされています", "undoAction": "待った", "redoAction": "やり直し", "viewSwitchAction": "ビュー切替（ボード／表）", "boardSettingsAction": "このボードの設定", "openAsMarkdownAction": "Markdown で開く", "archiveAction": "アーカイブ", "searchAction": "タイルを検索", "emptyNoFile": "ボードの .md でコマンド「tugtile で開く」を使ってください。", "fileNotFound": "ファイルが見つかりません：{0}", "searchPlaceholder": "タイルを探す", "viewBoard": "ボード", "viewTable": "表", "editMarkdown": "Markdown を直接編集", "findPlaceholder": "検索", "replacePlaceholder": "置換後", "findPrev": "前へ", "findNext": "次へ", "replaceOne": "置換", "replaceAll": "すべて置換", "colTile": "タイル", "colLane": "列", "colDate": "日付", "colTags": "タグ", "collapseExpand": "折りたたみ / 展開", "laneActionsAria": "列の操作（名前変更／挿入／並べ替え／アーカイブ／削除…）", "tileActionsAria": "その他の操作（編集／アーカイブ／削除…）", "relDateWrap": "（{0}）", "today": "今日", "tomorrow": "明日", "yesterday": "昨日", "dayAfterTomorrow": "明後日", "dayBeforeYesterday": "一昨日", "daysLater": "{0} 日後", "daysAgo": "{0} 日前", "yearMonth": "{0}年 {1}月", "weekdays": ["日", "月", "火", "水", "木", "金", "土"], "edit": "編集", "duplicateTile": "タイルを複製", "insertTileAbove": "上にタイルを挿入", "insertTileBelow": "下にタイルを挿入", "splitTileMenu": "分割", "archiveTileMenu": "アーカイブ", "moveTileTop": "列の先頭へ", "moveTileBottom": "列の末尾へ", "untitledLane": "(無題)", "moveToLane": "「{0}」へ移動", "deleteTileMenu": "タイルを捨てる", "splitNoNeed": "1行のみ。分割は不要です。", "splitDone": "{0} 枚のタイルに分割しました", "archivedTile": "タイルをアーカイブしました", "deletedTile": "タイルを捨てました", "deletedLane": "列を削除しました", "toastUndoBtn": "待った", "addTileBtn": "＋ タイルを追加", "dropToArchive": "ここにドロップでアーカイブ", "cancel": "キャンセル", "save": "保存", "discardConfirm": "変更を破棄しますか？", "editLost": "このタイルは存在しません。編集は保存されませんでした。", "mobileSubmit": "送信", "addLaneBtn": "＋ 列を追加", "addLanePlaceholder": "列名　⏎ で追加", "newLane": "新しい列", "newBoardName": "新しいボード", "confirmDeleteLane": "この列には {0} 枚のタイルがあります。列ごと削除しますか？", "boardListViewOnly": "ボードビューで使ってください", "archivedCompleted": "完了したタイル {0} 枚をアーカイブしました", "noCompleted": "完了したタイルはありません", "rename": "名前を変更", "insertLaneBefore": "前に列を挿入", "insertLaneAfter": "後に列を挿入", "sortTitleAsc": "タイトルで並べ替え A→Z", "sortTitleDesc": "タイトルで並べ替え Z→A", "sortDate": "日付で並べ替え（近い順）", "sortTag": "タグで並べ替え", "markLaneComplete": "この列をすべて完了にする", "archiveLaneMenu": "この列のタイルをすべてアーカイブ", "deleteLaneMenu": "列を削除", "confirmArchiveLane": "この列の {0} 枚のタイルをすべてアーカイブしますか？", "archivedLane": "この列のタイル {0} 枚をアーカイブしました", "noLaneToRestore": "tugtile：戻せる列がありません。先に列を作成してください", "externalModified": "tugtile：このファイルが別の場所で変更されました。上書きを避けるため再読み込みしました（この操作は保存されていません）", "backupFailed": "tugtile：バックアップに失敗したため、データ保護のため書き込みを中止しました", "writeFailed": "tugtile 書き込み失敗：{0}", "saved": "保存しました", "persistFailed": "tugtile：保存に失敗しました──{0}", "undoVerb": "待った", "redoVerb": "やり直し", "noStep": "tugtile：{0}できる操作がありません", "timeTraveled": "tugtile：{0}しました（待った {1} / やり直し {2}）", "archiveTitle": "アーカイブ", "archiveEmpty": "アーカイブされたタイルはありません。", "restore": "戻す", "deleteArchived": "タイルを捨てる", "boardSettingsTitle": "このボードの設定", "boardSettingsDesc": "このボードだけを変更します（ボードのファイルに保存）。空白＝グローバル既定に従う。", "migrateBtn": "tugtile 形式にアップグレード", "migrateBtnDesc": "obsidian-kanban のマーカーを除去し、このボードを tugtile ネイティブにします。一方向。", "migrateConfirm": "このボードを tugtile 独自の形式にアップグレードしますか？以後 obsidian-kanban では開けなくなり、kanban 専用の設定は削除されます。", "migrateDone": "tugtile 形式にアップグレードしました", "confirm": "確定", "setShowCheckboxes": "タイルのチェックボックスを表示", "setHideCount": "列のカウントを隠す", "setEnterBehavior": "Enter キーの動作", "setEnterBehaviorDesc": "shift-enter＝Enter で送信（CJK 向け）；enter＝Enter で改行", "optEnterSubmit": "Enter で送信", "optEnterNewline": "Enter で改行", "setNewCardPos": "新しいタイルの位置", "optAppend": "列の末尾", "optPrepend": "列の先頭", "optPrependCompact": "列の先頭(コンパクト)", "setRelativeDate": "相対日付を表示", "setRelativeDateDesc": "今日 / 明日 / N 日後", "setDateFormat": "日付の保存形式", "setDateFormatDesc": "markdown に書き込む形式（例 YYYY-MM-DD）", "setDateDisplay": "日付の表示形式", "setDateDisplayDesc": "タイルに表示する形式", "setDateTrigger": "日付トリガー文字", "setDateTriggerDesc": "既定 @", "setTimeTrigger": "時刻トリガー文字", "setTimeTriggerDesc": "既定 @@", "setLinkDaily": "日付をデイリーノートにリンク", "setLinkDailyDesc": "日付を @[[..]] と書きデイリーノートにリンク", "setTagAction": "タグクリックの動作", "setTagActionDesc": "タグをクリックしたときの動作——vault 全体を検索、またはこのボードだけを絞り込み。", "optSearchVault": "vault 全体を検索", "optFilterBoard": "このボードを絞り込み", "setMoveTags": "タグをタイルの下部へ移動", "setArchiveWithDate": "アーカイブ時にタイムスタンプ", "setMaxArchive": "アーカイブ上限", "setMaxArchiveDesc": "-1＝無制限", "settingsTitle": "tugtile 設定", "settingsDesc": "これらはグローバル既定です。各ボードの同名設定が優先されます。", "gShowCheckboxes": "タイルのチェックボックスを表示", "gShowCheckboxesDesc": "各タイルの右上にチェックボックスを表示（- [ ] / - [x] を切替）", "gHideCount": "列のカウントを隠す", "gHideCountDesc": "列のヘッダーにタイル数を表示しない", "gResponsiveBoard": "レスポンシブボード（狭い画面で縦積み）", "gResponsiveBoardDesc": "画面が狭いとき、ボードを自動で縦一列に並べ替えます。", "gLaneWidth": "列の幅", "gLaneWidthDesc": "各列の幅。すべての列が同じ幅で揃います", "gTableDensity": "表の行間隔", "gTableDensityDesc": "表の各行の上下の間隔", "gFormatTools": "文字書式ボタン", "gFormatToolsDesc": "エディタに表示する書式ボタンを選択", "gInsertTools": "挿入ボタン", "gInsertToolsDesc": "表示する挿入ボタンを選択（コード／リンク／日付／時刻）", "optDenseTight": "詰める", "optDenseMid": "標準", "optDenseLoose": "ゆったり", "gEnterSubmit": "Enter で送信", "gEnterSubmitDesc": "オン：Enter で送信、Shift+Enter で改行（CJK 向け既定）。オフ：Enter で改行、Shift/⌘+Enter で送信", "gPrepend": "新しいタイルを先頭に追加", "gPrependDesc": "既定は末尾に追加。オンで先頭に追加", "gRelativeDate": "相対日付を表示", "gRelativeDateDesc": "タイルの日付に「今日 / 明日 / N 日後」を表示", "gDateDisplay": "日付の表示形式", "gDateDisplayDesc": "moment 形式トークン：YYYY / MM / DD（既定 YYYY-MM-DD）", "gArchiveWithDate": "アーカイブ時にタイムスタンプ", "gArchiveWithDateDesc": "アーカイブ時にタイトルの前へ **YYYY-MM-DD HH:mm** を付加", "gMaxArchive": "アーカイブ上限", "gMaxArchiveDesc": "アーカイブに残す最大枚数（-1 = 無制限；超過分は古いものから削除）", "gArchiveHeading": "アーカイブ見出し", "gArchiveHeadingDesc": "新しいアーカイブ節の見出し文字（例 Archive、封存）。", "gDanger": "危険な操作", "gReset": "既定値にリセット", "gResetDesc": "上記のグローバル設定を既定に戻す", "gResetBtn": "リセット", "cmdToggleView": "tugtile：ボード / markdown を切替", "cmdOpenAsBoard": "tugtile で開く", "cmdUndo": "tugtile：待った（元に戻す）", "cmdRedo": "tugtile：やり直し", "cmdCreateBoard": "tugtile：新しいボードを作成", "cmdSearch": "tugtile：タイルを検索（Cmd/Ctrl+F に割当可）", "cmdArchiveCompleted": "tugtile：完了したタイルをすべてアーカイブ", "cmdConvertToBoard": "tugtile：現在のノートをボードに変換", "createBoardHere": "ここに tugtile ボードを作成", "openAsBoard": "tugtile ボードで開く", "ribbonTitle": "tugtile ボード", "ribbonNoFile": "先にボードの .md を開いてください", "convertFailed": "tugtile 変換失敗：{0}", "boardCreated": "ボードを作成しました：{0}（ファイルエクスプローラーで名前変更可）", "createBoardFailed": "tugtile ボードの作成に失敗：{0}", "mtRibbon": "marktile で編集", "mtOpenCmd": "marktile：現在のノートを編集", "mtNoFile": "先に .md ノートを開いてください", "mtBackToObsidian": "Obsidian エディタに戻る", "openInMarktile": "marktile で開く", "mtToTugtile": "tugtile ボードで開く", "mtBrand": "marktile-ing", "mtBrandLocked": "marktile", "mtEssentialTools": "基本ボタン", "mtEssentialToolsDesc": "検索・待った・やり直し", "mtInsertToolsDesc": "表示する挿入ボタン（コード／リンク）", "mtDefaultEditor": "marktile を既定の Markdown エディタにする", "mtDefaultEditorDesc": "既定はオフ。オンにすると .md ファイルが Obsidian の標準エディタではなく marktile で開きます（ボードも同様、tugtile ボタンで移動）。反映には Obsidian の再読み込みが必要。いつでもオフにして標準エディタに戻せます。", "mtReloadRequired": "反映するには Obsidian を再読み込みしてください", "mtSettings": "marktile 設定", "mtSettingsTitle": "marktile 設定", "mtSettingsDesc": "marktile は任意の .md ノートを tile ファミリーのエディタで開きます。ツールバーに表示するボタンを選んだり（すべて外すとツールバーを完全に隠せます）、marktile を既定の Markdown エディタにできます。", "mtModePlain": "プレーン", "mtModeSeasoned": "アジツケ", "expandAllAction": "すべて展開", "collapseAllAction": "すべて折りたたむ", "expandLanesAction": "レーンを展開", "mtModeToggle": "アジツケ／プレーン切替", "mtLockToggle": "エディタをロック（読み取り専用）", "mtToc": "目次", "mtTocEmpty": "見出しなし", "edH1": "見出し 1", "edH2": "見出し 2", "edH3": "見出し 3", "edBold": "太字", "edItalic": "斜体", "edStrike": "取り消し線", "edBullet": "箇条書き", "edNumber": "番号付きリスト", "edCheck": "チェックリスト", "edQuote": "引用", "edCode": "インラインコード", "edLink": "ウィキリンク", "edDate": "日付を挿入", "edTime": "時刻を挿入", "edFind": "検索／置換"}, "ko-KR": {"appName": "태그타일", "brandSuffix": "tugtile-ing (태그타일 중)", "brandSuffixLocked": "tugtile (태그타일)", "lockToggle": "보드 잠금/해제", "lockedNotice": "보드가 잠겨 있습니다", "undoAction": "무르기", "redoAction": "다시 실행", "viewSwitchAction": "보기 전환 (보드 / 표)", "boardSettingsAction": "이 보드 설정", "openAsMarkdownAction": "마크다운으로 열기", "archiveAction": "보관함", "searchAction": "타일 검색", "emptyNoFile": "보드 .md에서 “tugtile로 열기” 명령을 사용하세요.", "fileNotFound": "파일을 찾을 수 없습니다: {0}", "searchPlaceholder": "타일 찾기", "viewBoard": "보드", "viewTable": "표", "editMarkdown": "Markdown 원본 편집", "findPlaceholder": "찾기", "replacePlaceholder": "바꿀 내용", "findPrev": "이전", "findNext": "다음", "replaceOne": "바꾸기", "replaceAll": "모두 바꾸기", "colTile": "타일", "colLane": "열", "colDate": "날짜", "colTags": "태그", "collapseExpand": "접기 / 펼치기", "laneActionsAria": "열 작업 (이름 변경 / 삽입 / 정렬 / 보관 / 삭제…)", "tileActionsAria": "추가 작업 (편집 / 보관 / 삭제…)", "relDateWrap": " ({0})", "today": "오늘", "tomorrow": "내일", "yesterday": "어제", "dayAfterTomorrow": "모레", "dayBeforeYesterday": "그저께", "daysLater": "{0}일 후", "daysAgo": "{0}일 전", "yearMonth": "{0}년 {1}월", "weekdays": ["일", "월", "화", "수", "목", "금", "토"], "edit": "편집", "duplicateTile": "타일 복제", "insertTileAbove": "위에 타일 삽입", "insertTileBelow": "아래에 타일 삽입", "splitTileMenu": "분할", "archiveTileMenu": "보관", "moveTileTop": "열 맨 위로", "moveTileBottom": "열 맨 아래로", "untitledLane": "(제목 없음)", "moveToLane": "“{0}”(으)로 이동", "deleteTileMenu": "타일 버리기", "splitNoNeed": "한 줄뿐이라 분할할 수 없습니다.", "splitDone": "{0}장의 타일로 분할했습니다", "archivedTile": "타일을 보관했습니다", "deletedTile": "타일을 버렸습니다", "deletedLane": "열을 삭제했습니다", "toastUndoBtn": "무르기", "addTileBtn": "＋ 타일 추가", "dropToArchive": "여기에 놓아 보관", "cancel": "취소", "save": "저장", "discardConfirm": "변경 사항을 취소할까요?", "editLost": "이 타일은 더 이상 존재하지 않아 편집이 저장되지 않았습니다.", "mobileSubmit": "전송", "addLaneBtn": "＋ 열 추가", "addLanePlaceholder": "열 이름　⏎ 추가", "newLane": "새 열", "newBoardName": "새 보드", "confirmDeleteLane": "이 열에 타일이 {0}장 있습니다. 열 전체를 삭제할까요?", "boardListViewOnly": "보드 보기에서 사용하세요", "archivedCompleted": "완료된 타일 {0}장을 보관했습니다", "noCompleted": "완료된 타일이 없습니다", "rename": "이름 변경", "insertLaneBefore": "앞에 열 삽입", "insertLaneAfter": "뒤에 열 삽입", "sortTitleAsc": "타일 제목 정렬 A→Z", "sortTitleDesc": "타일 제목 정렬 Z→A", "sortDate": "날짜 정렬 (가까운 순)", "sortTag": "태그 정렬", "markLaneComplete": "이 열 전체 완료 표시", "archiveLaneMenu": "이 열의 타일 모두 보관", "deleteLaneMenu": "열 삭제", "confirmArchiveLane": "이 열의 타일 {0}장을 모두 보관할까요?", "archivedLane": "이 열의 타일 {0}장을 보관했습니다", "noLaneToRestore": "tugtile: 복원할 열이 없습니다. 먼저 열을 만드세요", "externalModified": "tugtile: 이 파일이 다른 곳에서 변경되어 덮어쓰기를 막기 위해 다시 불러왔습니다(이 작업은 저장되지 않음)", "backupFailed": "tugtile: 백업에 실패하여 데이터 보호를 위해 저장을 취소했습니다", "writeFailed": "tugtile 저장 실패: {0}", "saved": "저장됨", "persistFailed": "tugtile: 저장 실패 — {0}", "undoVerb": "무르기", "redoVerb": "다시 실행", "noStep": "tugtile: {0}할 단계가 없습니다", "timeTraveled": "tugtile: {0} 완료(무르기 {1} / 다시 실행 {2})", "archiveTitle": "보관함", "archiveEmpty": "보관된 타일이 없습니다.", "restore": "복원", "deleteArchived": "타일 버리기", "boardSettingsTitle": "이 보드 설정", "boardSettingsDesc": "이 보드만 변경합니다(보드 파일에 저장). 비워두면 전역 기본값을 따릅니다.", "migrateBtn": "tugtile 형식으로 업그레이드", "migrateBtnDesc": "obsidian-kanban 마커를 제거하여 이 보드를 tugtile 네이티브로 만듭니다. 일방향.", "migrateConfirm": "이 보드를 tugtile 자체 형식으로 업그레이드할까요? 이후 obsidian-kanban으로 열 수 없으며 kanban 전용 설정은 삭제됩니다.", "migrateDone": "tugtile 형식으로 업그레이드됨", "confirm": "확인", "setShowCheckboxes": "타일 체크박스 표시", "setHideCount": "열 카운트 숨기기", "setEnterBehavior": "Enter 키 동작", "setEnterBehaviorDesc": "shift-enter＝Enter로 전송(CJK 친화); enter＝Enter로 줄바꿈", "optEnterSubmit": "Enter로 전송", "optEnterNewline": "Enter로 줄바꿈", "setNewCardPos": "새 타일 위치", "optAppend": "열 맨 아래", "optPrepend": "열 맨 위", "optPrependCompact": "열 맨 위(간단)", "setRelativeDate": "상대 날짜 표시", "setRelativeDateDesc": "오늘 / 내일 / N일 후", "setDateFormat": "날짜 저장 형식", "setDateFormatDesc": "마크다운에 기록하는 형식(예: YYYY-MM-DD)", "setDateDisplay": "날짜 표시 형식", "setDateDisplayDesc": "타일에 표시되는 형식", "setDateTrigger": "날짜 트리거 문자", "setDateTriggerDesc": "기본 @", "setTimeTrigger": "시간 트리거 문자", "setTimeTriggerDesc": "기본 @@", "setLinkDaily": "날짜를 데일리 노트에 링크", "setLinkDailyDesc": "날짜를 @[[..]]로 작성해 데일리 노트에 링크", "setTagAction": "태그 클릭 동작", "setTagActionDesc": "태그를 클릭할 때의 동작 — 전체 vault 검색, 또는 이 보드만 필터.", "optSearchVault": "전체 vault 검색", "optFilterBoard": "이 보드 필터", "setMoveTags": "태그를 타일 하단으로 이동", "setArchiveWithDate": "보관 시 타임스탬프 추가", "setMaxArchive": "보관함 최대 수", "setMaxArchiveDesc": "-1＝무제한", "settingsTitle": "tugtile 설정", "settingsDesc": "이것은 전역 기본값이며, 각 보드의 동일한 이름 설정이 우선합니다.", "gShowCheckboxes": "타일 체크박스 표시", "gShowCheckboxesDesc": "각 타일 오른쪽 위에 체크박스 표시(- [ ] / - [x] 전환)", "gHideCount": "열 카운트 숨기기", "gHideCountDesc": "열 헤더에 타일 수를 표시하지 않음", "gResponsiveBoard": "반응형 보드 (좁은 창에서 세로 정렬)", "gResponsiveBoardDesc": "창이 좁아지면 보드를 자동으로 세로 한 줄로 재배치합니다.", "gLaneWidth": "열 너비", "gLaneWidthDesc": "각 열의 너비 — 모든 열이 같은 너비로 정렬됩니다", "gTableDensity": "표 행 간격", "gTableDensityDesc": "표 각 행의 위아래 간격", "gFormatTools": "텍스트 서식 버튼", "gFormatToolsDesc": "에디터에 표시할 서식 버튼 선택", "gInsertTools": "삽입 버튼", "gInsertToolsDesc": "표시할 삽입 버튼 선택(코드/링크/날짜/시간)", "optDenseTight": "촘촘", "optDenseMid": "보통", "optDenseLoose": "넓게", "gEnterSubmit": "Enter로 전송", "gEnterSubmitDesc": "켬: Enter로 전송, Shift+Enter로 줄바꿈(CJK 친화 기본). 끔: Enter로 줄바꿈, Shift/⌘+Enter로 전송", "gPrepend": "새 타일을 맨 위에 추가", "gPrependDesc": "기본은 맨 아래에 추가; 켜면 맨 위에 추가", "gRelativeDate": "상대 날짜 표시", "gRelativeDateDesc": "타일 날짜에 “오늘 / 내일 / N일 후” 표시", "gDateDisplay": "날짜 표시 형식", "gDateDisplayDesc": "moment 형식 토큰: YYYY / MM / DD(기본 YYYY-MM-DD)", "gArchiveWithDate": "보관 시 타임스탬프 추가", "gArchiveWithDateDesc": "보관 시 제목 앞에 **YYYY-MM-DD HH:mm** 추가", "gMaxArchive": "보관함 최대 수", "gMaxArchiveDesc": "보관함에 유지할 최대 장수(-1 = 무제한; 초과 시 오래된 것부터 삭제)", "gArchiveHeading": "보관함 제목", "gArchiveHeadingDesc": "새 보관(아카이브) 섹션의 제목 문자(예: Archive, 封存).", "gDanger": "위험 작업", "gReset": "기본값으로 재설정", "gResetDesc": "위 전역 설정을 기본값으로 되돌립니다", "gResetBtn": "재설정", "cmdToggleView": "tugtile: 보드 / markdown 전환", "cmdOpenAsBoard": "tugtile로 열기", "cmdUndo": "tugtile: 무르기(실행 취소)", "cmdRedo": "tugtile: 다시 실행", "cmdCreateBoard": "tugtile: 새 보드 만들기", "cmdSearch": "tugtile: 타일 검색(Cmd/Ctrl+F에 바인딩 가능)", "cmdArchiveCompleted": "tugtile: 완료된 타일 모두 보관", "cmdConvertToBoard": "tugtile: 현재 노트를 보드로 변환", "createBoardHere": "여기에 tugtile 보드 만들기", "openAsBoard": "tugtile 보드로 열기", "ribbonTitle": "tugtile 보드", "ribbonNoFile": "먼저 보드 .md 파일을 여세요", "convertFailed": "tugtile 변환 실패: {0}", "boardCreated": "보드를 만들었습니다: {0}(파일 탐색기에서 이름 변경 가능)", "createBoardFailed": "tugtile 보드 생성 실패: {0}", "mtRibbon": "marktile로 편집", "mtOpenCmd": "marktile: 현재 노트 편집", "mtNoFile": ".md 노트를 먼저 여세요", "mtBackToObsidian": "Obsidian 편집기로", "openInMarktile": "marktile에서 열기", "mtToTugtile": "tugtile 보드로 열기", "mtBrand": "marktile-ing", "mtBrandLocked": "marktile", "mtEssentialTools": "기본 버튼", "mtEssentialToolsDesc": "검색・무르기・다시 실행", "mtInsertToolsDesc": "표시할 삽입 버튼 (코드 / 링크)", "mtDefaultEditor": "marktile을 기본 Markdown 편집기로 설정", "mtDefaultEditorDesc": "기본은 꺼짐. 켜면 .md 파일이 Obsidian 기본 편집기 대신 marktile로 열립니다(보드 파일도 포함, tugtile 버튼으로 이동). 적용하려면 Obsidian을 다시 로드하세요. 언제든 꺼서 기본 편집기로 되돌릴 수 있습니다.", "mtReloadRequired": "적용하려면 Obsidian을 다시 로드하세요", "mtSettings": "marktile 설정", "mtSettingsTitle": "marktile 설정", "mtSettingsDesc": "marktile은 모든 .md 노트를 tile 패밀리 편집기로 엽니다. 도구 모음에 표시할 버튼을 선택하거나(모두 해제하면 도구 모음을 완전히 숨길 수 있음), marktile을 기본 Markdown 편집기로 설정할 수 있습니다.", "mtModePlain": "담백", "mtModeSeasoned": "양념", "expandAllAction": "모두 펼치기", "collapseAllAction": "모두 접기", "expandLanesAction": "레인 펼치기", "mtModeToggle": "양념 / 담백 전환", "mtLockToggle": "편집기 잠금(읽기 전용)", "mtToc": "목차", "mtTocEmpty": "제목 없음", "edH1": "제목 1", "edH2": "제목 2", "edH3": "제목 3", "edBold": "굵게", "edItalic": "기울임", "edStrike": "취소선", "edBullet": "글머리 목록", "edNumber": "번호 목록", "edCheck": "체크리스트", "edQuote": "인용", "edCode": "인라인 코드", "edLink": "위키링크", "edDate": "날짜 삽입", "edTime": "시간 삽입", "edFind": "찾기 / 바꾸기"}, "zh-TW": {"appName": "理牌", "brandSuffix": "tugtile-ing（理牌中）", "brandSuffixLocked": "tugtile（理牌）", "lockToggle": "鎖定／解鎖牌桌", "lockedNotice": "牌桌已鎖定", "undoAction": "悔牌（復原）", "redoAction": "重出（重做）", "viewSwitchAction": "切換檢視（牌桌／牌表）", "boardSettingsAction": "本牌桌設定", "openAsMarkdownAction": "以 markdown 開啟", "archiveAction": "牌庫（收牌區）", "searchAction": "搜尋牌", "emptyNoFile": "在某張牌桌 .md 上用指令「以 tugtile 開啟」。", "fileNotFound": "找不到檔案：{0}", "searchPlaceholder": "找牌", "viewBoard": "牌桌", "viewTable": "牌表", "editMarkdown": "編輯 Markdown 原始碼", "findPlaceholder": "尋找", "replacePlaceholder": "取代為", "findPrev": "上一個", "findNext": "下一個", "replaceOne": "取代", "replaceAll": "全部取代", "colTile": "牌", "colLane": "牌列", "colDate": "日期", "colTags": "標籤", "collapseExpand": "收合 / 展開", "laneActionsAria": "牌列動作（改名／插入／排序／收牌／棄牌…）", "tileActionsAria": "更多動作（編輯／收牌／棄牌…）", "relDateWrap": "（{0}）", "today": "今天", "tomorrow": "明天", "yesterday": "昨天", "dayAfterTomorrow": "後天", "dayBeforeYesterday": "前天", "daysLater": "{0} 天後", "daysAgo": "{0} 天前", "yearMonth": "{0} 年 {1} 月", "weekdays": ["日", "一", "二", "三", "四", "五", "六"], "edit": "編輯", "duplicateTile": "複製牌", "insertTileAbove": "在上方新增牌", "insertTileBelow": "在下方新增牌", "splitTileMenu": "拆分成多張", "archiveTileMenu": "收牌（封存）", "moveTileTop": "移到牌列頂", "moveTileBottom": "移到牌列底", "untitledLane": "(未命名)", "moveToLane": "移到「{0}」", "deleteTileMenu": "棄牌", "splitNoNeed": "只有一行，無需拆分", "splitDone": "已拆分成 {0} 張牌", "archivedTile": "已收牌（封存）", "deletedTile": "已棄牌", "deletedLane": "已刪牌列", "toastUndoBtn": "悔牌", "addTileBtn": "＋ 新增一張牌", "dropToArchive": "拖到這裡收牌", "cancel": "取消", "save": "儲存", "discardConfirm": "放棄這次的變更？", "editLost": "這張牌已不存在，編輯未儲存。", "mobileSubmit": "送出", "addLaneBtn": "＋ 新增牌列", "addLanePlaceholder": "牌列名稱　⏎ 新增", "newLane": "新牌列", "newBoardName": "新牌桌", "confirmDeleteLane": "這個牌列有 {0} 張牌，確定刪除整列？", "boardListViewOnly": "請在牌桌檢視使用", "archivedCompleted": "已收 {0} 張已完成牌", "noCompleted": "沒有已完成的牌", "rename": "改名", "insertLaneBefore": "在前面插入牌列", "insertLaneAfter": "在後面插入牌列", "sortTitleAsc": "依牌面排序 A→Z", "sortTitleDesc": "依牌面排序 Z→A", "sortDate": "依日期排序（近→遠）", "sortTag": "依標籤排序", "markLaneComplete": "標記本列全部完成", "archiveLaneMenu": "收本列所有牌", "deleteLaneMenu": "刪除牌列", "confirmArchiveLane": "把這列的 {0} 張牌全部收進牌庫？", "archivedLane": "已收本列 {0} 張牌", "noLaneToRestore": "理牌：沒有可還原到的牌列，請先建一列", "externalModified": "理牌：偵測到此檔在別處被修改，已重新載入以免覆蓋（剛才這步未寫入）", "backupFailed": "理牌：備份失敗，為保護資料已取消這次寫回", "writeFailed": "理牌寫回失敗：{0}", "saved": "已儲存", "persistFailed": "理牌：存檔失敗──{0}", "undoVerb": "悔牌", "redoVerb": "重出", "noStep": "理牌：沒有可{0}的步驟了", "timeTraveled": "理牌：已{0}（可悔牌 {1} / 可重出 {2}）", "archiveTitle": "牌庫", "archiveEmpty": "牌庫裡沒有牌。", "restore": "取回", "deleteArchived": "棄牌", "boardSettingsTitle": "本牌桌設定", "boardSettingsDesc": "只改這個牌桌（隨牌桌檔案儲存）。空白＝跟隨全域預設。", "migrateBtn": "升級成 tugtile 格式", "migrateBtnDesc": "移除 obsidian-kanban 標記，讓這個牌桌成為 tugtile 原生格式。單向不可逆。", "migrateConfirm": "要把這個牌桌升級成 tugtile 原生格式嗎？升級後將無法用 obsidian-kanban 開啟，且會清掉 kanban 專屬設定。", "migrateDone": "已升級成 tugtile 格式", "confirm": "確定", "setShowCheckboxes": "顯示牌的勾選框", "setHideCount": "隱藏牌列計數", "setEnterBehavior": "Enter 鍵行為", "setEnterBehaviorDesc": "shift-enter＝Enter 送出（CJK 友善）；enter＝Enter 換行", "optEnterSubmit": "Enter 送出", "optEnterNewline": "Enter 換行", "setNewCardPos": "新牌位置", "optAppend": "加在牌列底", "optPrepend": "加在牌列頂", "optPrependCompact": "加在牌列頂(精簡)", "setRelativeDate": "顯示相對日期", "setRelativeDateDesc": "今天 / 明天 / N 天後", "setDateFormat": "日期儲存格式", "setDateFormatDesc": "插入日期寫進 markdown 的格式（如 YYYY-MM-DD）", "setDateDisplay": "日期顯示格式", "setDateDisplayDesc": "牌上顯示的格式", "setDateTrigger": "日期觸發字元", "setDateTriggerDesc": "預設 @", "setTimeTrigger": "時間觸發字元", "setTimeTriggerDesc": "預設 @@", "setLinkDaily": "日期連每日筆記", "setLinkDailyDesc": "日期寫成 @[[..]] 連到每日筆記", "setTagAction": "點標籤行為", "setTagActionDesc": "點標籤時的動作——搜尋整個 vault，或只篩這個牌桌。", "optSearchVault": "搜整個 vault", "optFilterBoard": "篩本牌桌", "setMoveTags": "標籤移到牌底", "setArchiveWithDate": "收牌時加時間戳", "setMaxArchive": "牌庫數上限", "setMaxArchiveDesc": "-1＝無限", "settingsTitle": "理牌設定", "settingsDesc": "這些是全域預設；個別牌桌的同名設定會優先。", "gShowCheckboxes": "顯示牌的勾選框", "gShowCheckboxesDesc": "在每張牌右上角顯示勾選框（可切換 - [ ] / - [x]）", "gHideCount": "隱藏牌列計數", "gHideCountDesc": "不在牌列標題列顯示牌數", "gResponsiveBoard": "自適應牌桌（窄面板直排）", "gResponsiveBoardDesc": "面板變窄時，牌桌自動改成單欄直向堆疊。", "gLaneWidth": "牌列寬度", "gLaneWidthDesc": "每個牌列的寬度，所有牌列等寬對齊", "gTableDensity": "牌表行距", "gTableDensityDesc": "牌表每列的上下間距", "gFormatTools": "文字格式按鈕", "gFormatToolsDesc": "選擇編輯器要顯示哪些文字格式按鈕", "gInsertTools": "插入按鈕", "gInsertToolsDesc": "選擇要顯示哪些插入按鈕（程式碼／連結／日期／時間）", "optDenseTight": "緊湊", "optDenseMid": "適中", "optDenseLoose": "寬鬆", "gEnterSubmit": "Enter 鍵送出", "gEnterSubmitDesc": "開：Enter 送出、Shift+Enter 換行（CJK 友善預設）。關：Enter 換行、Shift/⌘+Enter 送出", "gPrepend": "新牌加在牌列頂", "gPrependDesc": "預設加在牌列底；開啟改為加在牌列頂", "gRelativeDate": "顯示相對日期", "gRelativeDateDesc": "牌日期顯示「今天 / 明天 / N 天後」", "gDateDisplay": "日期顯示格式", "gDateDisplayDesc": "moment 風格 token：YYYY / MM / DD（預設 YYYY-MM-DD）", "gArchiveWithDate": "收牌時加時間戳", "gArchiveWithDateDesc": "收牌時在標題前加上 **YYYY-MM-DD HH:mm**", "gMaxArchive": "牌庫數上限", "gMaxArchiveDesc": "牌庫最多保留幾張（-1 = 無限；超過丟最舊）", "gArchiveHeading": "牌庫標題", "gArchiveHeadingDesc": "新建牌庫（封存）區段用的標題文字（例如 Archive、封存）。", "gDanger": "危險操作", "gReset": "重設為預設值", "gResetDesc": "把上述全域設定還原成預設", "gResetBtn": "重設", "cmdToggleView": "理牌：切換牌桌 / markdown", "cmdOpenAsBoard": "以 tugtile 開啟", "cmdUndo": "理牌：悔牌（復原）", "cmdRedo": "理牌：重出（重做）", "cmdCreateBoard": "理牌：建立新牌桌", "cmdSearch": "理牌：搜尋牌（可綁 Cmd/Ctrl+F）", "cmdArchiveCompleted": "理牌：收全牌桌已完成牌", "cmdConvertToBoard": "理牌：把目前筆記轉成牌桌", "createBoardHere": "在此建立 tugtile 牌桌", "openAsBoard": "以 tugtile 牌桌開啟", "ribbonTitle": "tugtile 牌桌", "ribbonNoFile": "請先開啟一個牌桌 .md 檔", "convertFailed": "理牌轉換失敗：{0}", "boardCreated": "已建立牌桌：{0}（可在檔案總管改名）", "createBoardFailed": "理牌建立牌桌失敗：{0}", "mtRibbon": "用 marktile 編輯", "mtOpenCmd": "marktile：編輯目前筆記", "mtNoFile": "請先開啟一個 .md 筆記", "mtBackToObsidian": "回 Obsidian 編輯器", "openInMarktile": "開進 marktile", "mtToTugtile": "以 tugtile 牌桌開啟", "mtBrand": "marktile-ing", "mtBrandLocked": "marktile", "mtEssentialTools": "基本按鈕", "mtEssentialToolsDesc": "搜尋、復原、重做", "mtInsertToolsDesc": "要顯示哪些插入按鈕（程式碼／連結）", "mtDefaultEditor": "將 marktile 設為預設 Markdown 編輯器", "mtDefaultEditorDesc": "預設關閉。開啟後 .md 檔會用 marktile 開啟，而非 Obsidian 內建編輯器（看板檔也是，可用 tugtile 按鈕跳過去）。需重新載入 Obsidian 生效；隨時可關閉以還原原生編輯器。", "mtReloadRequired": "請重新載入 Obsidian 以生效", "mtSettings": "marktile 設定", "mtSettingsTitle": "marktile 設定", "mtSettingsDesc": "marktile 用 tile 家族的編輯器打開任何 .md 筆記。在這裡選擇工具列要顯示哪些按鈕（全部取消即可完全隱藏工具列），或將 marktile 設為預設的 Markdown 編輯器。", "mtModePlain": "原味", "mtModeSeasoned": "調味", "expandAllAction": "全展開", "collapseAllAction": "全收起", "expandLanesAction": "展開牌列", "mtModeToggle": "切換 調味／原味", "mtLockToggle": "鎖定編輯器（唯讀）", "mtToc": "目錄", "mtTocEmpty": "沒有標題", "edH1": "標題 1", "edH2": "標題 2", "edH3": "標題 3", "edBold": "粗體", "edItalic": "斜體", "edStrike": "刪除線", "edBullet": "項目清單", "edNumber": "編號清單", "edCheck": "核取清單", "edQuote": "引言", "edCode": "行內程式碼", "edLink": "雙向連結", "edDate": "插入日期", "edTime": "插入時間", "edFind": "尋找／取代"}};   // injected by build-marktile.sh
+const TR = {"en-US": {"appName": "tugtile", "brandSuffix": "tugtile-ing", "brandSuffixLocked": "tugtile", "lockToggle": "Lock / unlock board", "lockedNotice": "Board is locked", "undoAction": "Undo", "redoAction": "Redo", "viewSwitchAction": "Switch view (Board / Table)", "boardSettingsAction": "Board settings", "openAsMarkdownAction": "Open as markdown", "archiveAction": "Stash (Archive)", "searchAction": "Search tiles", "emptyNoFile": "Open a board .md with the “Open as tugtile” command.", "fileNotFound": "File not found: {0}", "searchPlaceholder": "Find a tile", "viewBoard": "Board", "viewTable": "Table", "editMarkdown": "Edit raw markdown", "findPlaceholder": "Find", "replacePlaceholder": "Replace", "findPrev": "Previous", "findNext": "Next", "replaceOne": "Replace", "replaceAll": "Replace all", "colTile": "Tile", "colLane": "Lane", "colDate": "Date", "colTags": "Tags", "collapseExpand": "Collapse / expand", "laneActionsAria": "Lane actions (rename / insert / sort / stash / delete…)", "tileActionsAria": "More actions (edit / stash / delete…)", "relDateWrap": " ({0})", "today": "today", "tomorrow": "tomorrow", "yesterday": "yesterday", "dayAfterTomorrow": "in 2 days", "dayBeforeYesterday": "2 days ago", "daysLater": "in {0} days", "daysAgo": "{0} days ago", "yearMonth": "{0}-{1}", "weekdays": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"], "edit": "Edit", "duplicateTile": "Duplicate", "insertTileAbove": "Insert tile above", "insertTileBelow": "Insert tile below", "splitTileMenu": "Split into tiles", "archiveTileMenu": "Stash (Archive)", "moveTileTop": "Move to top", "moveTileBottom": "Move to bottom", "untitledLane": "(untitled)", "moveToLane": "Move to “{0}”", "deleteTileMenu": "Delete", "splitNoNeed": "Only one line — nothing to split.", "splitDone": "Split into {0} tiles", "archivedTile": "Tile stashed", "deletedTile": "Tile deleted", "deletedLane": "Lane deleted", "toastUndoBtn": "Undo", "addTileBtn": "＋ Add a tile", "dropToArchive": "Drop here to stash", "cancel": "Cancel", "save": "Save", "discardConfirm": "Discard your changes?", "editLost": "Tile no longer exists — edit not saved.", "mobileSubmit": "Submit", "addLaneBtn": "＋ Add lane", "addLanePlaceholder": "Lane name — ⏎ to add", "newLane": "New lane", "newBoardName": "New board", "confirmDeleteLane": "This lane has {0} tiles. Delete the whole lane?", "boardListViewOnly": "Use this in Board view", "archivedCompleted": "Stashed {0} completed tiles", "noCompleted": "No completed tiles", "rename": "Rename", "insertLaneBefore": "Insert lane before", "insertLaneAfter": "Insert lane after", "sortTitleAsc": "Sort by tile title A→Z", "sortTitleDesc": "Sort by tile title Z→A", "sortDate": "Sort by date (soonest first)", "sortTag": "Sort by tag", "markLaneComplete": "Mark all in lane complete", "archiveLaneMenu": "Stash all tiles in lane", "deleteLaneMenu": "Delete lane", "confirmArchiveLane": "Stash all {0} tiles in this lane?", "archivedLane": "Stashed {0} tiles from lane", "noLaneToRestore": "tugtile: no lane to restore into — create a lane first", "externalModified": "tugtile: this file was changed elsewhere — reloaded to avoid overwrite (this step was not saved)", "backupFailed": "tugtile: backup failed — write cancelled to protect your data", "writeFailed": "tugtile write failed: {0}", "saved": "Saved", "persistFailed": "tugtile: save failed — {0}", "undoVerb": "undo", "redoVerb": "redo", "noStep": "tugtile: nothing left to {0}", "timeTraveled": "tugtile: {0} done (undo {1} / redo {2})", "archiveTitle": "Stash (Archive)", "archiveEmpty": "No stashed tiles.", "restore": "Restore", "deleteArchived": "Delete", "boardSettingsTitle": "Board settings", "boardSettingsDesc": "Affects only this board (saved with the board file). Blank = follow the global default.", "migrateBtn": "Upgrade to tugtile format", "migrateBtnDesc": "Remove obsidian-kanban markers so this board is tugtile-native. One-way.", "migrateConfirm": "Upgrade this board to tugtile’s own format? It will no longer open in obsidian-kanban, and kanban-only settings will be dropped.", "migrateDone": "Upgraded to tugtile format", "confirm": "Confirm", "setShowCheckboxes": "Show tile checkbox", "setHideCount": "Hide lane count", "setEnterBehavior": "Enter key behavior", "setEnterBehaviorDesc": "shift-enter = Enter submits (CJK friendly); enter = Enter newline", "optEnterSubmit": "Enter submits", "optEnterNewline": "Enter newline", "setNewCardPos": "New tile position", "optAppend": "At lane bottom", "optPrepend": "At lane top", "optPrependCompact": "At lane top (compact)", "setRelativeDate": "Show relative date", "setRelativeDateDesc": "today / tomorrow / in N days", "setDateFormat": "Date storage format", "setDateFormatDesc": "Format written into markdown (e.g. YYYY-MM-DD)", "setDateDisplay": "Date display format", "setDateDisplayDesc": "Format shown on tiles", "setDateTrigger": "Date trigger char", "setDateTriggerDesc": "Default @", "setTimeTrigger": "Time trigger char", "setTimeTriggerDesc": "Default @@", "setLinkDaily": "Link date to daily note", "setLinkDailyDesc": "Write date as @[[..]] linking to the daily note", "setTagAction": "Tag click action", "setTagActionDesc": "What clicking a tag does — search the whole vault, or filter just this board.", "optSearchVault": "Search whole vault", "optFilterBoard": "Filter this board", "setMoveTags": "Move tags to tile footer", "setArchiveWithDate": "Add timestamp on stash", "setMaxArchive": "Max stash size", "setMaxArchiveDesc": "-1 = unlimited", "settingsTitle": "tugtile settings", "settingsDesc": "These are global defaults; a board’s own settings of the same name take precedence.", "gShowCheckboxes": "Show tile checkbox", "gShowCheckboxesDesc": "Show a checkbox at the top-right of each tile (toggles - [ ] / - [x])", "gHideCount": "Hide lane count", "gHideCountDesc": "Don’t show the tile count in the lane header", "gResponsiveBoard": "Responsive board (stack on narrow panes)", "gResponsiveBoardDesc": "On a narrow pane, the board reflows into a single vertical stack.", "gLaneWidth": "Lane width", "gLaneWidthDesc": "Width of every lane — all lanes line up evenly", "gTableDensity": "Table row spacing", "gTableDensityDesc": "Vertical breathing room for each table row", "gFormatTools": "Text formatting buttons", "gFormatToolsDesc": "Headings, bold, italic, strikethrough.", "gInsertTools": "Insert buttons", "gInsertToolsDesc": "Which insert buttons show (code, link, date, time)", "optDenseTight": "Tight", "optDenseMid": "Medium", "optDenseLoose": "Loose", "gEnterSubmit": "Enter submits", "gEnterSubmitDesc": "On: Enter submits, Shift+Enter newline (CJK-friendly default). Off: Enter newline, Shift/⌘+Enter submits", "gPrepend": "Add new tile at top", "gPrependDesc": "Default adds at the bottom; enable to add at the top", "gRelativeDate": "Show relative date", "gRelativeDateDesc": "Show “today / tomorrow / in N days” on tile dates", "gDateDisplay": "Date display format", "gDateDisplayDesc": "moment-style tokens: YYYY / MM / DD (default YYYY-MM-DD)", "gArchiveWithDate": "Add timestamp on stash", "gArchiveWithDateDesc": "Prepend **YYYY-MM-DD HH:mm** to the title when stashing", "gMaxArchive": "Max stash size", "gMaxArchiveDesc": "Max tiles kept in stash (-1 = unlimited; oldest dropped)", "gArchiveHeading": "Stash heading", "gArchiveHeadingDesc": "Heading text for a new stash (archive) section (e.g. Archive, 封存).", "gDanger": "Danger zone", "gReset": "Reset to defaults", "gResetDesc": "Restore the above global settings to defaults", "gResetBtn": "Reset", "cmdToggleView": "tugtile: toggle board / markdown", "cmdOpenAsBoard": "Open as tugtile", "cmdUndo": "tugtile: undo", "cmdRedo": "tugtile: redo", "cmdCreateBoard": "tugtile: create new board", "cmdSearch": "tugtile: search tiles (bindable to Cmd/Ctrl+F)", "cmdArchiveCompleted": "tugtile: stash all completed tiles", "cmdConvertToBoard": "tugtile: convert current note to board", "createBoardHere": "Create tugtile board here", "openAsBoard": "Open as tugtile board", "ribbonTitle": "tugtile board", "ribbonNoFile": "Open a board .md first", "convertFailed": "tugtile convert failed: {0}", "boardCreated": "Board created: {0} (rename it in the file explorer)", "createBoardFailed": "tugtile create board failed: {0}", "mtRibbon": "Edit in marktile", "mtOpenCmd": "marktile: edit current note", "mtNoFile": "Open a .md note first", "mtBackToObsidian": "Back to Obsidian editor", "openInMarktile": "Open in marktile", "mtToTugtile": "Open as tugtile board", "mtBrand": "marktile-ing", "mtBrandLocked": "marktile", "mtEssentialTools": "Essential buttons", "mtEssentialToolsDesc": "Search, undo, redo", "mtInsertToolsDesc": "Which insert buttons to show (code / link)", "mtDefaultEditor": "Make marktile the default Markdown editor", "mtDefaultEditorDesc": "Off by default. When on, .md files open in marktile instead of Obsidian's editor (board files too — hop to tugtile with its button). Reload Obsidian to apply; turn off anytime to restore the native editor.", "mtReloadRequired": "Reload Obsidian to apply", "mtSettings": "marktile settings", "mtSettingsTitle": "marktile settings", "mtSettingsDesc": "marktile opens any .md note in the tile-family editor. Choose which toolbar buttons appear (uncheck all to hide the toolbar entirely), or make marktile your default Markdown editor.", "mtModePlain": "Plain", "mtModeSeasoned": "Seasoned", "expandAllAction": "Expand all", "collapseAllAction": "Collapse all", "expandLanesAction": "Expand lanes", "mtModeToggle": "Toggle Seasoned / Plain", "mtLockToggle": "Lock editor (read-only)", "mtToc": "Table of contents", "mtTocEmpty": "No headings", "edH1": "Heading 1", "edH2": "Heading 2", "edH3": "Heading 3", "edBold": "Bold", "edItalic": "Italic", "edStrike": "Strikethrough", "edBullet": "Bullet list", "edNumber": "Numbered list", "edCheck": "Checklist", "edQuote": "Blockquote", "edCode": "Inline code", "edLink": "Wikilink", "edDate": "Insert date", "edTime": "Insert time", "edFind": "Find / replace", "TBL_INS_COL_L": "Insert column left", "TBL_INS_COL_R": "Insert column right", "TBL_INS_ROW_A": "Insert row above", "TBL_INS_ROW_B": "Insert row below", "TBL_DEL_COL": "Delete column", "TBL_DEL_ROW": "Delete row", "mtModeRendered": "Rendered", "mtModesPick": "View modes", "mtModesPickDesc": "Which modes the view-cycle button rotates through. At least one stays on.", "mtModesMinOne": "Keep at least one view mode.", "gBlockTools": "Block tools", "gBlockToolsDesc": "Lists, checklist, quote, table.", "edTable": "Table"}, "ja-JP": {"appName": "タッグタイル", "brandSuffix": "tugtile-ing（タッグタイル中）", "brandSuffixLocked": "tugtile（タッグタイル）", "lockToggle": "ボードをロック／解除", "lockedNotice": "ボードはロックされています", "undoAction": "待った", "redoAction": "やり直し", "viewSwitchAction": "ビュー切替（ボード／表）", "boardSettingsAction": "このボードの設定", "openAsMarkdownAction": "Markdown で開く", "archiveAction": "アーカイブ", "searchAction": "タイルを検索", "emptyNoFile": "ボードの .md でコマンド「tugtile で開く」を使ってください。", "fileNotFound": "ファイルが見つかりません：{0}", "searchPlaceholder": "タイルを探す", "viewBoard": "ボード", "viewTable": "表", "editMarkdown": "Markdown を直接編集", "findPlaceholder": "検索", "replacePlaceholder": "置換後", "findPrev": "前へ", "findNext": "次へ", "replaceOne": "置換", "replaceAll": "すべて置換", "colTile": "タイル", "colLane": "列", "colDate": "日付", "colTags": "タグ", "collapseExpand": "折りたたみ / 展開", "laneActionsAria": "列の操作（名前変更／挿入／並べ替え／アーカイブ／削除…）", "tileActionsAria": "その他の操作（編集／アーカイブ／削除…）", "relDateWrap": "（{0}）", "today": "今日", "tomorrow": "明日", "yesterday": "昨日", "dayAfterTomorrow": "明後日", "dayBeforeYesterday": "一昨日", "daysLater": "{0} 日後", "daysAgo": "{0} 日前", "yearMonth": "{0}年 {1}月", "weekdays": ["日", "月", "火", "水", "木", "金", "土"], "edit": "編集", "duplicateTile": "タイルを複製", "insertTileAbove": "上にタイルを挿入", "insertTileBelow": "下にタイルを挿入", "splitTileMenu": "分割", "archiveTileMenu": "アーカイブ", "moveTileTop": "列の先頭へ", "moveTileBottom": "列の末尾へ", "untitledLane": "(無題)", "moveToLane": "「{0}」へ移動", "deleteTileMenu": "タイルを捨てる", "splitNoNeed": "1行のみ。分割は不要です。", "splitDone": "{0} 枚のタイルに分割しました", "archivedTile": "タイルをアーカイブしました", "deletedTile": "タイルを捨てました", "deletedLane": "列を削除しました", "toastUndoBtn": "待った", "addTileBtn": "＋ タイルを追加", "dropToArchive": "ここにドロップでアーカイブ", "cancel": "キャンセル", "save": "保存", "discardConfirm": "変更を破棄しますか？", "editLost": "このタイルは存在しません。編集は保存されませんでした。", "mobileSubmit": "送信", "addLaneBtn": "＋ 列を追加", "addLanePlaceholder": "列名　⏎ で追加", "newLane": "新しい列", "newBoardName": "新しいボード", "confirmDeleteLane": "この列には {0} 枚のタイルがあります。列ごと削除しますか？", "boardListViewOnly": "ボードビューで使ってください", "archivedCompleted": "完了したタイル {0} 枚をアーカイブしました", "noCompleted": "完了したタイルはありません", "rename": "名前を変更", "insertLaneBefore": "前に列を挿入", "insertLaneAfter": "後に列を挿入", "sortTitleAsc": "タイトルで並べ替え A→Z", "sortTitleDesc": "タイトルで並べ替え Z→A", "sortDate": "日付で並べ替え（近い順）", "sortTag": "タグで並べ替え", "markLaneComplete": "この列をすべて完了にする", "archiveLaneMenu": "この列のタイルをすべてアーカイブ", "deleteLaneMenu": "列を削除", "confirmArchiveLane": "この列の {0} 枚のタイルをすべてアーカイブしますか？", "archivedLane": "この列のタイル {0} 枚をアーカイブしました", "noLaneToRestore": "tugtile：戻せる列がありません。先に列を作成してください", "externalModified": "tugtile：このファイルが別の場所で変更されました。上書きを避けるため再読み込みしました（この操作は保存されていません）", "backupFailed": "tugtile：バックアップに失敗したため、データ保護のため書き込みを中止しました", "writeFailed": "tugtile 書き込み失敗：{0}", "saved": "保存しました", "persistFailed": "tugtile：保存に失敗しました──{0}", "undoVerb": "待った", "redoVerb": "やり直し", "noStep": "tugtile：{0}できる操作がありません", "timeTraveled": "tugtile：{0}しました（待った {1} / やり直し {2}）", "archiveTitle": "アーカイブ", "archiveEmpty": "アーカイブされたタイルはありません。", "restore": "戻す", "deleteArchived": "タイルを捨てる", "boardSettingsTitle": "このボードの設定", "boardSettingsDesc": "このボードだけを変更します（ボードのファイルに保存）。空白＝グローバル既定に従う。", "migrateBtn": "tugtile 形式にアップグレード", "migrateBtnDesc": "obsidian-kanban のマーカーを除去し、このボードを tugtile ネイティブにします。一方向。", "migrateConfirm": "このボードを tugtile 独自の形式にアップグレードしますか？以後 obsidian-kanban では開けなくなり、kanban 専用の設定は削除されます。", "migrateDone": "tugtile 形式にアップグレードしました", "confirm": "確定", "setShowCheckboxes": "タイルのチェックボックスを表示", "setHideCount": "列のカウントを隠す", "setEnterBehavior": "Enter キーの動作", "setEnterBehaviorDesc": "shift-enter＝Enter で送信（CJK 向け）；enter＝Enter で改行", "optEnterSubmit": "Enter で送信", "optEnterNewline": "Enter で改行", "setNewCardPos": "新しいタイルの位置", "optAppend": "列の末尾", "optPrepend": "列の先頭", "optPrependCompact": "列の先頭(コンパクト)", "setRelativeDate": "相対日付を表示", "setRelativeDateDesc": "今日 / 明日 / N 日後", "setDateFormat": "日付の保存形式", "setDateFormatDesc": "markdown に書き込む形式（例 YYYY-MM-DD）", "setDateDisplay": "日付の表示形式", "setDateDisplayDesc": "タイルに表示する形式", "setDateTrigger": "日付トリガー文字", "setDateTriggerDesc": "既定 @", "setTimeTrigger": "時刻トリガー文字", "setTimeTriggerDesc": "既定 @@", "setLinkDaily": "日付をデイリーノートにリンク", "setLinkDailyDesc": "日付を @[[..]] と書きデイリーノートにリンク", "setTagAction": "タグクリックの動作", "setTagActionDesc": "タグをクリックしたときの動作——vault 全体を検索、またはこのボードだけを絞り込み。", "optSearchVault": "vault 全体を検索", "optFilterBoard": "このボードを絞り込み", "setMoveTags": "タグをタイルの下部へ移動", "setArchiveWithDate": "アーカイブ時にタイムスタンプ", "setMaxArchive": "アーカイブ上限", "setMaxArchiveDesc": "-1＝無制限", "settingsTitle": "tugtile 設定", "settingsDesc": "これらはグローバル既定です。各ボードの同名設定が優先されます。", "gShowCheckboxes": "タイルのチェックボックスを表示", "gShowCheckboxesDesc": "各タイルの右上にチェックボックスを表示（- [ ] / - [x] を切替）", "gHideCount": "列のカウントを隠す", "gHideCountDesc": "列のヘッダーにタイル数を表示しない", "gResponsiveBoard": "レスポンシブボード（狭い画面で縦積み）", "gResponsiveBoardDesc": "画面が狭いとき、ボードを自動で縦一列に並べ替えます。", "gLaneWidth": "列の幅", "gLaneWidthDesc": "各列の幅。すべての列が同じ幅で揃います", "gTableDensity": "表の行間隔", "gTableDensityDesc": "表の各行の上下の間隔", "gFormatTools": "文字書式ボタン", "gFormatToolsDesc": "見出し・太字・斜体・打ち消し線。", "gInsertTools": "挿入ボタン", "gInsertToolsDesc": "表示する挿入ボタンを選択（コード／リンク／日付／時刻）", "optDenseTight": "詰める", "optDenseMid": "標準", "optDenseLoose": "ゆったり", "gEnterSubmit": "Enter で送信", "gEnterSubmitDesc": "オン：Enter で送信、Shift+Enter で改行（CJK 向け既定）。オフ：Enter で改行、Shift/⌘+Enter で送信", "gPrepend": "新しいタイルを先頭に追加", "gPrependDesc": "既定は末尾に追加。オンで先頭に追加", "gRelativeDate": "相対日付を表示", "gRelativeDateDesc": "タイルの日付に「今日 / 明日 / N 日後」を表示", "gDateDisplay": "日付の表示形式", "gDateDisplayDesc": "moment 形式トークン：YYYY / MM / DD（既定 YYYY-MM-DD）", "gArchiveWithDate": "アーカイブ時にタイムスタンプ", "gArchiveWithDateDesc": "アーカイブ時にタイトルの前へ **YYYY-MM-DD HH:mm** を付加", "gMaxArchive": "アーカイブ上限", "gMaxArchiveDesc": "アーカイブに残す最大枚数（-1 = 無制限；超過分は古いものから削除）", "gArchiveHeading": "アーカイブ見出し", "gArchiveHeadingDesc": "新しいアーカイブ節の見出し文字（例 Archive、封存）。", "gDanger": "危険な操作", "gReset": "既定値にリセット", "gResetDesc": "上記のグローバル設定を既定に戻す", "gResetBtn": "リセット", "cmdToggleView": "tugtile：ボード / markdown を切替", "cmdOpenAsBoard": "tugtile で開く", "cmdUndo": "tugtile：待った（元に戻す）", "cmdRedo": "tugtile：やり直し", "cmdCreateBoard": "tugtile：新しいボードを作成", "cmdSearch": "tugtile：タイルを検索（Cmd/Ctrl+F に割当可）", "cmdArchiveCompleted": "tugtile：完了したタイルをすべてアーカイブ", "cmdConvertToBoard": "tugtile：現在のノートをボードに変換", "createBoardHere": "ここに tugtile ボードを作成", "openAsBoard": "tugtile ボードで開く", "ribbonTitle": "tugtile ボード", "ribbonNoFile": "先にボードの .md を開いてください", "convertFailed": "tugtile 変換失敗：{0}", "boardCreated": "ボードを作成しました：{0}（ファイルエクスプローラーで名前変更可）", "createBoardFailed": "tugtile ボードの作成に失敗：{0}", "mtRibbon": "marktile で編集", "mtOpenCmd": "marktile：現在のノートを編集", "mtNoFile": "先に .md ノートを開いてください", "mtBackToObsidian": "Obsidian エディタに戻る", "openInMarktile": "marktile で開く", "mtToTugtile": "tugtile ボードで開く", "mtBrand": "marktile-ing", "mtBrandLocked": "marktile", "mtEssentialTools": "基本ボタン", "mtEssentialToolsDesc": "検索・待った・やり直し", "mtInsertToolsDesc": "表示する挿入ボタン（コード／リンク）", "mtDefaultEditor": "marktile を既定の Markdown エディタにする", "mtDefaultEditorDesc": "既定はオフ。オンにすると .md ファイルが Obsidian の標準エディタではなく marktile で開きます（ボードも同様、tugtile ボタンで移動）。反映には Obsidian の再読み込みが必要。いつでもオフにして標準エディタに戻せます。", "mtReloadRequired": "反映するには Obsidian を再読み込みしてください", "mtSettings": "marktile 設定", "mtSettingsTitle": "marktile 設定", "mtSettingsDesc": "marktile は任意の .md ノートを tile ファミリーのエディタで開きます。ツールバーに表示するボタンを選んだり（すべて外すとツールバーを完全に隠せます）、marktile を既定の Markdown エディタにできます。", "mtModePlain": "プレーン", "mtModeSeasoned": "アジツケ", "expandAllAction": "すべて展開", "collapseAllAction": "すべて折りたたむ", "expandLanesAction": "レーンを展開", "mtModeToggle": "アジツケ／プレーン切替", "mtLockToggle": "エディタをロック（読み取り専用）", "mtToc": "目次", "mtTocEmpty": "見出しなし", "edH1": "見出し 1", "edH2": "見出し 2", "edH3": "見出し 3", "edBold": "太字", "edItalic": "斜体", "edStrike": "取り消し線", "edBullet": "箇条書き", "edNumber": "番号付きリスト", "edCheck": "チェックリスト", "edQuote": "引用", "edCode": "インラインコード", "edLink": "ウィキリンク", "edDate": "日付を挿入", "edTime": "時刻を挿入", "edFind": "検索／置換", "TBL_INS_COL_L": "左に列を挿入", "TBL_INS_COL_R": "右に列を挿入", "TBL_INS_ROW_A": "上に行を挿入", "TBL_INS_ROW_B": "下に行を挿入", "TBL_DEL_COL": "列を削除", "TBL_DEL_ROW": "行を削除", "mtModeRendered": "レンダー", "mtModesPick": "表示モード", "mtModesPickDesc": "ビュー切り替えボタンが巡回するモード。最低 1 つは残ります。", "mtModesMinOne": "ビューモードは最低 1 つ残してください。", "gBlockTools": "ブロックツール", "gBlockToolsDesc": "リスト・チェック・引用・表。", "edTable": "表"}, "ko-KR": {"appName": "태그타일", "brandSuffix": "tugtile-ing (태그타일 중)", "brandSuffixLocked": "tugtile (태그타일)", "lockToggle": "보드 잠금/해제", "lockedNotice": "보드가 잠겨 있습니다", "undoAction": "무르기", "redoAction": "다시 실행", "viewSwitchAction": "보기 전환 (보드 / 표)", "boardSettingsAction": "이 보드 설정", "openAsMarkdownAction": "마크다운으로 열기", "archiveAction": "보관함", "searchAction": "타일 검색", "emptyNoFile": "보드 .md에서 “tugtile로 열기” 명령을 사용하세요.", "fileNotFound": "파일을 찾을 수 없습니다: {0}", "searchPlaceholder": "타일 찾기", "viewBoard": "보드", "viewTable": "표", "editMarkdown": "Markdown 원본 편집", "findPlaceholder": "찾기", "replacePlaceholder": "바꿀 내용", "findPrev": "이전", "findNext": "다음", "replaceOne": "바꾸기", "replaceAll": "모두 바꾸기", "colTile": "타일", "colLane": "열", "colDate": "날짜", "colTags": "태그", "collapseExpand": "접기 / 펼치기", "laneActionsAria": "열 작업 (이름 변경 / 삽입 / 정렬 / 보관 / 삭제…)", "tileActionsAria": "추가 작업 (편집 / 보관 / 삭제…)", "relDateWrap": " ({0})", "today": "오늘", "tomorrow": "내일", "yesterday": "어제", "dayAfterTomorrow": "모레", "dayBeforeYesterday": "그저께", "daysLater": "{0}일 후", "daysAgo": "{0}일 전", "yearMonth": "{0}년 {1}월", "weekdays": ["일", "월", "화", "수", "목", "금", "토"], "edit": "편집", "duplicateTile": "타일 복제", "insertTileAbove": "위에 타일 삽입", "insertTileBelow": "아래에 타일 삽입", "splitTileMenu": "분할", "archiveTileMenu": "보관", "moveTileTop": "열 맨 위로", "moveTileBottom": "열 맨 아래로", "untitledLane": "(제목 없음)", "moveToLane": "“{0}”(으)로 이동", "deleteTileMenu": "타일 버리기", "splitNoNeed": "한 줄뿐이라 분할할 수 없습니다.", "splitDone": "{0}장의 타일로 분할했습니다", "archivedTile": "타일을 보관했습니다", "deletedTile": "타일을 버렸습니다", "deletedLane": "열을 삭제했습니다", "toastUndoBtn": "무르기", "addTileBtn": "＋ 타일 추가", "dropToArchive": "여기에 놓아 보관", "cancel": "취소", "save": "저장", "discardConfirm": "변경 사항을 취소할까요?", "editLost": "이 타일은 더 이상 존재하지 않아 편집이 저장되지 않았습니다.", "mobileSubmit": "전송", "addLaneBtn": "＋ 열 추가", "addLanePlaceholder": "열 이름　⏎ 추가", "newLane": "새 열", "newBoardName": "새 보드", "confirmDeleteLane": "이 열에 타일이 {0}장 있습니다. 열 전체를 삭제할까요?", "boardListViewOnly": "보드 보기에서 사용하세요", "archivedCompleted": "완료된 타일 {0}장을 보관했습니다", "noCompleted": "완료된 타일이 없습니다", "rename": "이름 변경", "insertLaneBefore": "앞에 열 삽입", "insertLaneAfter": "뒤에 열 삽입", "sortTitleAsc": "타일 제목 정렬 A→Z", "sortTitleDesc": "타일 제목 정렬 Z→A", "sortDate": "날짜 정렬 (가까운 순)", "sortTag": "태그 정렬", "markLaneComplete": "이 열 전체 완료 표시", "archiveLaneMenu": "이 열의 타일 모두 보관", "deleteLaneMenu": "열 삭제", "confirmArchiveLane": "이 열의 타일 {0}장을 모두 보관할까요?", "archivedLane": "이 열의 타일 {0}장을 보관했습니다", "noLaneToRestore": "tugtile: 복원할 열이 없습니다. 먼저 열을 만드세요", "externalModified": "tugtile: 이 파일이 다른 곳에서 변경되어 덮어쓰기를 막기 위해 다시 불러왔습니다(이 작업은 저장되지 않음)", "backupFailed": "tugtile: 백업에 실패하여 데이터 보호를 위해 저장을 취소했습니다", "writeFailed": "tugtile 저장 실패: {0}", "saved": "저장됨", "persistFailed": "tugtile: 저장 실패 — {0}", "undoVerb": "무르기", "redoVerb": "다시 실행", "noStep": "tugtile: {0}할 단계가 없습니다", "timeTraveled": "tugtile: {0} 완료(무르기 {1} / 다시 실행 {2})", "archiveTitle": "보관함", "archiveEmpty": "보관된 타일이 없습니다.", "restore": "복원", "deleteArchived": "타일 버리기", "boardSettingsTitle": "이 보드 설정", "boardSettingsDesc": "이 보드만 변경합니다(보드 파일에 저장). 비워두면 전역 기본값을 따릅니다.", "migrateBtn": "tugtile 형식으로 업그레이드", "migrateBtnDesc": "obsidian-kanban 마커를 제거하여 이 보드를 tugtile 네이티브로 만듭니다. 일방향.", "migrateConfirm": "이 보드를 tugtile 자체 형식으로 업그레이드할까요? 이후 obsidian-kanban으로 열 수 없으며 kanban 전용 설정은 삭제됩니다.", "migrateDone": "tugtile 형식으로 업그레이드됨", "confirm": "확인", "setShowCheckboxes": "타일 체크박스 표시", "setHideCount": "열 카운트 숨기기", "setEnterBehavior": "Enter 키 동작", "setEnterBehaviorDesc": "shift-enter＝Enter로 전송(CJK 친화); enter＝Enter로 줄바꿈", "optEnterSubmit": "Enter로 전송", "optEnterNewline": "Enter로 줄바꿈", "setNewCardPos": "새 타일 위치", "optAppend": "열 맨 아래", "optPrepend": "열 맨 위", "optPrependCompact": "열 맨 위(간단)", "setRelativeDate": "상대 날짜 표시", "setRelativeDateDesc": "오늘 / 내일 / N일 후", "setDateFormat": "날짜 저장 형식", "setDateFormatDesc": "마크다운에 기록하는 형식(예: YYYY-MM-DD)", "setDateDisplay": "날짜 표시 형식", "setDateDisplayDesc": "타일에 표시되는 형식", "setDateTrigger": "날짜 트리거 문자", "setDateTriggerDesc": "기본 @", "setTimeTrigger": "시간 트리거 문자", "setTimeTriggerDesc": "기본 @@", "setLinkDaily": "날짜를 데일리 노트에 링크", "setLinkDailyDesc": "날짜를 @[[..]]로 작성해 데일리 노트에 링크", "setTagAction": "태그 클릭 동작", "setTagActionDesc": "태그를 클릭할 때의 동작 — 전체 vault 검색, 또는 이 보드만 필터.", "optSearchVault": "전체 vault 검색", "optFilterBoard": "이 보드 필터", "setMoveTags": "태그를 타일 하단으로 이동", "setArchiveWithDate": "보관 시 타임스탬프 추가", "setMaxArchive": "보관함 최대 수", "setMaxArchiveDesc": "-1＝무제한", "settingsTitle": "tugtile 설정", "settingsDesc": "이것은 전역 기본값이며, 각 보드의 동일한 이름 설정이 우선합니다.", "gShowCheckboxes": "타일 체크박스 표시", "gShowCheckboxesDesc": "각 타일 오른쪽 위에 체크박스 표시(- [ ] / - [x] 전환)", "gHideCount": "열 카운트 숨기기", "gHideCountDesc": "열 헤더에 타일 수를 표시하지 않음", "gResponsiveBoard": "반응형 보드 (좁은 창에서 세로 정렬)", "gResponsiveBoardDesc": "창이 좁아지면 보드를 자동으로 세로 한 줄로 재배치합니다.", "gLaneWidth": "열 너비", "gLaneWidthDesc": "각 열의 너비 — 모든 열이 같은 너비로 정렬됩니다", "gTableDensity": "표 행 간격", "gTableDensityDesc": "표 각 행의 위아래 간격", "gFormatTools": "텍스트 서식 버튼", "gFormatToolsDesc": "제목, 굵게, 기울임, 취소선.", "gInsertTools": "삽입 버튼", "gInsertToolsDesc": "표시할 삽입 버튼 선택(코드/링크/날짜/시간)", "optDenseTight": "촘촘", "optDenseMid": "보통", "optDenseLoose": "넓게", "gEnterSubmit": "Enter로 전송", "gEnterSubmitDesc": "켬: Enter로 전송, Shift+Enter로 줄바꿈(CJK 친화 기본). 끔: Enter로 줄바꿈, Shift/⌘+Enter로 전송", "gPrepend": "새 타일을 맨 위에 추가", "gPrependDesc": "기본은 맨 아래에 추가; 켜면 맨 위에 추가", "gRelativeDate": "상대 날짜 표시", "gRelativeDateDesc": "타일 날짜에 “오늘 / 내일 / N일 후” 표시", "gDateDisplay": "날짜 표시 형식", "gDateDisplayDesc": "moment 형식 토큰: YYYY / MM / DD(기본 YYYY-MM-DD)", "gArchiveWithDate": "보관 시 타임스탬프 추가", "gArchiveWithDateDesc": "보관 시 제목 앞에 **YYYY-MM-DD HH:mm** 추가", "gMaxArchive": "보관함 최대 수", "gMaxArchiveDesc": "보관함에 유지할 최대 장수(-1 = 무제한; 초과 시 오래된 것부터 삭제)", "gArchiveHeading": "보관함 제목", "gArchiveHeadingDesc": "새 보관(아카이브) 섹션의 제목 문자(예: Archive, 封存).", "gDanger": "위험 작업", "gReset": "기본값으로 재설정", "gResetDesc": "위 전역 설정을 기본값으로 되돌립니다", "gResetBtn": "재설정", "cmdToggleView": "tugtile: 보드 / markdown 전환", "cmdOpenAsBoard": "tugtile로 열기", "cmdUndo": "tugtile: 무르기(실행 취소)", "cmdRedo": "tugtile: 다시 실행", "cmdCreateBoard": "tugtile: 새 보드 만들기", "cmdSearch": "tugtile: 타일 검색(Cmd/Ctrl+F에 바인딩 가능)", "cmdArchiveCompleted": "tugtile: 완료된 타일 모두 보관", "cmdConvertToBoard": "tugtile: 현재 노트를 보드로 변환", "createBoardHere": "여기에 tugtile 보드 만들기", "openAsBoard": "tugtile 보드로 열기", "ribbonTitle": "tugtile 보드", "ribbonNoFile": "먼저 보드 .md 파일을 여세요", "convertFailed": "tugtile 변환 실패: {0}", "boardCreated": "보드를 만들었습니다: {0}(파일 탐색기에서 이름 변경 가능)", "createBoardFailed": "tugtile 보드 생성 실패: {0}", "mtRibbon": "marktile로 편집", "mtOpenCmd": "marktile: 현재 노트 편집", "mtNoFile": ".md 노트를 먼저 여세요", "mtBackToObsidian": "Obsidian 편집기로", "openInMarktile": "marktile에서 열기", "mtToTugtile": "tugtile 보드로 열기", "mtBrand": "marktile-ing", "mtBrandLocked": "marktile", "mtEssentialTools": "기본 버튼", "mtEssentialToolsDesc": "검색・무르기・다시 실행", "mtInsertToolsDesc": "표시할 삽입 버튼 (코드 / 링크)", "mtDefaultEditor": "marktile을 기본 Markdown 편집기로 설정", "mtDefaultEditorDesc": "기본은 꺼짐. 켜면 .md 파일이 Obsidian 기본 편집기 대신 marktile로 열립니다(보드 파일도 포함, tugtile 버튼으로 이동). 적용하려면 Obsidian을 다시 로드하세요. 언제든 꺼서 기본 편집기로 되돌릴 수 있습니다.", "mtReloadRequired": "적용하려면 Obsidian을 다시 로드하세요", "mtSettings": "marktile 설정", "mtSettingsTitle": "marktile 설정", "mtSettingsDesc": "marktile은 모든 .md 노트를 tile 패밀리 편집기로 엽니다. 도구 모음에 표시할 버튼을 선택하거나(모두 해제하면 도구 모음을 완전히 숨길 수 있음), marktile을 기본 Markdown 편집기로 설정할 수 있습니다.", "mtModePlain": "담백", "mtModeSeasoned": "양념", "expandAllAction": "모두 펼치기", "collapseAllAction": "모두 접기", "expandLanesAction": "레인 펼치기", "mtModeToggle": "양념 / 담백 전환", "mtLockToggle": "편집기 잠금(읽기 전용)", "mtToc": "목차", "mtTocEmpty": "제목 없음", "edH1": "제목 1", "edH2": "제목 2", "edH3": "제목 3", "edBold": "굵게", "edItalic": "기울임", "edStrike": "취소선", "edBullet": "글머리 목록", "edNumber": "번호 목록", "edCheck": "체크리스트", "edQuote": "인용", "edCode": "인라인 코드", "edLink": "위키링크", "edDate": "날짜 삽입", "edTime": "시간 삽입", "edFind": "찾기 / 바꾸기", "TBL_INS_COL_L": "왼쪽에 열 삽입", "TBL_INS_COL_R": "오른쪽에 열 삽입", "TBL_INS_ROW_A": "위에 행 삽입", "TBL_INS_ROW_B": "아래에 행 삽입", "TBL_DEL_COL": "열 삭제", "TBL_DEL_ROW": "행 삭제", "mtModeRendered": "렌더", "mtModesPick": "보기 모드", "mtModesPickDesc": "보기 전환 버튼이 순환하는 모드. 최소 하나는 켜져 있습니다.", "mtModesMinOne": "보기 모드는 최소 하나 남겨 두세요.", "gBlockTools": "블록 도구", "gBlockToolsDesc": "목록, 체크리스트, 인용, 표.", "edTable": "표"}, "zh-TW": {"appName": "理牌", "brandSuffix": "tugtile-ing（理牌中）", "brandSuffixLocked": "tugtile（理牌）", "lockToggle": "鎖定／解鎖牌桌", "lockedNotice": "牌桌已鎖定", "undoAction": "悔牌（復原）", "redoAction": "重出（重做）", "viewSwitchAction": "切換檢視（牌桌／牌表）", "boardSettingsAction": "本牌桌設定", "openAsMarkdownAction": "以 markdown 開啟", "archiveAction": "牌庫（收牌區）", "searchAction": "搜尋牌", "emptyNoFile": "在某張牌桌 .md 上用指令「以 tugtile 開啟」。", "fileNotFound": "找不到檔案：{0}", "searchPlaceholder": "找牌", "viewBoard": "牌桌", "viewTable": "牌表", "editMarkdown": "編輯 Markdown 原始碼", "findPlaceholder": "尋找", "replacePlaceholder": "取代為", "findPrev": "上一個", "findNext": "下一個", "replaceOne": "取代", "replaceAll": "全部取代", "colTile": "牌", "colLane": "牌列", "colDate": "日期", "colTags": "標籤", "collapseExpand": "收合 / 展開", "laneActionsAria": "牌列動作（改名／插入／排序／收牌／棄牌…）", "tileActionsAria": "更多動作（編輯／收牌／棄牌…）", "relDateWrap": "（{0}）", "today": "今天", "tomorrow": "明天", "yesterday": "昨天", "dayAfterTomorrow": "後天", "dayBeforeYesterday": "前天", "daysLater": "{0} 天後", "daysAgo": "{0} 天前", "yearMonth": "{0} 年 {1} 月", "weekdays": ["日", "一", "二", "三", "四", "五", "六"], "edit": "編輯", "duplicateTile": "複製牌", "insertTileAbove": "在上方新增牌", "insertTileBelow": "在下方新增牌", "splitTileMenu": "拆分成多張", "archiveTileMenu": "收牌（封存）", "moveTileTop": "移到牌列頂", "moveTileBottom": "移到牌列底", "untitledLane": "(未命名)", "moveToLane": "移到「{0}」", "deleteTileMenu": "棄牌", "splitNoNeed": "只有一行，無需拆分", "splitDone": "已拆分成 {0} 張牌", "archivedTile": "已收牌（封存）", "deletedTile": "已棄牌", "deletedLane": "已刪牌列", "toastUndoBtn": "悔牌", "addTileBtn": "＋ 新增一張牌", "dropToArchive": "拖到這裡收牌", "cancel": "取消", "save": "儲存", "discardConfirm": "放棄這次的變更？", "editLost": "這張牌已不存在，編輯未儲存。", "mobileSubmit": "送出", "addLaneBtn": "＋ 新增牌列", "addLanePlaceholder": "牌列名稱　⏎ 新增", "newLane": "新牌列", "newBoardName": "新牌桌", "confirmDeleteLane": "這個牌列有 {0} 張牌，確定刪除整列？", "boardListViewOnly": "請在牌桌檢視使用", "archivedCompleted": "已收 {0} 張已完成牌", "noCompleted": "沒有已完成的牌", "rename": "改名", "insertLaneBefore": "在前面插入牌列", "insertLaneAfter": "在後面插入牌列", "sortTitleAsc": "依牌面排序 A→Z", "sortTitleDesc": "依牌面排序 Z→A", "sortDate": "依日期排序（近→遠）", "sortTag": "依標籤排序", "markLaneComplete": "標記本列全部完成", "archiveLaneMenu": "收本列所有牌", "deleteLaneMenu": "刪除牌列", "confirmArchiveLane": "把這列的 {0} 張牌全部收進牌庫？", "archivedLane": "已收本列 {0} 張牌", "noLaneToRestore": "理牌：沒有可還原到的牌列，請先建一列", "externalModified": "理牌：偵測到此檔在別處被修改，已重新載入以免覆蓋（剛才這步未寫入）", "backupFailed": "理牌：備份失敗，為保護資料已取消這次寫回", "writeFailed": "理牌寫回失敗：{0}", "saved": "已儲存", "persistFailed": "理牌：存檔失敗──{0}", "undoVerb": "悔牌", "redoVerb": "重出", "noStep": "理牌：沒有可{0}的步驟了", "timeTraveled": "理牌：已{0}（可悔牌 {1} / 可重出 {2}）", "archiveTitle": "牌庫", "archiveEmpty": "牌庫裡沒有牌。", "restore": "取回", "deleteArchived": "棄牌", "boardSettingsTitle": "本牌桌設定", "boardSettingsDesc": "只改這個牌桌（隨牌桌檔案儲存）。空白＝跟隨全域預設。", "migrateBtn": "升級成 tugtile 格式", "migrateBtnDesc": "移除 obsidian-kanban 標記，讓這個牌桌成為 tugtile 原生格式。單向不可逆。", "migrateConfirm": "要把這個牌桌升級成 tugtile 原生格式嗎？升級後將無法用 obsidian-kanban 開啟，且會清掉 kanban 專屬設定。", "migrateDone": "已升級成 tugtile 格式", "confirm": "確定", "setShowCheckboxes": "顯示牌的勾選框", "setHideCount": "隱藏牌列計數", "setEnterBehavior": "Enter 鍵行為", "setEnterBehaviorDesc": "shift-enter＝Enter 送出（CJK 友善）；enter＝Enter 換行", "optEnterSubmit": "Enter 送出", "optEnterNewline": "Enter 換行", "setNewCardPos": "新牌位置", "optAppend": "加在牌列底", "optPrepend": "加在牌列頂", "optPrependCompact": "加在牌列頂(精簡)", "setRelativeDate": "顯示相對日期", "setRelativeDateDesc": "今天 / 明天 / N 天後", "setDateFormat": "日期儲存格式", "setDateFormatDesc": "插入日期寫進 markdown 的格式（如 YYYY-MM-DD）", "setDateDisplay": "日期顯示格式", "setDateDisplayDesc": "牌上顯示的格式", "setDateTrigger": "日期觸發字元", "setDateTriggerDesc": "預設 @", "setTimeTrigger": "時間觸發字元", "setTimeTriggerDesc": "預設 @@", "setLinkDaily": "日期連每日筆記", "setLinkDailyDesc": "日期寫成 @[[..]] 連到每日筆記", "setTagAction": "點標籤行為", "setTagActionDesc": "點標籤時的動作——搜尋整個 vault，或只篩這個牌桌。", "optSearchVault": "搜整個 vault", "optFilterBoard": "篩本牌桌", "setMoveTags": "標籤移到牌底", "setArchiveWithDate": "收牌時加時間戳", "setMaxArchive": "牌庫數上限", "setMaxArchiveDesc": "-1＝無限", "settingsTitle": "理牌設定", "settingsDesc": "這些是全域預設；個別牌桌的同名設定會優先。", "gShowCheckboxes": "顯示牌的勾選框", "gShowCheckboxesDesc": "在每張牌右上角顯示勾選框（可切換 - [ ] / - [x]）", "gHideCount": "隱藏牌列計數", "gHideCountDesc": "不在牌列標題列顯示牌數", "gResponsiveBoard": "自適應牌桌（窄面板直排）", "gResponsiveBoardDesc": "面板變窄時，牌桌自動改成單欄直向堆疊。", "gLaneWidth": "牌列寬度", "gLaneWidthDesc": "每個牌列的寬度，所有牌列等寬對齊", "gTableDensity": "牌表行距", "gTableDensityDesc": "牌表每列的上下間距", "gFormatTools": "文字格式按鈕", "gFormatToolsDesc": "標題、粗體、斜體、刪除線。", "gInsertTools": "插入按鈕", "gInsertToolsDesc": "選擇要顯示哪些插入按鈕（程式碼／連結／日期／時間）", "optDenseTight": "緊湊", "optDenseMid": "適中", "optDenseLoose": "寬鬆", "gEnterSubmit": "Enter 鍵送出", "gEnterSubmitDesc": "開：Enter 送出、Shift+Enter 換行（CJK 友善預設）。關：Enter 換行、Shift/⌘+Enter 送出", "gPrepend": "新牌加在牌列頂", "gPrependDesc": "預設加在牌列底；開啟改為加在牌列頂", "gRelativeDate": "顯示相對日期", "gRelativeDateDesc": "牌日期顯示「今天 / 明天 / N 天後」", "gDateDisplay": "日期顯示格式", "gDateDisplayDesc": "moment 風格 token：YYYY / MM / DD（預設 YYYY-MM-DD）", "gArchiveWithDate": "收牌時加時間戳", "gArchiveWithDateDesc": "收牌時在標題前加上 **YYYY-MM-DD HH:mm**", "gMaxArchive": "牌庫數上限", "gMaxArchiveDesc": "牌庫最多保留幾張（-1 = 無限；超過丟最舊）", "gArchiveHeading": "牌庫標題", "gArchiveHeadingDesc": "新建牌庫（封存）區段用的標題文字（例如 Archive、封存）。", "gDanger": "危險操作", "gReset": "重設為預設值", "gResetDesc": "把上述全域設定還原成預設", "gResetBtn": "重設", "cmdToggleView": "理牌：切換牌桌 / markdown", "cmdOpenAsBoard": "以 tugtile 開啟", "cmdUndo": "理牌：悔牌（復原）", "cmdRedo": "理牌：重出（重做）", "cmdCreateBoard": "理牌：建立新牌桌", "cmdSearch": "理牌：搜尋牌（可綁 Cmd/Ctrl+F）", "cmdArchiveCompleted": "理牌：收全牌桌已完成牌", "cmdConvertToBoard": "理牌：把目前筆記轉成牌桌", "createBoardHere": "在此建立 tugtile 牌桌", "openAsBoard": "以 tugtile 牌桌開啟", "ribbonTitle": "tugtile 牌桌", "ribbonNoFile": "請先開啟一個牌桌 .md 檔", "convertFailed": "理牌轉換失敗：{0}", "boardCreated": "已建立牌桌：{0}（可在檔案總管改名）", "createBoardFailed": "理牌建立牌桌失敗：{0}", "mtRibbon": "用 marktile 編輯", "mtOpenCmd": "marktile：編輯目前筆記", "mtNoFile": "請先開啟一個 .md 筆記", "mtBackToObsidian": "回 Obsidian 編輯器", "openInMarktile": "開進 marktile", "mtToTugtile": "以 tugtile 牌桌開啟", "mtBrand": "marktile-ing", "mtBrandLocked": "marktile", "mtEssentialTools": "基本按鈕", "mtEssentialToolsDesc": "搜尋、復原、重做", "mtInsertToolsDesc": "要顯示哪些插入按鈕（程式碼／連結）", "mtDefaultEditor": "將 marktile 設為預設 Markdown 編輯器", "mtDefaultEditorDesc": "預設關閉。開啟後 .md 檔會用 marktile 開啟，而非 Obsidian 內建編輯器（看板檔也是，可用 tugtile 按鈕跳過去）。需重新載入 Obsidian 生效；隨時可關閉以還原原生編輯器。", "mtReloadRequired": "請重新載入 Obsidian 以生效", "mtSettings": "marktile 設定", "mtSettingsTitle": "marktile 設定", "mtSettingsDesc": "marktile 用 tile 家族的編輯器打開任何 .md 筆記。在這裡選擇工具列要顯示哪些按鈕（全部取消即可完全隱藏工具列），或將 marktile 設為預設的 Markdown 編輯器。", "mtModePlain": "原味", "mtModeSeasoned": "調味", "expandAllAction": "全展開", "collapseAllAction": "全收起", "expandLanesAction": "展開牌列", "mtModeToggle": "切換 調味／原味", "mtLockToggle": "鎖定編輯器（唯讀）", "mtToc": "目錄", "mtTocEmpty": "沒有標題", "edH1": "標題 1", "edH2": "標題 2", "edH3": "標題 3", "edBold": "粗體", "edItalic": "斜體", "edStrike": "刪除線", "edBullet": "項目清單", "edNumber": "編號清單", "edCheck": "核取清單", "edQuote": "引言", "edCode": "行內程式碼", "edLink": "雙向連結", "edDate": "插入日期", "edTime": "插入時間", "edFind": "尋找／取代", "TBL_INS_COL_L": "在左方插入欄", "TBL_INS_COL_R": "在右方插入欄", "TBL_INS_ROW_A": "在上方插入列", "TBL_INS_ROW_B": "在下方插入列", "TBL_DEL_COL": "刪除欄", "TBL_DEL_ROW": "刪除列", "mtModeRendered": "渲染", "mtModesPick": "檢視模式", "mtModesPickDesc": "檢視循環按鈕會輪替哪些模式。至少保留一個。", "mtModesMinOne": "至少保留一個檢視模式。", "gBlockTools": "區塊工具", "gBlockToolsDesc": "清單、核取、引用、表格。", "edTable": "表格"}};   // injected by build-marktile.sh
 function t(key, ...args) {
   let s = (TR[LOCALE] && TR[LOCALE][key]);
   if (s == null) s = TR['en-US'] && TR['en-US'][key];
@@ -46,7 +46,8 @@ const EDITOR_TOOLS = [
   // icons verified present in Obsidian's bundled Lucide subset (not all of Lucide ships); g = text fallback when no icon
   { key: 'h1', g: 'H1', icon: 'heading-1', cat: 'format', tip: 'edH1' }, { key: 'h2', g: 'H2', icon: 'heading-2', cat: 'format', tip: 'edH2' }, { key: 'h3', g: 'H3', icon: 'heading-3', cat: 'format', tip: 'edH3' }, 'sep',
   { key: 'bold', g: 'B', icon: 'bold', cat: 'format', tip: 'edBold' }, { key: 'italic', g: 'I', icon: 'italic', cat: 'format', tip: 'edItalic' }, { key: 'strike', g: 'S', icon: 'strikethrough', cat: 'format', tip: 'edStrike' }, 'rowbreak',   // phone: wrap to a third toolbar row here (desktop treats it as a separator)
-  { key: 'bullet', g: '•', icon: 'list', cat: 'format', tip: 'edBullet' }, { key: 'number', g: '1.', icon: 'list-ordered', cat: 'format', tip: 'edNumber' }, { key: 'check', g: '☑', icon: 'list-checks', cat: 'format', tip: 'edCheck' }, { key: 'quote', g: '❝', icon: 'text-quote', cat: 'format', tip: 'edQuote' }, 'sep',
+  // block tools (lists / quote / table) — split out of 'format' (which is now just headings + inline marks)
+  { key: 'bullet', g: '•', icon: 'list', cat: 'block', tip: 'edBullet' }, { key: 'number', g: '1.', icon: 'list-ordered', cat: 'block', tip: 'edNumber' }, { key: 'check', g: '☑', icon: 'list-checks', cat: 'block', tip: 'edCheck' }, { key: 'quote', g: '❝', icon: 'text-quote', cat: 'block', tip: 'edQuote' }, { key: 'table', g: '⊞', icon: 'table', cat: 'block', tip: 'edTable' }, 'sep',
   { key: 'code', g: '</>', icon: 'code', cat: 'insert', tip: 'edCode' }, { key: 'link', g: '[[ ]]', icon: 'link', cat: 'insert', tip: 'edLink' }, 'sep',
   { key: 'date', g: '@', icon: 'calendar', cat: 'insert', tip: 'edDate' }, { key: 'time', g: '@@', icon: 'clock', cat: 'insert', tip: 'edTime' },
 ];
@@ -174,6 +175,7 @@ function mountEditor(contentEl, opts, host) {
       el.addEventListener('click', fn);                                                             // Mouse/desktop click
     };
     if (opts.onToc) { const tc = bar.createEl('button', { cls: 'tugtile-iconbtn tugtile-ed-toc' }); setIcon(tc.createSpan(), 'list-tree'); tc.setAttribute('aria-label', t('mtToc')); tap(tc, opts.onToc); }   // TOC toggle — sits in the ✕'s left slot; only when the host wants it (marktile passes onToc; tugtile's card modal doesn't)
+    if (opts.onCycle) { const vc = bar.createEl('button', { cls: 'tugtile-iconbtn tugtile-ed-cycle' }); const renderVc = () => { vc.empty(); const m = (opts.getMode && opts.getMode()) || EDITOR_MODES[0]; setIcon(vc.createSpan(), m.icon); vc.setAttribute('aria-label', t(m.name)); }; renderVc(); tap(vc, () => { opts.onCycle(); renderVc(); }); }   // view-mode cycle in the bar (tugtile's modal): icon reflects the current mode, tap advances the rig + re-renders. marktile keeps its in the header instead.
     if (opts.onCancel) { const x = bar.createEl('button', { cls: 'tugtile-iconbtn tugtile-ed-x' }); setIcon(x.createSpan(), 'x'); x.setAttribute('aria-label', t('cancel')); tap(x, opts.onCancel); }   // ✕ — Lucide icon (matches the toolbar), span-nested for iPad; only when the host wants a cancel affordance (modal)
     const tools = bar.createDiv({ cls: 'tugtile-ed-tools' });
     if (opts.onSave) { const ok = bar.createEl('button', { cls: 'tugtile-iconbtn tugtile-ed-ok' }); setIcon(ok.createSpan(), 'check'); ok.setAttribute('aria-label', t('save')); tap(ok, opts.onSave); }   // ✓ — Lucide check; only for the modal (the file view autosaves)
@@ -397,6 +399,7 @@ function mountEditor(contentEl, opts, host) {
       h1: () => setHeading('# '), h2: () => setHeading('## '), h3: () => setHeading('### '),
       bold: () => wrap('**', '**'), italic: () => wrap('*', '*'), strike: () => wrap('~~', '~~'),
       bullet: () => togglePre('- '), number: () => togglePre('1. '), check: () => togglePre('- [ ] '), quote: () => togglePre('> '),
+      table: () => { const v = getText(), s = sel().start, ls = lineStartOf(v, s); const pre = (ls > 0 && v[ls - 1] !== '\n') ? '\n' : ''; const tbl = pre + '|  |  |\n| --- | --- |\n|  |  |\n'; applyEdit(v.slice(0, ls) + tbl + v.slice(ls), ls + pre.length + 2); },   // insert a starter 2×2 table; decorateTables grids it for in-place editing
       code: () => wrap('`', '`'), link: () => wrap('[[', ']]'),
       date: () => insertTok(host.dateTrigger || '@'), time: () => insertTok(host.timeTrigger || '@@'),
     };
@@ -504,7 +507,32 @@ class TileEditModal extends Modal {
     this.host._editModalOpen = true;
     this.host.freezeBoard();
     this.modalEl.addClass('tugtile-edit-modal-full');
-    this._ctrl = mountEditor(this.contentEl, { text: this._opts.text || '', onCancel: () => this._requestClose(), onSave: () => this._doClose('save'), onSubmit: () => this._doClose('save'), onEscape: () => this._requestClose() }, this.host);
+    this._ctrl = mountEditor(this.contentEl, {
+      text: this._opts.text || '',
+      onCancel: () => this._requestClose(), onSave: () => this._doClose('save'), onSubmit: () => this._doClose('save'), onEscape: () => this._requestClose(),
+      onToc: () => { if (this._rig && this._rig.toc) this._rig.toc.toggle(); },
+      onCycle: () => { if (this._rig) this._rig.cycleMode(); },
+      getMode: () => (this._rig ? this._rig.currentMode() : EDITOR_MODES[0]),
+    }, this.host);
+    // Equip the same rig marktile uses → tugtile's big editor is literally marktile + the ✕/✓ buttons. Host hooks:
+    // Obsidian vault image resolution (source path = the board file) and the TOC's Sortable + mobile/anchor tuning.
+    const app = this.app, srcPath = (this.view && this.view.file) ? this.view.file.path : '';
+    this._rig = equipEditor({
+      mount: this.contentEl, ctrl: this._ctrl,
+      enabledModes: (this.host.plugin && this.host.plugin.settings && this.host.plugin.settings.modes) || {},
+      resolveSrc: (raw) => {
+        raw = String(raw).split('|')[0].trim();
+        if (/^(https?:|data:|app:)/i.test(raw)) return raw;
+        if (!/\.(png|jpe?g|gif|svg|webp|bmp|avif)$/i.test(raw.split('#')[0])) return null;
+        try { const f = app.metadataCache.getFirstLinkpathDest(raw, srcPath); return f ? app.vault.getResourcePath(f) : null; } catch (e) { return null; }
+      },
+      toc: {
+        Sortable: (typeof Sortable !== 'undefined' ? Sortable : (typeof window !== 'undefined' ? window.Sortable : null)),
+        labels: { title: t('mtToc'), empty: t('mtTocEmpty') },
+        onReorder: () => {}, anchorScroll: '.tugtile-ed-scroll',
+        sortableOptions: { delay: 180, delayOnTouchOnly: true, touchStartThreshold: 8, forceFallback: true, fallbackOnBody: true, fallbackTolerance: 4, dragClass: 'marktile-toc-item--drag' },
+      },
+    });
   }
   _dirty() { return !!this._ctrl && this._ctrl.isDirty(); }
   close() {
@@ -529,6 +557,7 @@ class TileEditModal extends Modal {
     this.close();
   }
   onClose() {
+    if (this._rig) { this._rig.destroy(); this._rig = null; }
     if (this._ctrl) this._ctrl.destroy();
     this.host._editModalOpen = false;
     this.host.unfreezeBoard();
@@ -544,12 +573,506 @@ class TileEditModal extends Modal {
 }
 
 
+// ───────────────────────────────────────────────────────────────────────────
+// TABLE GRID (the "locked markers" in-grid markdown-table editor). Single source
+// for tugtile/marktile (inlined) AND ejecta (tile-core emit). decorateTables(root,
+// ctrl, gateClass) restyles contiguous |table| line-divs into an aligned grid and
+// makes them editable in place; gateClass selects the host's "grid on" class —
+// both marktile and ejecta use 'marktile-grid' (set in Seasoned + Rendered, dropped
+// in Plain). The .tugtile-preview overlay then hides the pipes in Rendered, in CSS
+// only. (gateClass defaults to 'tugtile-preview' for older callers.) textContent stays
+// byte-identical → round-trip exact, no other core change. Was extracted from
+// ejecta/core/editor/{table-align,table-view}.js; design notes live there.
+// ───────────────────────────────────────────────────────────────────────────
+
+// table-align — cheap markdown-table prettifier: pad cells with spaces so the pipes line up in a monospace
+// editor. Stays single-layer (output is still valid markdown, edits in place, round-trips) — no CSS table, no
+// widget. The one catch is CJK: 中文/日文/全形 are DOUBLE-width, so we measure DISPLAY width (east-asian-width),
+// NOT code-point length, or the pipes drift. Pure string → runs in node + browser. See [[web-known-pitfalls]].
+
+// East Asian Width: 2 for wide/fullwidth code points, else 1. Practical subset for zh/ja (not the full UAX#11
+// table, but covers CJK ideographs, kana, hangul, and fullwidth forms/punctuation — what real content uses).
+const WIDE = [
+  [0x1100, 0x115F],   // Hangul Jamo
+  [0x2E80, 0x303E],   // CJK radicals · Kangxi · CJK symbols & punctuation （、。「」…）
+  [0x3041, 0x33FF],   // Hiragana · Katakana · enclosed CJK
+  [0x3400, 0x4DBF],   // CJK Ext A
+  [0x4E00, 0x9FFF],   // CJK Unified Ideographs
+  [0xA000, 0xA4CF],   // Yi
+  [0xAC00, 0xD7A3],   // Hangul syllables
+  [0xF900, 0xFAFF],   // CJK compatibility ideographs
+  [0xFE30, 0xFE4F],   // CJK compatibility forms
+  [0xFF00, 0xFF60],   // Fullwidth forms （！？（）　…）
+  [0xFFE0, 0xFFE6],   // Fullwidth signs
+  [0x20000, 0x3FFFD], // CJK Ext B+ (supplementary planes)
+];
+function charWidth(cp) { for (const [a, b] of WIDE) if (cp >= a && cp <= b) return 2; return 1; }
+function dispWidth(s) { let w = 0; for (const ch of String(s)) w += charWidth(ch.codePointAt(0)); return w; }
+
+const isTableLine = (l) => /^\s*\|.*\|\s*$/.test(l);
+const splitRow = (line) => line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => c.trim());
+const isSepRow = (cells) => cells.length > 0 && cells.every((c) => /^:?-+:?$/.test(c.trim()));
+
+// Parse a contiguous block of table source lines into { header, align, body, ncol } for rendering a real
+// <table>. Returns null if it isn't a valid table (2nd line must be the |---| separator). Used by the 編輯-mode
+// table widget (table-view.js) — the browser then measures real glyph widths, so CJK columns align regardless
+// of font (the fill-to-fit escape from the space-quantum problem).
+function parseTable(lines) {
+  const rows = lines.map(splitRow);
+  if (rows.length < 2 || !isSepRow(rows[1])) return null;
+  const ncol = Math.max(...rows.map((r) => r.length));
+  const align = [];
+  for (let i = 0; i < ncol; i++) { const t = (rows[1][i] || '').trim(); const l = t.startsWith(':'), r = t.endsWith(':'); align[i] = (l && r) ? 'center' : r ? 'right' : 'left'; }
+  return { header: rows[0], align, body: rows.slice(2), ncol };
+}
+
+// Format ONE contiguous table block (source lines) → aligned lines; null if it isn't a real table.
+function formatBlock(lines) {
+  if (lines.length < 2) return null;
+  const rows = lines.map(splitRow);
+  if (!isSepRow(rows[1])) return null;                       // 2nd line MUST be the |---| separator
+  const ncol = Math.max(...rows.map((r) => r.length));
+  const align = [];
+  for (let i = 0; i < ncol; i++) { const t = (rows[1][i] || '').trim(); const l = t.startsWith(':'), r = t.endsWith(':'); align[i] = (l && r) ? 'c' : r ? 'r' : 'l'; }
+  const w = [];
+  for (let i = 0; i < ncol; i++) { let mx = 3; rows.forEach((r, ri) => { if (ri !== 1) mx = Math.max(mx, dispWidth(r[i] || '')); }); w[i] = mx; }
+  const pad = (text, width, a) => {
+    const gap = width - dispWidth(text); if (gap <= 0) return text;
+    if (a === 'r') return ' '.repeat(gap) + text;
+    if (a === 'c') { const left = gap >> 1; return ' '.repeat(left) + text + ' '.repeat(gap - left); }
+    return text + ' '.repeat(gap);
+  };
+  return rows.map((r, ri) => {
+    if (ri === 1) return '| ' + w.map((width, i) => { const d = '-'.repeat(width); return align[i] === 'c' ? ':' + d.slice(2) + ':' : align[i] === 'r' ? d.slice(1) + ':' : d; }).join(' | ') + ' |';
+    return '| ' + w.map((width, i) => pad(r[i] || '', width, align[i])).join(' | ') + ' |';
+  });
+}
+
+// Re-align every contiguous markdown table block; non-table text is untouched. Idempotent.
+function formatTables(md) {
+  const lines = String(md).replace(/\r\n/g, '\n').split('\n');
+  const out = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (isTableLine(lines[i])) {
+      let j = i; const block = [];
+      while (j < lines.length && isTableLine(lines[j])) block.push(lines[j++]);
+      const fixed = formatBlock(block);
+      if (fixed) { out.push(...fixed); i = j - 1; continue; }
+    }
+    out.push(lines[i]);
+  }
+  return out.join('\n');
+}
+
+// table-view — in 編輯 mode, restyle a contiguous markdown table block so it LOOKS like a real grid with
+// aligned columns — CJK included — and lets you EDIT INSIDE the grid safely, without touching marktile core.
+//
+// Why restyle the line <div>s IN PLACE (not insert a <table> widget): marktile's text model assumes the editor
+// root's children ARE the lines (getText joins child textContent; caret math + lineCount walk the same children).
+// So we keep the SAME line divs and only regroup each line's inner nodes (cells/pipes into spans) + CSS. Every
+// line's textContent stays byte-identical → round-trip exact, no core change.
+//
+// In-grid editing rests on three legs (the "locked markers" design):
+//   1. LOCKED MARKERS — every hidden pipe span is contenteditable=false (only in 編輯 mode), so the caret can't
+//      enter the syntax and a stray Backspace can't eat a pipe: the table structure is physically indestructible.
+//      A beforeinput guard additionally blocks deletions whose target range would cross a pipe / cell / row
+//      boundary. Typed characters flow into the cell's text node → the markdown is naturally correct.
+//   2. SYNC RE-WRAP — marktile rebuilds a line's innerHTML after edits (wiping our spans). MutationObserver
+//      callbacks are microtasks that run BEFORE paint, so re-wrapping synchronously in the callback (with caret
+//      capture/restore around the surgery) is flicker-free by construction. No debounce.
+//   3. TABLE KEYS, two dialects:
+//      · markdown 魂 — typing '|' in a cell SPLITS THE COLUMN there (the syntax IS the command; the split is
+//        propagated to every row so the table stays rectangular).
+//      · Word 遺毒 — Tab hops cells and GROWS A ROW from the last cell; Enter inserts a row below; right-click
+//        opens insert/delete column/row — the habits real (non-technical) operators arrive with.
+// 調味/原味 show raw source: pipes visible and fully editable there (locks are preview-mode-only).
+
+// Undo our wrapping: restore marktile's inline nodes + literal | text and drop our classes (idempotent base).
+function unwrapLine(line) {
+  if (!line.querySelector('.ej-cell, .ej-pipe')) { line.classList.remove('ej-trow', 'ej-thead', 'ej-tsep'); return; }
+  line.querySelectorAll('.ej-pipe').forEach((p) => p.replaceWith(document.createTextNode('|')));
+  line.querySelectorAll('.ej-cell').forEach((c) => { while (c.firstChild) c.parentNode.insertBefore(c.firstChild, c); c.remove(); });
+  line.normalize();
+  line.classList.remove('ej-trow', 'ej-thead', 'ej-tsep');
+}
+
+// Group ONE highlighted line into cell/pipe spans, PRESERVING marktile's inline nodes (tg-b / tg-mk / tg-link)
+// inside each cell — bold/italic render and their markers hide like everywhere else in 編輯 mode, textContent
+// byte-identical. Splits at top-level '|' text only; tags each cell with its column alignment.
+function wrapLine(line, aligns) {
+  unwrapLine(line);
+  const cells = []; let cur = [];
+  for (const node of [...line.childNodes]) {
+    if (node.nodeType === 3 && node.nodeValue.indexOf('|') >= 0) {
+      const segs = node.nodeValue.split('|');
+      for (let i = 0; i < segs.length; i++) { if (i > 0) { cells.push(cur); cur = []; } if (segs[i] !== '') cur.push(document.createTextNode(segs[i])); }
+    } else { cur.push(node); }
+  }
+  cells.push(cur);
+  const frag = document.createDocumentFragment();
+  cells.forEach((nodes, ci) => {
+    if (ci > 0) { const p = document.createElement('span'); p.className = 'ej-pipe'; p.textContent = '|'; frag.appendChild(p); }
+    if (ci === 0 || ci === cells.length - 1) { nodes.forEach((n) => frag.appendChild(n)); return; }   // outer | … | border, no cell
+    const c = document.createElement('span'); c.className = 'ej-cell';
+    const a = aligns && aligns[ci - 1]; if (a && a !== 'left') c.dataset.a = a;
+    nodes.forEach((n) => c.appendChild(n)); frag.appendChild(c);
+  });
+  line.textContent = '';   // drop the leftover original text nodes (the '|'-bearing ones were copied, not moved)
+  line.appendChild(frag);
+}
+
+// caret char-offset within a line (textContent positions) — captured/restored around our DOM surgery
+function caretOffset(line) {
+  const s = getSelection(); if (!s || !s.rangeCount) return null;
+  const r = s.getRangeAt(0); if (!line.contains(r.startContainer)) return null;
+  const pre = document.createRange(); pre.selectNodeContents(line); pre.setEnd(r.startContainer, r.startOffset);
+  return pre.toString().length;
+}
+function setCaret(line, off) {
+  let rem = off; const w = document.createTreeWalker(line, NodeFilter.SHOW_TEXT); let n;
+  while ((n = w.nextNode())) {
+    const len = n.nodeValue.length;
+    const inPipe = n.parentElement && n.parentElement.closest('.ej-pipe');   // locked+hidden — the caret can't live there;
+    if (rem <= len && !inPipe) { const r = document.createRange(); r.setStart(n, rem); r.collapse(true); const s = getSelection(); s.removeAllRanges(); s.addRange(r); return; }
+    if (rem <= len && inPipe) { rem = 0; continue; }                          // boundary inside a pipe → start of the NEXT visible node
+    rem -= len;
+  }
+}
+
+const nthPipe = (t, n) => { let c = -1; for (let k = 0; k < t.length; k++) { if (t[k] === '|') c++; if (c === n) return k; } return -1; };
+
+function decorateTables(root, ctrl, gateClass) {
+  const inPreview = () => root.classList.contains(gateClass || 'tugtile-preview');
+  const lineOf = (node) => { if (!node || !root.contains(node)) return null; const el = node.nodeType === 3 ? node.parentElement : node; return el && el.closest ? el.closest('.tg-line') : null; };
+  const caretLineEl = () => { const s = getSelection(); return s && s.rangeCount ? lineOf(s.anchorNode) : null; };
+  const T = (k, fb) => { try { const s = (typeof t === 'function') ? t(k) : null; return (s != null && s !== k) ? s : fb; } catch (e) { return fb; } };
+
+  const setLocks = (line, on) => line.querySelectorAll('.ej-pipe').forEach((p) => { if (on) p.setAttribute('contenteditable', 'false'); else p.removeAttribute('contenteditable'); });
+
+  const blockRows = (line) => { let r = line; while (r.previousElementSibling && r.previousElementSibling.classList.contains('ej-trow')) r = r.previousElementSibling;
+    const rows = []; for (; r && r.classList.contains('ej-trow'); r = r.nextElementSibling) rows.push(r); return rows; };
+  const cellsOf = (rows) => rows.filter((x) => !x.classList.contains('ej-tsep')).flatMap((x) => [...x.querySelectorAll('.ej-cell')]);
+
+  // WebKit doesn't propagate a row's content-width change to the SIBLING rows of the anonymous table box (the
+  // header column stays stuck until you type in it). Cure: kick every row of the edited block out of table
+  // context and back (style-only, no DOM mutation → selection survives), forcing the anonymous table to be
+  // rebuilt with fresh column widths. Runs inside the MO microtask = before paint → invisible.
+  const relayout = (block) => {
+    block.forEach((l) => { l.style.display = 'block'; });
+    void block[0].offsetWidth;   // flush layout while the rows are out of the table
+    block.forEach((l) => { l.style.display = ''; });
+  };
+
+  const scan = () => {
+    obs.disconnect();
+    try {
+      const cl = caretLineEl(); const clOff = cl ? caretOffset(cl) : null; let touchedCaret = false;
+      const lock = inPreview();
+      const lines = [...root.querySelectorAll('.tg-line')];
+      let i = 0;
+      while (i < lines.length) {
+        if (isTableLine(lines[i].textContent)) {
+          let j = i; const block = [];
+          while (j < lines.length && isTableLine(lines[j].textContent)) block.push(lines[j++]);
+          const parsed = parseTable(block.map((l) => l.textContent));
+          if (parsed) {
+            block.forEach((l, k) => {
+              if (!l.classList.contains('ej-trow')) { wrapLine(l, parsed.align); l.classList.add('ej-trow'); if (k === 0) l.classList.add('ej-thead'); if (k === 1) l.classList.add('ej-tsep'); if (l === cl) touchedCaret = true; }
+              setLocks(l, lock);
+            });
+            if (lock && block.indexOf(cl) >= 0) relayout(block);   // typing in this block → resync sibling-row column widths
+          }
+          i = j; continue;
+        }
+        if (lines[i].classList.contains('ej-trow')) { if (lines[i] === cl) touchedCaret = true; unwrapLine(lines[i]); }   // edited out of a table → restore
+        i++;
+      }
+      if (touchedCaret && cl && clOff != null) setCaret(cl, clOff);   // our surgery moved the caret's nodes — put it back
+    } finally { obs.observe(root, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['class'] }); }
+  };
+
+  // ---- whole-document table transforms (one ctrl.setText each = one undo step; caret restored after) ----
+  const docEdit = (mutate) => {
+    const all = [...root.querySelectorAll('.tg-line')];
+    const doc = ctrl.rawValue().split('\n');
+    const caret = mutate(all, doc) || {};   // mutate doc in place; returns {caretLine, caretOff}
+    ctrl.setText(doc.join('\n'));
+    if (caret.caretLine != null) { const fresh = root.querySelectorAll('.tg-line')[caret.caretLine]; if (fresh) setCaret(fresh, caret.caretOff || 0); }
+  };
+
+  // cell index of a char offset in a row's text (0-based; -1 = before the leading border pipe)
+  const cellIndexAt = (t, off) => { let ci = -1; for (let k = 0; k < off; k++) if (t[k] === '|') ci++; return ci; };
+
+  // insert an empty column so the NEW cell sits at index `at` in every row of `line`'s block
+  const insertColumn = (line, at, caretRow) => docEdit((all, doc) => {
+    const rows = blockRows(line); let out = null;
+    for (const r of rows) {
+      const ix = all.indexOf(r); const t = doc[ix];
+      const cell = r.classList.contains('ej-tsep') ? ' --- |' : '  |';
+      const open = nthPipe(t, at);                                  // pipe that OPENS index `at`
+      const pos = open < 0 ? t.length : open + 1;
+      doc[ix] = t.slice(0, pos) + cell + t.slice(pos);
+      if (r === (caretRow || line)) out = { caretLine: ix, caretOff: pos + 1 };
+    }
+    return out;
+  });
+
+  const deleteColumn = (line, ci) => docEdit((all, doc) => {
+    const rows = blockRows(line); let out = null;
+    for (const r of rows) {
+      const ix = all.indexOf(r); const t = doc[ix];
+      const open = nthPipe(t, ci), close = nthPipe(t, ci + 1);
+      if (open < 0) continue;
+      doc[ix] = close < 0 ? t.slice(0, open + 1) : t.slice(0, open) + t.slice(close);
+      if (r === line) out = { caretLine: ix, caretOff: Math.max(1, open) };
+    }
+    return out;
+  });
+
+  const insertRow = (line, below) => docEdit((all, doc) => {
+    const rows = blockRows(line);
+    const parsed = parseTable(rows.map((l) => l.textContent)); if (!parsed) return null;
+    // from the header, "below" means below the |---| separator; "above" the header is not a table place
+    let anchor = line;
+    if (line.classList.contains('ej-thead')) anchor = below ? rows[1] : rows[0];
+    const ix = all.indexOf(anchor) + (below ? 1 : 0);
+    doc.splice(ix, 0, '|' + '  |'.repeat(parsed.ncol));
+    return { caretLine: ix, caretOff: 2 };
+  });
+
+  const deleteRow = (line) => docEdit((all, doc) => {
+    const ix = all.indexOf(line);
+    doc.splice(ix, 1);
+    return { caretLine: Math.max(0, ix - 1), caretOff: 2 };
+  });
+
+  // ---- Word-habit context menu: right-click a cell → insert/delete column/row ----
+  let menu = null;
+  const closeMenu = () => { if (menu) { menu.remove(); menu = null; } };
+  document.addEventListener('click', closeMenu, true);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); }, true);
+  root.addEventListener('contextmenu', (e) => {
+    if (!inPreview() || !ctrl) return;
+    const cellEl = e.target && e.target.closest ? e.target.closest('.ej-cell') : null; if (!cellEl) return;
+    const line = cellEl.closest('.tg-line'); if (!line || !line.classList.contains('ej-trow')) return;
+    e.preventDefault(); closeMenu();
+    const ci = [...line.querySelectorAll('.ej-cell')].indexOf(cellEl);
+    const rows = blockRows(line);
+    const ncol = (parseTable(rows.map((l) => l.textContent)) || { ncol: 1 }).ncol;
+    const isHead = line.classList.contains('ej-thead');
+    menu = document.createElement('div'); menu.className = 'ej-tblmenu';
+    const item = (label, fn, disabled) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = label; if (disabled) b.disabled = true;
+      b.onmousedown = (ev) => ev.preventDefault();
+      b.onclick = (ev) => { ev.stopPropagation(); closeMenu(); fn(); }; menu.appendChild(b); return b; };
+    item(T('TBL_INS_COL_L', '在左方插入欄'), () => insertColumn(line, ci, line));
+    item(T('TBL_INS_COL_R', '在右方插入欄'), () => insertColumn(line, ci + 1, line));
+    menu.appendChild(document.createElement('hr'));
+    item(T('TBL_INS_ROW_A', '在上方插入列'), () => insertRow(line, false), isHead);
+    item(T('TBL_INS_ROW_B', '在下方插入列'), () => insertRow(line, true));
+    menu.appendChild(document.createElement('hr'));
+    item(T('TBL_DEL_COL', '刪除欄'), () => deleteColumn(line, ci), ncol <= 1);
+    item(T('TBL_DEL_ROW', '刪除列'), () => deleteRow(line), isHead);
+    menu.style.left = e.clientX + 'px'; menu.style.top = e.clientY + 'px';
+    document.body.appendChild(menu);
+    const r = menu.getBoundingClientRect();   // keep on screen
+    if (r.right > innerWidth) menu.style.left = (innerWidth - r.width - 8) + 'px';
+    if (r.bottom > innerHeight) menu.style.top = (e.clientY - r.height) + 'px';
+  });
+
+  // ---- table keys (capture phase: marktile's Tab/Enter handlers must not see these) ----
+  root.addEventListener('keydown', (e) => {
+    if (!inPreview()) return;
+    const line = caretLineEl(); if (!line || !line.classList.contains('ej-trow')) return;
+    if (e.key === 'Tab') {
+      e.preventDefault(); e.stopPropagation();
+      const rows = blockRows(line);
+      const cells = cellsOf(rows);
+      const s = getSelection(); const cur = s.rangeCount ? (s.anchorNode.nodeType === 3 ? s.anchorNode.parentElement : s.anchorNode).closest('.ej-cell') : null;
+      const ix = cells.indexOf(cur);
+      if (!e.shiftKey && ix === cells.length - 1) { insertRow(rows[rows.length - 1], true); return; }   // Word habit: Tab past the end grows a row
+      const next = cells[(ix < 0 ? 0 : ix + (e.shiftKey ? -1 : 1) + cells.length) % cells.length];
+      if (next) { const rg = document.createRange(); rg.selectNodeContents(next); rg.collapse(false); s.removeAllRanges(); s.addRange(rg); }
+      return;
+    }
+    if (e.key === 'Enter') {   // Enter in a cell = NEW ROW below (a raw newline would split the row)
+      e.preventDefault(); e.stopPropagation();
+      if (ctrl) insertRow(line, true);
+      return;
+    }
+  }, true);
+
+  // ---- typing '|' in a cell = SPLIT THE COLUMN here (the syntax IS the command) ----
+  // In plain markdown a pipe splits that one row; in the grid we propagate the split to EVERY row of the
+  // block (empty cell after the same column; the |---| row gets a matching ---), keeping the table rectangular.
+  root.addEventListener('beforeinput', (e) => {
+    if (!inPreview() || !ctrl || e.inputType !== 'insertText' || e.data !== '|') return;
+    const line = caretLineEl(); if (!line || !line.classList.contains('ej-trow')) return;
+    const s = getSelection(); if (!s.rangeCount || !s.isCollapsed) return;
+    const anchorEl = s.anchorNode.nodeType === 3 ? s.anchorNode.parentElement : s.anchorNode;
+    if (!anchorEl.closest('.ej-cell')) return;   // only inside a cell (not the outer | borders)
+    e.preventDefault(); e.stopPropagation();
+    const off = caretOffset(line); if (off == null) return;
+    const ci = cellIndexAt(line.textContent, off);
+    docEdit((all, doc) => {
+      const rows = blockRows(line); let out = null;
+      for (const r of rows) {
+        const ix = all.indexOf(r); const t = doc[ix];
+        if (r === line) { doc[ix] = t.slice(0, off) + '|' + t.slice(off); out = { caretLine: ix, caretOff: off + 1 }; continue; }
+        const close = nthPipe(t, ci + 1);                                               // closing pipe of cell ci
+        const cell = r.classList.contains('ej-tsep') ? ' --- |' : '  |';
+        doc[ix] = close < 0 ? t + cell : t.slice(0, close + 1) + cell + t.slice(close + 1);
+      }
+      return out;
+    });
+  }, true);
+
+  // ---- deletion guard: block any delete whose target range would cross a pipe / cell / row boundary ----
+  root.addEventListener('beforeinput', (e) => {
+    if (!inPreview() || !e.inputType || !e.inputType.startsWith('delete')) return;
+    const line = caretLineEl(); const inTable = line && line.classList.contains('ej-trow');
+    const ranges = e.getTargetRanges ? e.getTargetRanges() : [];
+    if (!ranges.length) { return; }
+    for (const r of ranges) {
+      const sl = lineOf(r.startContainer), el = lineOf(r.endContainer);
+      if (!(sl && sl.classList.contains('ej-trow')) && !(el && el.classList.contains('ej-trow')) && !inTable) continue;
+      if (sl !== el) { e.preventDefault(); return; }                                        // crossing a row boundary dissolves the table
+      const sC = (r.startContainer.nodeType === 3 ? r.startContainer.parentElement : r.startContainer);
+      const eC = (r.endContainer.nodeType === 3 ? r.endContainer.parentElement : r.endContainer);
+      if (sC.closest('.ej-pipe') || eC.closest('.ej-pipe')) { e.preventDefault(); return; }  // touching a locked marker
+      const c1 = sC.closest('.ej-cell'), c2 = eC.closest('.ej-cell');
+      if (c1 !== c2) { e.preventDefault(); return; }                                         // crossing a cell boundary
+    }
+  }, true);
+
+  const obs = new MutationObserver(scan);   // microtask → re-wrap runs BEFORE paint → flicker-free by construction
+  scan();
+  return obs;
+}
+
+// Inline image thumbnails — show the picture beside its still-editable source line. The source text stays in the
+// line (textContent untouched → round-trip exact, the markdown model is unaffected); a contenteditable=false <img>
+// is appended as a sibling. resolveSrc(raw) maps the matched path/url to a real displayable src, or null to skip —
+// ejecta passes web URLs through, marktile resolves vault paths (and returns null for non-images). marktile
+// rebuilds the line divs on every keystroke, so a debounced MutationObserver re-applies. Shared by both hosts;
+// this is the first step of Rendered "growing" — the same widget pattern later carries math / callouts.
+function decorateImages(root, resolveSrc) {
+  const resolve = resolveSrc || ((u) => u);
+  const scan = () => {
+    root.querySelectorAll('.tg-line').forEach((line) => {
+      const txt = line.textContent || '';
+      const m = txt.match(/!\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/) || txt.match(/!\[[^\]]*\]\(([^)]+)\)/) || txt.match(/<img[^>]+src=["']([^"']+)["']/);
+      const url = m ? resolve(m[1]) : null;
+      const cur = line.querySelector(':scope > img.ej-inlimg');
+      if (url) {
+        if (!cur || cur.dataset.u !== url) {
+          if (cur) cur.remove();
+          const im = document.createElement('img');
+          im.className = 'ej-inlimg'; im.contentEditable = 'false'; im.draggable = false; im.dataset.u = url; im.src = url;
+          line.appendChild(im); line.classList.add('ej-hasimg');
+        }
+      } else if (cur) { cur.remove(); line.classList.remove('ej-hasimg'); }
+    });
+  };
+  let t; const obs = new MutationObserver(() => { clearTimeout(t); t = setTimeout(scan, 80); });
+  obs.observe(root, { childList: true, subtree: true, characterData: true });
+  scan();
+  return obs;
+}
+
+// Table of contents — the ONE shared TOC for marktile (Obsidian) and ejecta (web). Lists H1–H3 (tocHeadings),
+// click to jump, drag to reorder whole sections (moveSection via Sortable). One visual (.marktile-toc* classes in
+// the shared sheet). Hosts pass: mount (container), ctrl (editor controller), labels {title, empty} (each host
+// resolves its own i18n), and optional Sortable (defaults to window.Sortable), onReorder (after a drag),
+// onNavigate (after a click — e.g. marktile closes on phone), anchorScroll (selector whose offsetTop the panel
+// pins below, for Obsidian's in-flow toolbar; ejecta anchors via CSS), sortableOptions (extra Sortable opts, e.g.
+// marktile's mobile touch tuning). Returns { toggle, refresh, destroy }.
+function wireToc(opts) {
+  const { mount, ctrl, labels, onReorder, onNavigate, anchorScroll, sortableOptions } = opts;
+  const Sortable = opts.Sortable || (typeof window !== 'undefined' ? window.Sortable : null);
+  let open = false, panel = null, debT = null, sortable = null;
+  const lab = labels || {};
+  const ensure = () => { if (panel && panel.isConnected) return; panel = document.createElement('div'); panel.className = 'marktile-toc'; mount.appendChild(panel); };
+  const killSortable = () => { if (sortable) { try { sortable.destroy(); } catch (e) {} sortable = null; } };
+  function build() {
+    const ed = mount.querySelector('.tugtile-ed-rich'); if (!ed || !panel) return;
+    if (anchorScroll) { const s = mount.querySelector(anchorScroll); if (s) panel.style.top = s.offsetTop + 'px'; }   // pin below the in-flow toolbar (Obsidian)
+    killSortable();
+    panel.innerHTML = '';
+    const ti = document.createElement('div'); ti.className = 'marktile-toc-title'; ti.textContent = lab.title || ''; panel.appendChild(ti);
+    const list = document.createElement('div'); list.className = 'marktile-toc-list'; panel.appendChild(list);
+    const lineEls = ed.querySelectorAll('.tg-line'); const heads = tocHeadings(ctrl ? ctrl.rawValue() : '');
+    if (!heads.length) { const e = document.createElement('div'); e.className = 'marktile-toc-empty'; e.textContent = lab.empty || ''; list.appendChild(e); return; }
+    heads.forEach((h) => {
+      const it = document.createElement('div'); it.className = 'marktile-toc-item marktile-toc-l' + h.level; it.textContent = h.text || '—';
+      it.onclick = () => { const el = lineEls[h.line]; if (el) el.scrollIntoView({ block: 'start', behavior: 'smooth' }); if (onNavigate) onNavigate(); };
+      list.appendChild(it);
+    });
+    if (Sortable) try {
+      sortable = new Sortable(list, Object.assign({
+        draggable: '.marktile-toc-item', animation: 150,
+        ghostClass: 'marktile-toc-item--ghost', chosenClass: 'marktile-toc-item--chosen',
+        onEnd: (ev) => {
+          const cur = ctrl.rawValue(); const next = moveSection(cur, ev.oldIndex, ev.newIndex);
+          if (next !== cur && ctrl.setText) { ctrl.setText(next); if (onReorder) onReorder(); }
+          setTimeout(() => { if (open) build(); }, 0);   // deferred: don't destroy the active Sortable from inside its own onEnd
+        },
+      }, sortableOptions || {}));
+    } catch (e) {}
+  }
+  return {
+    toggle(force) { open = (force === undefined) ? !open : !!force; if (open) { ensure(); build(); } mount.classList.toggle('marktile-toc-open', open); },
+    refresh() { if (!open) return; clearTimeout(debT); debT = setTimeout(() => { if (open) build(); }, 250); },
+    isOpen() { return open; },
+    destroy() { killSortable(); panel = null; open = false; },
+  };
+}
+
+// The editor "rig" — the full marktile experience any host equips on a mounted editor: the Seasoned/Rendered/Plain
+// mode cycle (the class on `mount`), in-grid tables, inline images, and the TOC, all wired once. Hosts pass the
+// mount + controller + their host-specific hooks (resolveSrc image resolver, toc options, which modes are enabled,
+// an initialMode to restore across a rebuild) and render their OWN viewcycle button by calling cycleMode()/
+// currentMode(). One rig — equipped by MarktileView, TileEditModal and the web editor alike — so "the editor" is
+// literally one thing everywhere it appears.
+const EDITOR_MODES = [
+  { key: 'seasoned', cls: '', icon: 'square-m', name: 'mtModeSeasoned' },
+  { key: 'rendered', cls: 'tugtile-preview', icon: 'square-pen', name: 'mtModeRendered' },
+  { key: 'plain', cls: 'tugtile-plain', icon: 'square-code', name: 'mtModePlain' },
+];
+function equipEditor(opts) {
+  const { mount, ctrl, enabledModes, resolveSrc, toc } = opts;
+  const onModes = () => { const md = enabledModes || {}; const on = EDITOR_MODES.filter((m) => md[m.key] !== false); return on.length ? on : EDITOR_MODES; };
+  let ix = 0;
+  if (opts.initialMode) { const i = onModes().findIndex((m) => m.key === opts.initialMode); if (i >= 0) ix = i; }
+  const current = () => { const e = onModes(); return e[ix % e.length]; };
+  const applyMode = () => {
+    const m = current();
+    mount.classList.toggle('marktile-grid', m.key !== 'plain');   // tables become a locked grid in Seasoned & Rendered
+    mount.classList.toggle('tugtile-preview', m.cls === 'tugtile-preview');   // Rendered hides the markers
+    mount.classList.toggle('tugtile-plain', m.cls === 'tugtile-plain');       // Plain = raw source
+  };
+  const tableObs = decorateTables(mount, ctrl, 'marktile-grid');
+  const imgObs = resolveSrc ? decorateImages(mount, resolveSrc) : null;
+  const tocCtl = toc ? wireToc(Object.assign({ mount, ctrl }, toc)) : null;
+  applyMode();
+  return {
+    currentMode: current,
+    applyMode,
+    cycleMode() { ix = (ix + 1) % onModes().length; applyMode(); },
+    toc: tocCtl,
+    destroy() { try { tableObs.disconnect(); } catch (e) {} if (imgObs) { try { imgObs.disconnect(); } catch (e) {} } if (tocCtl) tocCtl.destroy(); },
+  };
+}
+
+
 const VIEW_TYPE = 'marktile-editor';
 
 // marktile settings. editorTools: per-button on/off (missing key = on), same convention as tugtile — uncheck
 // everything and the toolbar disappears. defaultEditor: opt-in to register marktile as the default .md editor
 // (off by default, so Obsidian's native editor stays the no-surprise default).
-const DEFAULTS = { editorTools: {}, defaultEditor: false };
+const DEFAULTS = { editorTools: {}, defaultEditor: false, modes: {} };
+
+// The 3-mode cycle + its decorations live in the shared core (EDITOR_MODES + equipEditor, inlined). settings.modes
+// gates which modes appear in the cycle (missing key = on, like editorTools); the picker keeps >=1 on.
 
 // The editor's board-only hooks are no-ops; a .md file never "submits" on Enter (Enter is always a newline).
 function makeFileHost(plugin) {
@@ -608,7 +1131,7 @@ class MarktileView extends TextFileView {
     const vc = wrap.createSpan({ cls: 'tugtile-viewcycle' });   // toggles styled-Markdown ⇄ plain-text
     vc.setAttribute('role', 'button');
     vc.setAttribute('aria-label', t('mtModeToggle'));   // toggles Seasoned ⇄ Plain (NOT tugtile's board/table view switch)
-    vc.onclick = (e) => { e.preventDefault(); e.stopPropagation(); this.togglePlain(); };
+    vc.onclick = (e) => { e.preventDefault(); e.stopPropagation(); this.cycleMode(); };
     this._viewCycleEl = vc;
     wrap.createSpan({ cls: 'tugtile-sep', text: '·' });
     const lk = wrap.createSpan({ cls: 'tugtile-brand' });   // brand suffix + lock icon = the read-only toggle
@@ -623,8 +1146,9 @@ class MarktileView extends TextFileView {
     const vc = this._viewCycleEl;
     if (vc && vc.isConnected) {
       vc.empty();
-      setIcon(vc.createSpan({ cls: 'tugtile-viewcycle-icon' }), this._plain ? 'square-code' : 'square-m');   // Seasoned = square-m (= marktile's identity); Plain = square-code (raw source)
-      vc.createSpan({ cls: 'tugtile-viewcycle-name', text: this._plain ? t('mtModePlain') : t('mtModeSeasoned') });
+      const _m = this._currentMode();
+      setIcon(vc.createSpan({ cls: 'tugtile-viewcycle-icon' }), _m.icon);   // square-m Seasoned · square-pen Rendered · square-code Plain
+      vc.createSpan({ cls: 'tugtile-viewcycle-name', text: t(_m.name) });
     }
     const lk = this._lockBtnEl;
     if (lk && lk.isConnected) {
@@ -633,11 +1157,15 @@ class MarktileView extends TextFileView {
       setIcon(lk.createSpan({ cls: 'tugtile-lock-icon' }), this._locked ? 'lock' : 'lock-open');
     }
   }
-  // Plain mode: neutralize ALL editor styling (CSS: .tugtile-plain) → a bare plain-text markdown editor.
-  // Mode 1 = the styled editor (headings grow, bold is bold); Mode 2 = plain. No rendering, pure CSS.
-  togglePlain() {
-    this._plain = !this._plain;
-    this.contentEl.toggleClass('tugtile-plain', this._plain);
+  // The view cycle + its decorations are the shared core rig (equipEditor). The view only drives the button:
+  // cycleMode advances the rig and remembers the key (restored across a reload); _currentMode feeds refreshCtl.
+  _currentMode() {
+    return this._rig ? this._rig.currentMode() : EDITOR_MODES[0];
+  }
+  cycleMode() {
+    if (!this._rig) return;
+    this._rig.cycleMode();
+    this._modeKey = this._rig.currentMode().key;
     this.refreshCtl();
   }
   // Lock: make the editor read-only. Obsidian has no save step (whatever you change IS saved), so this guards
@@ -654,64 +1182,11 @@ class MarktileView extends TextFileView {
   }
   // Table of contents: a toggle side panel of H1–H3. The toggle button is added by the shared editor (onToc hook)
   // in the ✕-close slot of marktile's ancestor, tugtile's card modal. Click a heading → scroll the editor to it.
-  toggleToc(force) {
-    this._tocOpen = (force === undefined) ? !this._tocOpen : !!force;
-    if (this._tocOpen) this._ensureTocPanel();
-    this.contentEl.toggleClass('marktile-toc-open', this._tocOpen);   // show/hide FIRST so the panel appears even if buildToc throws (and it slides in via the transition)
-    if (this._tocOpen) this.buildToc();
-  }
-  _ensureTocPanel() {
-    if (this._tocPanel && this._tocPanel.isConnected) return;
-    this._tocPanel = this.contentEl.createDiv({ cls: 'marktile-toc' });   // absolute-positioned overlay; CSS slides it in when .marktile-toc-open is set
-  }
-  _refreshTocSoon() {   // headings change as you type → rebuild, debounced, only while the panel is open
-    if (!this._tocOpen) return;
-    clearTimeout(this._tocT);
-    this._tocT = setTimeout(() => { if (this._tocOpen) this.buildToc(); }, 250);
-  }
-  buildToc() {
-    const ed = this.contentEl.querySelector('.tugtile-ed-rich');
-    if (!ed || !this._tocPanel) return;
-    const scroll = this.contentEl.querySelector('.tugtile-ed-scroll');   // anchor the panel to the editor content top, BELOW the toolbar(s), so the toggle button stays tappable
-    if (scroll) this._tocPanel.style.top = scroll.offsetTop + 'px';
-    if (this._tocSortable) { try { this._tocSortable.destroy(); } catch (e) {} this._tocSortable = null; }   // rebuilt below; drop the stale instance bound to the old list
-    this._tocPanel.empty();
-    this._tocPanel.createDiv({ cls: 'marktile-toc-title', text: t('mtToc') });
-    const list = this._tocPanel.createDiv({ cls: 'marktile-toc-list' });
-    const lineEls = ed.querySelectorAll('.tg-line');   // index-aligned with source lines (one div per line)
-    const heads = tocHeadings(this._ctrl ? this._ctrl.rawValue() : '');
-    if (!heads.length) { list.createDiv({ cls: 'marktile-toc-empty', text: t('mtTocEmpty') }); return; }
-    heads.forEach((h) => {
-      const item = list.createDiv({ cls: 'marktile-toc-item marktile-toc-l' + h.level, text: h.text || '—' });
-      item.onclick = () => {
-        const el = lineEls[h.line];
-        if (el) el.scrollIntoView({ block: 'start', behavior: 'smooth' });
-        if (Platform.isPhone) this.toggleToc(false);   // phone TOC is a full-width overlay → close it so the jump is visible
-      };
-    });
-    // Drag-reorder (level b: a section moves whole, levels never change). List items index-align with heads order.
-    // Touch options borrowed 1:1 from tugtile's tile Sortable: forceFallback + fallbackOnBody fix the "ghost
-    // detaches from the finger" offset (native HTML5 DnD mistracks on iOS; the clone is mis-positioned inside the
-    // panel's transformed/absolute context — fallbackOnBody re-parents it to <body>). delay = long-press to start.
-    // try/catch: drag is an enhancement — if Sortable is somehow unavailable, the TOC still lists + jumps.
-    try {
-      this._tocSortable = new Sortable(list, {
-        draggable: '.marktile-toc-item',
-        animation: 150,
-        delay: 180, delayOnTouchOnly: true, touchStartThreshold: 8,
-        forceFallback: true, fallbackOnBody: true, fallbackTolerance: 4,
-        ghostClass: 'marktile-toc-item--ghost', chosenClass: 'marktile-toc-item--chosen', dragClass: 'marktile-toc-item--drag',
-        onEnd: (evt) => this._reorderToc(evt.oldIndex, evt.newIndex),
-      });
-    } catch (e) {}
-  }
-  _reorderToc(from, to) {
-    if (from == null || to == null || from === to) return;
-    const text = this._ctrl ? this._ctrl.rawValue() : '';
-    const next = moveSection(text, from, to);
-    if (next !== text && this._ctrl && this._ctrl.setText) { this._ctrl.setText(next); this.requestSave(); }
-    setTimeout(() => { if (this._tocOpen) this.buildToc(); }, 0);   // deferred: don't destroy the active Sortable from inside its own onEnd; rebuild reflects the new order (and reverts a no-op drag)
-  }
+  // TOC = the shared core wireToc (one TOC for marktile + ejecta). marktile's extras ride as hooks: the panel pins
+  // below the in-flow toolbar (anchorScroll), the phone overlay closes after a jump (onNavigate), and the Sortable
+  // gets tugtile's mobile touch tuning (sortableOptions). this._toc is (re)created in setViewData after the mount.
+  toggleToc(force) { if (this._rig && this._rig.toc) this._rig.toc.toggle(force); }
+  _refreshTocSoon() { if (this._rig && this._rig.toc) this._rig.toc.refresh(); }   // shared wireToc no-ops when the panel is closed
   toTugtile() {
     if (!this.file) return;
     this.leaf.setViewState({ type: 'tugtile-board', active: true, state: { file: this.file.path } });
@@ -720,23 +1195,46 @@ class MarktileView extends TextFileView {
   setViewData(data, clear) {
     this.data = data;
     if (this._ctrl) { this._ctrl.destroy(); this._ctrl = null; }
+    const _tocWasOpen = this._rig && this._rig.toc ? this._rig.toc.isOpen() : false;   // remember across the rebuild
+    if (this._rig) { this._rig.destroy(); this._rig = null; }
     this.contentEl.empty();
     this._ctrl = mountEditor(this.contentEl, { text: data, onChange: () => { this.requestSave(); this._refreshTocSoon(); }, onToc: () => this.toggleToc() }, makeFileHost(this.plugin));
     // mountEditor() empties contentEl, so build the phone control strip AFTER it and prepend above the toolbar.
     if (Platform.isPhone) { const ctl = createDiv({ cls: 'tugtile__ctlbar' }); this._buildHeaderCtl(ctl); this.contentEl.prepend(ctl); }
     this.decorateHeaderTitle();   // desktop: inject into the header title; phone: keep the header filename cleared
-    this.contentEl.toggleClass("tugtile-plain", !!this._plain);   // re-apply mode + lock state after the rebuild
-    this.contentEl.addClass('marktile-ed');   // scope: marktile IS a markdown editor → monospace font in BOTH modes (not tugtile cards)
+    this.contentEl.addClass('marktile-ed');   // scope: marktile IS a markdown editor → monospace font (not tugtile cards)
     this._applyLock();
-    this._tocPanel = null;   // contentEl.empty() above destroyed the old panel node
-    if (this._tocOpen) { this._ensureTocPanel(); this.contentEl.addClass('marktile-toc-open'); this.buildToc(); }   // restore the TOC across a reload
+    // Equip the shared editor rig (mode cycle + in-grid tables + inline images + TOC) on contentEl — the exact same
+    // rig tugtile's modal equips. Host hooks: Obsidian vault image resolution, and the TOC's mobile/anchor tuning.
+    this._rig = equipEditor({
+      mount: this.contentEl, ctrl: this._ctrl,
+      enabledModes: (this.plugin.settings && this.plugin.settings.modes) || {},
+      initialMode: this._modeKey,   // restore the current mode across a reload
+      resolveSrc: (raw) => {
+        raw = String(raw).split('|')[0].trim();
+        if (/^(https?:|data:|app:)/i.test(raw)) return raw;
+        if (!/\.(png|jpe?g|gif|svg|webp|bmp|avif)$/i.test(raw.split('#')[0])) return null;
+        try { const f = this.app.metadataCache.getFirstLinkpathDest(raw, this.file ? this.file.path : ''); return f ? this.app.vault.getResourcePath(f) : null; } catch (e) { return null; }
+      },
+      toc: {
+        Sortable: (typeof Sortable !== 'undefined' ? Sortable : undefined),
+        labels: { title: t('mtToc'), empty: t('mtTocEmpty') },
+        onReorder: () => this.requestSave(),
+        onNavigate: () => { if (Platform.isPhone) this.toggleToc(false); },   // phone overlay closes after a jump
+        anchorScroll: '.tugtile-ed-scroll',                                    // pin the panel below the in-flow toolbar
+        sortableOptions: { delay: 180, delayOnTouchOnly: true, touchStartThreshold: 8, forceFallback: true, fallbackOnBody: true, fallbackTolerance: 4, dragClass: 'marktile-toc-item--drag' },
+      },
+    });
+    this.refreshCtl();   // viewcycle button reflects the restored mode
+    if (_tocWasOpen) this._rig.toc.toggle(true);   // restore the TOC across a reload
   }
   clear() {
     if (this._ctrl) { this._ctrl.destroy(); this._ctrl = null; }
+    if (this._rig) { this._rig.destroy(); this._rig = null; }
     this.contentEl.empty();
     this.data = '';
   }
-  async onClose() { clearTimeout(this._tocT); if (this._tocSortable) { try { this._tocSortable.destroy(); } catch (e) {} this._tocSortable = null; } this._tocPanel = null; if (this._titleObserver) { this._titleObserver.disconnect(); this._titleObserver = null; } if (this._ctrl) { this._ctrl.destroy(); this._ctrl = null; } }
+  async onClose() { if (this._rig) { this._rig.destroy(); this._rig = null; } if (this._titleObserver) { this._titleObserver.disconnect(); this._titleObserver = null; } if (this._ctrl) { this._ctrl.destroy(); this._ctrl = null; } }
   toObsidian() {
     if (!this.file) return;
     // tugtile globally hooks setViewState to reclaim board files as boards, so a plain setViewState('markdown')
@@ -770,8 +1268,25 @@ class MarktileSettingTab extends PluginSettingTab {
       });
     });
     toolPicker(t('mtEssentialTools'), t('mtEssentialToolsDesc'), (tk) => tk.fixed);             // search / undo / redo
-    toolPicker(t('gFormatTools'), t('gFormatToolsDesc'), (tk) => tk.cat === 'format');           // headings / bold / lists…
+    toolPicker(t('gFormatTools'), t('gFormatToolsDesc'), (tk) => tk.cat === 'format');           // headings / bold / italic / strike
+    toolPicker(t('gBlockTools'), t('gBlockToolsDesc'), (tk) => tk.cat === 'block');               // lists / check / quote / table
     toolPicker(t('gInsertTools'), t('mtInsertToolsDesc'), (tk) => tk.cat === 'insert' && tk.key !== 'date' && tk.key !== 'time');   // code / link (date/time are board-only)
+    new Setting(containerEl).setName(t('mtModesPick')).setDesc(t('mtModesPickDesc')).then((s) => {
+      s.controlEl.addClass('tugtile-tools-pick');
+      const md = this.plugin.settings.modes || (this.plugin.settings.modes = {});
+      EDITOR_MODES.forEach((m) => {
+        const lbl = s.controlEl.createEl('label', { cls: 'tugtile-tool-chk' });
+        const cb = lbl.createEl('input', { type: 'checkbox' });
+        cb.checked = md[m.key] !== false;
+        setIcon(lbl.createSpan({ cls: 'tugtile-tool-chk-i' }), m.icon);
+        lbl.createSpan({ text: t(m.name) });
+        cb.onchange = async () => {
+          const willOn = EDITOR_MODES.filter((x) => (x.key === m.key ? cb.checked : md[x.key] !== false));
+          if (!willOn.length) { cb.checked = true; new Notice(t('mtModesMinOne')); return; }   // keep at least one mode in the cycle
+          md[m.key] = cb.checked; await this.plugin.saveSettings(); new Notice(t('mtReloadRequired'));
+        };
+      });
+    });
     new Setting(containerEl).setName(t('mtDefaultEditor')).setDesc(t('mtDefaultEditorDesc'))
       .addToggle((tg) => tg.setValue(this.plugin.settings.defaultEditor).onChange(async (v) => {
         this.plugin.settings.defaultEditor = v; await this.plugin.saveSettings(); new Notice(t('mtReloadRequired'));

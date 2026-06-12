@@ -1,10 +1,11 @@
 {
   "id": "marktile",
   "name": "marktile",
-  "version": "0.0.50",
+  "version": "0.0.57",
   "minAppVersion": "1.4.0",
   "description": "A Markdown editor where the markers never hide — headings grow while ## stays put. Pairs with tugtile. CJK-friendly.",
   "author": "CVER Inc.",
   "authorUrl": "https://cver.net",
+  "fundingUrl": "https://cver.net/donate",
   "isDesktopOnly": false
 }

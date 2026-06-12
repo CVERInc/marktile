@@ -895,3 +895,40 @@ body.is-phone .tugtile-ed-rich { padding-bottom: 55vh; }
   background: var(--background-modifier-hover);
   color: var(--text-normal);
 }
+
+/* ── In-grid markdown tables — the "locked markers" editor (decorateTables in editor-core.js). SHARED by
+   marktile (inlined) and ejecta (this file is vendored as tile-core.css). Gate = .marktile-grid: hosts add it
+   in Seasoned + Rendered, drop it in Plain. The pipe `|` is the table's `##` — in Seasoned it stays VISIBLE
+   (dimmed, locked) so the markdown coexists with the layout; the .tugtile-preview overlay (Rendered) hides the
+   pipes into a real bordered grid. textContent is byte-identical either way → round-trip exact. (Dormant in
+   tugtile, which never sets .marktile-grid.) */
+.marktile-grid .ej-trow { display: table-row; white-space: normal; }
+.marktile-grid .ej-trow .ej-cell { display: table-cell; padding: 3px 12px; vertical-align: top; cursor: text; min-width: 36px; }
+.marktile-grid .ej-trow .ej-pipe { display: table-cell; color: var(--text-faint, #9aa0a6); padding: 0 1px; }   /* the locked pipe, dimmed — the visible "seasoning" in Seasoned */
+.marktile-grid .ej-tsep .ej-cell { color: var(--text-faint, #9aa0a6); }                                       /* the |---| separator row, dimmed (also shown in Seasoned) */
+.marktile-grid .ej-trow .ej-cell[data-a=center] { text-align: center; }
+.marktile-grid .ej-trow .ej-cell[data-a=right] { text-align: right; }
+/* Rendered overlay: the markers give way to a real grid (pipes + separator gone, cells get borders). */
+.tugtile-preview .ej-trow .ej-pipe { display: none; }
+.tugtile-preview .ej-tsep { display: none; }
+.tugtile-preview .ej-trow .ej-cell { border: 1px solid var(--background-modifier-border, #e4e6e9); padding: 6px 14px; }
+.tugtile-preview .ej-trow.ej-thead .ej-cell { background: var(--background-secondary, #f6f7f9); font-weight: 700; }
+/* Rendered hides EVERY marker, not just the table pipes — the `##`/`**`/`` ` `` markers (.tg-mk) give way too, so
+   the whole view reads as output (the third point of raw → coexist → output). Still fully editable; markup never
+   leaves the text. Dormant in tugtile (no .tugtile-preview). */
+.tugtile-preview .tg-mk { display: none; }
+
+/* table right-click menu (desktop: insert/delete row/column) */
+.ej-tblmenu { position: fixed; z-index: 2000; min-width: 168px; background: var(--background-primary, #fff); border: 1px solid var(--background-modifier-border, #e4e6e9); border-radius: 10px; box-shadow: 0 10px 30px rgba(10, 22, 40, .18); padding: 5px; display: flex; flex-direction: column; }
+.ej-tblmenu button { font: 13.5px var(--font-interface, system-ui, sans-serif); text-align: left; border: 0; background: transparent; border-radius: 7px; padding: 8px 12px; cursor: pointer; color: var(--text-normal, #1f2328); }
+.ej-tblmenu button:hover:not(:disabled) { background: var(--background-modifier-hover, rgba(0, 0, 0, .06)); }
+.ej-tblmenu button:disabled { opacity: .35; cursor: default; }
+.ej-tblmenu hr { border: 0; border-top: 1px solid var(--background-modifier-border, #e4e6e9); margin: 4px 6px; }
+
+/* Inline image thumbnails (decorateImages in editor-core.js) — the picture shows beside its still-editable source
+   line; the source markdown stays but dims. Hidden in Plain so power users see raw source only. Shared by marktile
+   + ejecta; dormant in tugtile (never calls decorateImages). The first step of Rendered "growing". */
+.ej-inlimg { display: block; max-width: min(280px, 100%); max-height: 220px; border-radius: 8px; margin: 4px 0 8px; border: 1px solid var(--background-modifier-border, #e4e6e9); }
+.tg-line.ej-hasimg { color: var(--text-faint, #9aa0a6); font-size: 12px; }
+.tugtile-plain .ej-inlimg { display: none; }
+.tugtile-plain .tg-line.ej-hasimg { color: var(--text-normal, #1f2328); font-size: 1em; }
