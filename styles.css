@@ -675,6 +675,15 @@ body.is-phone .tugtile-ed-rich { padding-bottom: 55vh; }
 .tugtile-ed-rich .tg-tag,
 .tugtile-ed-rich .tg-link { color: var(--text-accent); }
 .tugtile-ed-rich .tg-date { color: var(--color-yellow); }
+/* Seasoned "彩色" palette — opt-in via settings (seasonedColor → .marktile-palette-color on the editor mount).
+   Each syntax token gets its own hue instead of the single accent tint. Obsidian theme color vars (hex fallbacks
+   for the web host) so it tracks light/dark + custom themes. quote/strike/date/check keep their base styling. */
+.marktile-palette-color .tugtile-ed-rich .tg-h { color: var(--color-cyan, #56b6c2); }
+.marktile-palette-color .tugtile-ed-rich .tg-b { color: var(--color-orange, #d19a66); }
+.marktile-palette-color .tugtile-ed-rich .tg-i { color: var(--color-purple, #c678dd); }
+.marktile-palette-color .tugtile-ed-rich .tg-code { color: var(--color-green, #98c379); }
+.marktile-palette-color .tugtile-ed-rich .tg-tag,
+.marktile-palette-color .tugtile-ed-rich .tg-link { color: var(--color-blue, #61afef); }
 /* Textarea for card editing */
 .tugtile__tile-edit {
   width: 100%;
