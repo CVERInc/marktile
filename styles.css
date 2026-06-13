@@ -606,11 +606,11 @@ body.is-phone .tugtile-ed-bar { padding-top: 6px; padding-bottom: 4px; }
 /* A leading tab on a heading line must NOT inflate the indent guide — its 1ch position / 100% height / 0.35em
    padding are all font-size-relative, so on a grown heading the thin rule balloons. Counter-scale the tab's own
    font-size by the heading's scale so its metrics fall back to the base text size (the guide stays thin). */
-.marktile-ed .tg-h1 .tg-tab { font-size: calc(1em / 1.7); }
-.marktile-ed .tg-h2 .tg-tab { font-size: calc(1em / 1.45); }
-.marktile-ed .tg-h3 .tg-tab { font-size: calc(1em / 1.25); }
-.marktile-ed .tg-h4 .tg-tab { font-size: calc(1em / 1.12); }
-.marktile-ed .tg-h5 .tg-tab, .marktile-ed .tg-h6 .tg-tab { font-size: calc(1em / 1.05); }
+.marktile-ed .tg-h1 .tg-tab { font-size: calc(1em / 1.7); padding-block: 0.85em; }
+.marktile-ed .tg-h2 .tg-tab { font-size: calc(1em / 1.45); padding-block: 0.68em; }
+.marktile-ed .tg-h3 .tg-tab { font-size: calc(1em / 1.25); padding-block: 0.55em; }
+.marktile-ed .tg-h4 .tg-tab { font-size: calc(1em / 1.12); padding-block: 0.45em; }
+.marktile-ed .tg-h5 .tg-tab, .marktile-ed .tg-h6 .tg-tab { font-size: calc(1em / 1.05); padding-block: 0.4em; }
 
 /* ── Table of contents (marktile only). A toggle side panel of H1–H3; click a heading to scroll to it.
    Absolute overlay anchored (top set in JS) to the editor content, so the toolbar + the TOC toggle button
