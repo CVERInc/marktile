@@ -1,4 +1,19 @@
 /* tugtile — markdown kanban (prototype, read-only renderer) */
+
+/* Squircle (continuous-curvature) corners — progressive enhancement.
+   corner-shape is Chromium-only as of mid-2026; Safari/WebKit & Firefox ignore it and keep the
+   border-radius arc, so this is ZERO visual regression. Requires a non-zero border-radius (still
+   set per-surface below). Token lives here because corner-shape is NOT inherited but a custom
+   property IS. Applied only to finite-radius card/button/panel/input surfaces — never pills/circles. */
+:root { --corner: squircle; }
+:where(
+  .tugtile-brand, .tugtile__lane, .tugtile__tile, .tugtile__num, .tugtile__popup,
+  .tugtile__popup-d, .tugtile__popup-t, .tugtile__add-btn, .tugtile__add-input, .tugtile__add-ok,
+  .tugtile-prompt-field, .tugtile-iconbtn, .tugtile-ed-find-i, .tugtile__tile-edit,
+  .tugtile__lane-rename, .tugtile-viewcycle, .tugtile__archivebar, .tugtile__lane-chevron,
+  .tugtile-archive-row, .tugtile__addcol-btn
+) { corner-shape: var(--corner); }
+
 .tugtile {
   height: 100%;
   padding: 0;
@@ -47,6 +62,13 @@ body.is-phone .workspace-leaf-content[data-type="tugtile-board"] .view-content {
   cursor: pointer; border-radius: var(--radius-s); padding: 2px 6px;
 }
 .tugtile-brand:hover { background: var(--background-modifier-hover); color: var(--text-muted); }
+
+/* TileEditModal (tugtile's big editor) control strip — scoped to the modal so marktile's own strip is untouched.
+   A uniform gray bar spanning the full width: ✕ pinned far left, ✓ far right, the mode·lock centered between. */
+.tugtile-edit-modal-full .tugtile__ctlbar { background: var(--background-secondary); }
+.tugtile-edit-modal-full .tugtile-headerctl { display: flex; width: 100%; }
+.tugtile-edit-modal-full .tugtile-headerctl > .tugtile-iconbtn:first-child { margin-right: auto; }   /* ✕ → far left */
+.tugtile-edit-modal-full .tugtile-headerctl > .tugtile-iconbtn:last-child { margin-left: auto; }      /* ✓ → far right */
 .tugtile-lock-icon { display: inline-flex; }
 .tugtile-lock-icon svg { width: 0.9em; height: 0.9em; }
 /* Locked board (read-only): hide add/edit affordances, disable checkboxes, drop drag cursors. View-only actions (collapse, view switch, search) still work. */
