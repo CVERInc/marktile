@@ -65,9 +65,12 @@ function escHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt
 // the in-place single-line re-highlight (so both produce byte-identical DOM).
 function highlightLineParts(line) {
   let cls = 'tg-line';
-  const hm = /^(#{1,6})\s/.exec(line);
-  if (hm) cls += ' tg-h tg-h' + hm[1].length;
-  else if (/^>\s?/.test(line)) cls += ' tg-quote';
+  // CommonMark: a heading counts at line start, after ≤3 leading spaces, OR inside a list item. hm[1] swallows the
+  // optional indent + bullet/checkbox prefix so `- ### x` / `- [ ] ### x` / `  ### x` all size+colour as headings;
+  // hm[2] is the # run (→ level). It's ADDITIVE with tg-li/tg-task — a heading can also be a list/task line.
+  const hm = /^(\s*(?:[-*]\s(?:\[[ xX]\]\s)?)?)(#{1,6})\s/.exec(line);
+  if (hm) cls += ' tg-h tg-h' + hm[2].length;
+  if (/^>\s?/.test(line)) cls += ' tg-quote';
   else if (/^\s*[-*]\s/.test(line)) cls += ' tg-li';
   // Each syntax marker (## , &gt; , - , [ ], **, *, ~~, `, [[ ]], @{}) is wrapped in its own <span class="tg-mk">
   // so a host can hide JUST the markers via CSS (.tugtile-preview .tg-mk{display:none}) while the styling stays —
@@ -76,7 +79,7 @@ function highlightLineParts(line) {
   // markers stay visible there (their 調味/原味 cycle is unchanged); only a host that opts in hides them. escHtml
   // has already turned a leading > into &gt; (the quote marker), so match that form.
   const h = escHtml(line)
-    .replace(/^(#{1,6}\s)/, '<span class="tg-mk">$1</span>')   // heading marker
+    .replace(/^(\s*(?:[-*]\s(?:\[[ xX]\]\s)?)?)(#{1,6}\s)/, (m, pre, hashes) => pre + '<span class="tg-mk">' + hashes + '</span>')   // heading marker — wraps only the # run, leaving any indent/bullet/checkbox prefix for the rules below to wrap
     .replace(/^(&gt;\s?)/, '<span class="tg-mk">$1</span>')   // blockquote marker
     .replace(/^(\s*[-*]\s)(\[[ xX]\])/, (m, p, box) => '<span class="tg-mk">' + p + '</span><span class="tg-check' + (/[xX]/.test(box) ? ' tg-check-done' : '') + '"><span class="tg-mk">' + box + '</span></span>')
     .replace(/^(\s*[-*]\s)/, '<span class="tg-mk">$1</span>')   // plain bullet (heading/quote/checkbox lines already start with a <span>, so this won't match them)
