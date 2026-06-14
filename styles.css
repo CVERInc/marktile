@@ -304,7 +304,12 @@ body.is-phone .workspace-leaf-content[data-type="tugtile-board"] .view-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 8px;   /* separates the date and time chips (replaces the old full-width-space spacer) */
 }
+.tugtile__date-d, .tugtile__date-t { display: inline-flex; align-items: center; gap: 3px; }
+.tugtile__date svg { width: 1em; height: 1em; }                 /* Lucide calendar/clock, sized to the chip text */
+.tugtile__archivebar-i { display: inline-flex; }
+.tugtile__archivebar svg { width: 1.1em; height: 1.1em; }       /* Lucide archive icon (was a 📥 emoji) */
 /* Date status colors: red for overdue, accent for today, yellow for upcoming (≤7 days), and green for safe (>7 days); colored whenever a date exists */
 .tugtile__date--overdue { color: var(--color-red); font-weight: 600; }
 .tugtile__date--today { color: var(--text-accent); font-weight: 600; }

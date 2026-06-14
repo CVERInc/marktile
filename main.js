@@ -51,7 +51,7 @@ const EDITOR_TOOLS = [
   { key: 'code', g: '</>', icon: 'code', cat: 'insert', tip: 'edCode' }, { key: 'link', g: '[[ ]]', icon: 'link', cat: 'insert', tip: 'edLink' },
   // image/video: capability lives in the core, NOT injected per-surface. Each host wires the platform seam via
   // opts.pickImage / opts.pickVideo (Obsidian: vault save / web: upload) — `needs` hides the button when unwired.
-  { key: 'image', g: '🖼', icon: 'image', cat: 'insert', tip: 'edImage', needs: 'pickImage' }, { key: 'video', g: '🎞', icon: 'video', cat: 'insert', tip: 'edVideo', needs: 'pickVideo' }, 'sep',
+  { key: 'image', g: 'IMG', icon: 'image', cat: 'insert', tip: 'edImage', needs: 'pickImage' }, { key: 'video', g: 'VID', icon: 'video', cat: 'insert', tip: 'edVideo', needs: 'pickVideo' }, 'sep',
   { key: 'date', g: '@', icon: 'calendar', cat: 'insert', tip: 'edDate' }, { key: 'time', g: '@@', icon: 'clock', cat: 'insert', tip: 'edTime' },
 ];
 
@@ -1272,7 +1272,7 @@ class MarktileView extends TextFileView {
   constructor(leaf, plugin) { super(leaf); this.plugin = plugin; }   // plugin ref → the editor reads its toolbar settings
   getViewType() { return VIEW_TYPE; }
   getDisplayText() { return this.file ? this.file.basename : 'marktile'; }
-  getIcon() { return 'square-m'; }   // marktile's identity = an 'M' badge (= its Seasoned mode), like tugtile's board = layout-dashboard
+  getIcon() { return 'square-m'; }   // marktile's identity = an 'M' badge (= its Seasoned mode), like tugtile's board = gallery-vertical
   async onOpen() {
     // Header actions register RIGHT-TO-LEFT (addAction renders in reverse), and Obsidian's own ⋯ sits rightmost.
     // Target order L→R: [→ tugtile] [→ Obsidian] [settings] [⋯]. So register settings → Obsidian → tugtile.
@@ -1280,7 +1280,7 @@ class MarktileView extends TextFileView {
     this.addAction('file-text', t('mtBackToObsidian'), () => this.toObsidian());   // file-text = the conventional "native markdown" icon (Obsidian/Kanban/Excalidraw all use it)
     // tile-family interop: hand this file off to tugtile (open it as a kanban board), if it's installed (leftmost)
     if (this.app.plugins && this.app.plugins.enabledPlugins && this.app.plugins.enabledPlugins.has('tugtile')) {
-      this.addAction('layout-dashboard', t('mtToTugtile'), () => this.toTugtile());
+      this.addAction('gallery-vertical', t('mtToTugtile'), () => this.toTugtile());
     }
     this.watchHeaderTitle();   // take over the header title (clear the redundant filename, drop in the control strip) — see _buildHeaderCtl
   }
@@ -1485,7 +1485,7 @@ module.exports = class MarktilePlugin extends Plugin {
     this.registerView(VIEW_TYPE, (leaf) => new MarktileView(leaf, this));
     this.addSettingTab(new MarktileSettingTab(this.app, this));
     // Opt-in (off by default): make marktile the default editor for .md. Board files still open here too — hop to
-    // tugtile with the layout-dashboard button. Toggling needs an Obsidian reload to take effect.
+    // tugtile with the gallery-vertical button. Toggling needs an Obsidian reload to take effect.
     if (this.settings.defaultEditor) { try { this.registerExtensions(['md'], VIEW_TYPE); } catch (e) {} }
     this.addRibbonIcon('square-m', t('mtRibbon'), () => this.openActiveInMarktile());
     this.addCommand({
