@@ -127,7 +127,8 @@ function renumberLists(v) {
   for (let i = 0; i < lines.length; i++) {
     const m = /^(\d+)([.)])(\s)/.exec(lines[i]);
     if (m) { n++; const want = n + m[2] + m[3]; if (m[0] !== want) { lines[i] = want + lines[i].slice(m[0].length); changed = true; } }
-    else n = 0;   // blank / non-ordered line breaks the block → next ordered run restarts at 1
+    else if (/^[ \t]+\S/.test(lines[i])) continue;   // indented continuation / nested list → part of the current item, leave the top-level counter alone
+    else n = 0;   // blank / non-indented non-ordered line breaks the block → next ordered run restarts at 1
   }
   return changed ? lines.join('\n') : v;
 }
@@ -571,6 +572,10 @@ class TileEditModal extends Modal {
     this.host._editModalOpen = true;
     this.host.freezeBoard();
     this.modalEl.addClass('tugtile-edit-modal-full');
+    // Tag the modal CONTAINER so the backdrop/alignment rules can target it directly instead of via
+    // .modal-container:has(.tugtile-edit-modal-full) — same timing as the modalEl class above, but no :has()
+    // selector invalidation. Guarded: the ejecta web shim's Modal may not expose containerEl.
+    if (this.containerEl) this.containerEl.addClass('tugtile-edit-host');
     // Obsidian vault hooks (source path = the board file): image save/resolution. Computed up here so mountEditor's
     // toolbar image/video buttons and equipEditor's paste handler share the same seam.
     const app = this.app, srcPath = (this.view && this.view.file) ? this.view.file.path : '';
