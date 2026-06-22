@@ -8,9 +8,9 @@
 :root { --corner: squircle; }
 :where(
   .tugtile-brand, .tugtile__lane, .tugtile__tile, .tugtile__num, .tugtile__popup,
-  .tugtile__popup-d, .tugtile__popup-t, .tugtile__add-btn, .tugtile__add-input, .tugtile__add-ok,
-  .tugtile-prompt-field, .tugtile-iconbtn, .tugtile-ed-find-i, .tugtile__tile-edit,
-  .tugtile__lane-rename, .tugtile-viewcycle, .tugtile__archivebar, .tugtile__lane-chevron,
+  .tugtile__popup-d, .tugtile__popup-t, .tugtile__add-btn,
+  .tugtile-prompt-field, .tugtile-iconbtn, .tugtile-ed-find-i,
+  .tugtile-viewcycle, .tugtile__archivebar, .tugtile__lane-chevron,
   .tugtile-archive-row, .tugtile__addcol-btn
 ) { corner-shape: var(--corner); }
 
@@ -21,7 +21,10 @@
 }
 /* Search/Undo/Redo live in the native back/forward container (repurposed by setupLeftActions), so they line up with the left-sidebar toggle above. */
 .tugtile-leftacts { display: flex; align-items: center; gap: 2px; padding-left: 4px; }   /* Nudge right to line up the first icon with the left-sidebar toggle above (auto-measure couldn't find the toggle on iPad) */
-.tugtile-leftacts > * { margin: 0 !important; }   /* Reset Obsidian's per-action margins so Search/Undo/Redo are evenly spaced and aligned */
+/* iPad only, Obsidian sets `.is-mobile .view-action { margin: auto 0 }` (specificity (0,2,0)) on these addAction
+   icons, which misaligns Search/Undo/Redo. This (0,3,0) compound out-specifies it and resets the margin without
+   !important — the children always carry both classes (addAction → .clickable-icon.view-action). */
+.tugtile-leftacts > .clickable-icon.view-action { margin: 0; }
 /* Board⇄table swap: the outgoing snapshot slides up & out while the new view rises from below (two panels shuffling). */
 .tugtile-viewsnap {
   position: absolute; inset: 0; z-index: 3;
@@ -32,13 +35,6 @@
 .tugtile--switching .tugtile__board,
 .tugtile--switching .tugtile__table-wrap { animation: tugtile-view-in 0.38s cubic-bezier(.7, 0, .3, 1); }
 @keyframes tugtile-view-in { from { transform: translateY(100%); } to { transform: translateY(0); } }
-/* iOS26 border radius fix (merged from the old kanban-card-radius snippet): iOS26 stretches the core variable --input-radius
-   into a pill shape, deforming any input box or button using it. We override it locally within tugtile's scope (kanban view
-   and the two modals) instead of applying it globally to the body, keeping this OSS plugin clean. Remove once Obsidian/iOS is fixed. */
-.tugtile,
-.tugtile-edit-modal-full,
-.tugtile-prompt-modal,
-.tugtile-archive-modal { --input-radius: var(--radius-m) !important; }
 /* Phone: the centered control (view-cycle · lock) sits in a top-bar in the content, not the cramped header */
 /* Solid bg + z-index above the view-swap snapshot (z-index 3): the bar stays put on top while board/table
    slide beneath it, so the up-slide animation never leaks through the control row. */
@@ -321,8 +317,9 @@ body.is-phone .workspace-leaf-content[data-type="tugtile-board"] .view-content {
 /* Freeze container scrolling during dragging (adding .is-dragging in main.js onStart) to prevent native mobile scrolling from fighting the drag gesture */
 .tugtile.is-dragging .tugtile__board,
 .tugtile.is-dragging .tugtile__list {
-  overflow: hidden !important;
-  touch-action: none !important;
+  /* (0,2,0) already out-specifies the base .tugtile__board/__list (0,1,0) in this file, so no !important needed */
+  overflow: hidden;
+  touch-action: none;
 }
 /* Add card button and input */
 .tugtile__add {
@@ -341,20 +338,6 @@ body.is-phone .workspace-leaf-content[data-type="tugtile-board"] .view-content {
 .tugtile__add-btn:hover {
   background: var(--background-modifier-hover);
   color: var(--text-normal);
-}
-.tugtile__add-input {
-  width: 100%;
-  min-height: 4em;
-  resize: vertical;
-  border-radius: var(--radius-m);
-}
-.tugtile__add-ok {
-  background: var(--interactive-accent);
-  color: var(--text-on-accent);
-  border: none;
-  border-radius: var(--radius-s);
-  padding: 4px 12px;
-  cursor: pointer;
 }
 /* ⋯ More actions */
 .tugtile__tile-more {
@@ -383,12 +366,6 @@ body.is-phone .workspace-leaf-content[data-type="tugtile-board"] .view-content {
   text-decoration: underline;
   cursor: pointer;
   color: var(--text-accent);
-}
-/* Submit button for mobile editing */
-.tugtile__edit-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 6px;
 }
 /* Focused editing sheet (integrated with iOS 26 rounded sheet design; hides native ✕ to use our own left ❌ and right ✓) */
 .tugtile-edit-modal-full {
@@ -427,35 +404,21 @@ body.is-phone .workspace-leaf-content[data-type="tugtile-board"] .view-content {
   from { opacity: 1; transform: scale(1); }
   to   { opacity: 0; transform: scale(0.92); }
 }
-/* Small input modal (search / rename / add lane): sit near the top like Spotlight, so the virtual keyboard doesn't cover it. */
-.modal-container.tugtile-prompt-host { align-items: flex-start; }
-.tugtile-prompt-modal {
-  margin-top: 10vh;
-  transform-origin: center;
-  animation: tugtile-pop-in 0.4s cubic-bezier(.34, 1.56, .64, 1);
-  /* Make the modal PANEL invisible — we stop fighting its box/padding/alignment and just float the search row
-     (field + buttons, which carry their own backgrounds) over a frosted backdrop. */
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
+/* In-content text bars (search · rename · add-lane) — none of these use an Obsidian Modal any more. The view
+   renders a strip at the top of its content: .tugtile-searchbar is persistent (toggled by .tugtile--searching),
+   .tugtile-promptbar is transient (built on demand for rename / add-lane). Both reuse the .tugtile-prompt-row/
+   -field/-input styles below, and the JS freezes the board height while they're open so the virtual keyboard
+   can't collapse it into a black gap. On phone they take over the .tugtile__ctlbar slot. */
+.tugtile-searchbar { display: none; }
+.tugtile--searching .tugtile-searchbar,
+.tugtile-promptbar {
+  flex: 0 0 auto;
+  padding: 4px 8px 8px;
+  background: var(--background-primary);
 }
-/* Phone: sit below the header toolbar instead of colliding with it (this one was safe; the box/padding
-   overrides that broke the layout — clobbering Obsidian's mobile safe-area — have been removed). */
-body.is-phone .tugtile-prompt-modal { margin-top: calc(env(safe-area-inset-top) + 64px); }
-.tugtile-prompt-modal.tugtile-ed-closing { animation: tugtile-pop-out 0.28s ease-in forwards; }
-.tugtile-prompt-modal .modal-close-button { display: none; }   /* Hides Obsidian's native ✕ button to use our custom ❌ button instead */
-/* Our own inner spacing — replaces Obsidian's 16px .modal-content padding. NEVER touch .modal's box: that
-   carries the mobile safe-area insets (overriding it clipped the buttons off-screen). justify-content:center
-   vertically centres the one-line row, so any leftover modal height is balanced top/bottom (no top-heavy gap). */
-.tugtile-prompt-modal .modal-content { padding: 8px; justify-content: center; }
-/* Dim the board behind the search modal (Obsidian forces the prompt backdrop transparent — opacity:0 !important —
-   so without this the board shows at full brightness and crowds the field on a narrow phone). */
-.modal-container.tugtile-prompt-host .modal-bg {
-  opacity: 1 !important;
-  background-color: rgba(0, 0, 0, 0.4);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
-}
+.tugtile--searching .tugtile-searchbar { display: block; }
+body.is-phone .tugtile--searching .tugtile__ctlbar,
+body.is-phone .tugtile--prompting .tugtile__ctlbar { display: none; }
 .tugtile-prompt-row { display: flex; align-items: center; gap: 8px; }
 /* The input is wrapped in a rounded "field" so a leading icon (search) can sit inside it */
 .tugtile-prompt-field {
@@ -655,15 +618,8 @@ body.is-phone .tugtile-ed-bar { padding-top: 6px; padding-bottom: 4px; }
 }
 .is-phone .marktile-toc { width: 100%; border-right: none; }       /* phone: full-width overlay (sidebar too cramped) */
 .is-phone .marktile-toc-open .tugtile-ed-scroll { padding-left: 0; }
-/* marktile viewcycle → Plain mode: neutralize ALL editor styling so it's a bare plain-text markdown editor
-   (uniform size/weight, no colours, markers shown as-is). Pure CSS — no rendering, no parser, fully portable. */
-.tugtile-plain .tg-line,
-.tugtile-plain .tg-line * {
-  font-size: 1em !important; font-weight: normal !important; font-style: normal !important;
-  text-decoration: none !important; color: var(--text-normal) !important; background: transparent !important;
-  font-family: var(--font-monospace) !important; line-height: inherit !important;   /* monospace = raw-source feel */
-  border: 0 !important; padding-left: 0 !important; margin: 0 !important;
-}
+/* marktile viewcycle → Plain mode neutralizer lives AFTER the syntax rules below — it must out-specify every one
+   of them WITHOUT !important, so it's placed past the last competitor (see the specificity-contract comment there). */
 /* marktile lock → read-only. contenteditable=false alone is OVERRIDDEN on WebKit by the editor's
    -webkit-user-modify: read-write-plaintext-only, so flip that to read-only here (the real switch). Also
    disable the toolbar so a stray tap can't edit (Obsidian has no save step — whatever changes IS saved). */
@@ -702,12 +658,24 @@ body.is-phone .tugtile-ed-rich { padding-bottom: 55vh; }
 .marktile-palette-color .tugtile-ed-rich .tg-code { color: var(--color-green, #98c379); }
 .marktile-palette-color .tugtile-ed-rich .tg-tag,
 .marktile-palette-color .tugtile-ed-rich .tg-link { color: var(--color-cyan, #56b6c2); }
-/* Textarea for card editing */
-.tugtile__tile-edit {
-  width: 100%;
-  min-height: 4em;
-  resize: vertical;
-  border-radius: var(--radius-s);
+/* Plain mode = a hard reset of ALL the syntax styling above to a bare monospace baseline. This used to be one
+   !important block; it's now specificity-only (no !important) so styles.css is 100% !important-free.
+   ⚠️ SPECIFICITY CONTRACT — do not weaken, and keep this block AFTER every syntax rule above:
+     • every syntax rule above tops out at (0,3,0) — the .marktile-palette-color and .marktile-ed .tg-hN .tg-tab rules.
+     • `.tugtile-plain .tugtile-ed-rich .tg-line[ *]`            = (0,3,0): covers non-marktile hosts (tugtile card
+        editor, web), where NO (0,3,0) competitor exists (palette + tab rules are all .marktile-* gated → only (0,2,0)).
+     • `.marktile-ed.tugtile-plain .tugtile-ed-rich .tg-line[ *]` = (0,4,0): clears marktile's (0,3,0) palette + tab rules.
+   .tugtile-plain sits on the editor mount (an ANCESTOR of .tugtile-ed-rich); .tg-line are direct children of it.
+   If you ever add a syntax rule at (0,4,0)+, or a new editor host that runs Plain WITHOUT .marktile-ed, Plain mode
+   silently stops neutralising (symptom: colours/sizes leak through) — fix it here. There is no test guarding this. */
+.tugtile-plain .tugtile-ed-rich .tg-line,
+.tugtile-plain .tugtile-ed-rich .tg-line *,
+.marktile-ed.tugtile-plain .tugtile-ed-rich .tg-line,
+.marktile-ed.tugtile-plain .tugtile-ed-rich .tg-line * {
+  font-size: 1em; font-weight: normal; font-style: normal;
+  text-decoration: none; color: var(--text-normal); background: transparent;
+  font-family: var(--font-monospace); line-height: inherit;   /* monospace = raw-source feel */
+  border: 0; padding-left: 0; margin: 0;
 }
 /* Lane header container */
 .tugtile__lane-title {
@@ -725,11 +693,6 @@ body.is-phone .tugtile-ed-rich { padding-bottom: 55vh; }
 .tugtile__lane--narrowing .tugtile__lane-title { transform: scaleX(0); opacity: 0; }
 .tugtile__lane--narrowing .tugtile__lane-count,
 .tugtile__lane--narrowing .tugtile__lane-more { opacity: 0; }
-.tugtile__lane-rename {
-  flex: 1;
-  font-weight: 700;
-  border-radius: var(--radius-s);
-}
 /* Responsive board (opt-in, default off): on a narrow pane the horizontal lanes reflow into a single full-width vertical stack — the behaviour of the retired List view, now automatic via a container query. Drag-and-drop/editing logic is shared with the board view. */
 .tugtile--rwd { container-type: inline-size; container-name: tugtileboard; }
 @container tugtileboard (max-width: 640px) {
