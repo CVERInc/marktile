@@ -12,10 +12,11 @@ Please open a [GitHub issue](https://github.com/CVERInc/marktile/issues). Helpfu
 
 ## Pull requests
 
-This repository is the public **distribution mirror** — the release build (`main.js`,
-`styles.css`, `manifest.json`) is generated from a private development monorepo, so code
-PRs against these built files can't be merged directly. For a fix or an idea, please open
-an issue first and we'll land it at the source.
+The built files here (`main.js`, `styles.css`, `manifest.json`) are generated from
+source, so this repo is the release home — not where code changes are made. **The source
+is open at [CVERInc/tile](https://github.com/CVERInc/tile)** (MIT): the shared editor
+engine and both Obsidian plugins live there, and that is where code pull requests go.
+Clone it, run `bash scripts/test.sh`, then PR against it.
 
 Documentation wording and translation suggestions are very welcome.
 
