@@ -35,7 +35,7 @@ Same file, no lock-in.
 
 - **Community plugins (recommended):** in Obsidian, open Settings → Community plugins →
   Browse, search for **marktile**, then Install and Enable.
-- **Manual:** from the [latest release](../../releases/latest), download `main.js`,
+- **Manual:** from the [latest release](https://github.com/CVERInc/marktile/releases/latest), download `main.js`,
   `manifest.json`, and `styles.css` into your vault's `.obsidian/plugins/marktile/` folder,
   then enable **marktile** in Settings → Community plugins.
 - **[BRAT](https://github.com/TfTHacker/obsidian42-brat) (beta builds):** add `CVERInc/marktile`.
@@ -79,7 +79,7 @@ marktile（mark + tile）は、あなた次第で Markdown を読みやすくし
 
 - **コミュニティプラグイン（推奨）：** 設定 → コミュニティプラグイン → 「閲覧」で
   **marktile** を検索し、インストールして有効化。
-- **手動：** [最新リリース](../../releases/latest) から `main.js`・`manifest.json`・
+- **手動：** [最新リリース](https://github.com/CVERInc/marktile/releases/latest) から `main.js`・`manifest.json`・
   `styles.css` を vault の `.obsidian/plugins/marktile/` に置き、設定 → コミュニティ
   プラグインで **marktile** を有効化。
 - **[BRAT](https://github.com/TfTHacker/obsidian42-brat)（ベータ版）：** `CVERInc/marktile` を追加。
@@ -121,7 +121,7 @@ marktile(mark + tile)은 당신 방식대로 Markdown을 읽기 좋게 만듭니
 
 - **커뮤니티 플러그인(권장):** 설정 → 커뮤니티 플러그인 → 「탐색」에서 **marktile**을
   검색해 설치하고 활성화하세요.
-- **수동:** [최신 릴리스](../../releases/latest)에서 `main.js`, `manifest.json`,
+- **수동:** [최신 릴리스](https://github.com/CVERInc/marktile/releases/latest)에서 `main.js`, `manifest.json`,
   `styles.css`를 vault의 `.obsidian/plugins/marktile/`에 넣고, 설정 → 커뮤니티
   플러그인에서 **marktile**을 활성화하세요.
 - **[BRAT](https://github.com/TfTHacker/obsidian42-brat)(베타 빌드):** `CVERInc/marktile` 추가.
@@ -158,7 +158,7 @@ marktile（mark + tile）讓 Markdown 依你的方式變好讀：三種模式—
 
 - **社群外掛（推薦）：** 在 Obsidian 開 設定 → 社群外掛 → 瀏覽，搜尋 **marktile**，
   安裝後啟用。
-- **手動：** 從[最新 release](../../releases/latest) 下載 `main.js`、`manifest.json`、
+- **手動：** 從[最新 release](https://github.com/CVERInc/marktile/releases/latest) 下載 `main.js`、`manifest.json`、
   `styles.css` 放進 vault 的 `.obsidian/plugins/marktile/`，然後在 設定 → 社群外掛 啟用
   **marktile**。
 - **[BRAT](https://github.com/TfTHacker/obsidian42-brat)（beta 版）：** 加入 `CVERInc/marktile`。
