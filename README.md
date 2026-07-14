@@ -1,6 +1,6 @@
 # marktile
 
-[English](#english) · [日本語](#日本語) · [한국어](#한국어) · [繁體中文](#繁體中文)
+[English](https://github.com/CVERInc/marktile#english) · [日本語](https://github.com/CVERInc/marktile#日本語) · [한국어](https://github.com/CVERInc/marktile#한국어) · [繁體中文](https://github.com/CVERInc/marktile#繁體中文)
 
 ---
 
