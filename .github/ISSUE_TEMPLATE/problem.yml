@@ -1,0 +1,25 @@
+name: Something isn't working
+description: marktile did something you didn't expect.
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen again
+      description: >-
+        If a document is involved, a few lines that show the problem are enough.
+        Please don't attach a private document.
+  - type: input
+    id: versions
+    attributes:
+      label: macOS and marktile versions
+      description: marktile's is under marktile ▸ About marktile.
+      placeholder: macOS 27.0, marktile 0.1.0
+    validations:
+      required: true

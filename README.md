@@ -1,10 +1,51 @@
-# marktile — 新家（private，形狀未定）
+# marktile
 
-這裡是 marktile 這個名字的下一步，跟 Obsidian 外掛的 `CVERInc/tile`（源碼）／
-`CVERInc/obsidian-marktile`（發佈鏡像）是三件不同的東西：
+> A Markdown editor for the Mac that leaves your files exactly as it found them — and finds
+> anything you have ever written.
 
-- `CVERInc/tile`（現 `tile-oss` 本機路徑）＝ Obsidian 外掛 marktile/tugtile 的共用引擎 monorepo，繼續維護
-- `CVERInc/obsidian-marktile` ＝ Obsidian 社群外掛的發佈鏡像，`publish.sh` 投影出去的，別在那裡動手改
-- **這裡** ＝ marktile 想成為的下一個東西（設想中：flintfind 進來、獨立 macOS App），private 是因為形狀還沒定案——先別把「有人依賴這個名字」的合約簽下去，準備好了再翻公開。
+marktile opens `.md` files and nothing else. Double-click one in Finder and it opens in a window,
+with no vault, library or import step in between. The same file can be read three ways:
 
-2026-08-09 建立，先佔名字、還沒開工。下一步要先有一次設計對話，別在沒有 spec 的情況下長程式碼。
+- **Seasoned** — the Markdown markers stay in the text, styled, so you see the structure you typed.
+- **Rendered** — the document as a reader sees it.
+- **Plain** — the raw text.
+
+**Your file stays your file.** Open a document and save it without changes, and you get the same
+bytes back: trailing spaces, Windows or Unix line endings — even a mix of both in one file — are all
+kept. marktile reads and writes UTF-8 only, and says so instead of guessing at another encoding,
+because a wrong guess quietly corrupts the file on the next save.
+
+**Search every document** (⇧⌘F) finds a word across every Markdown file in the folders you let it
+read, including the ones Spotlight does not index, with the matching passages on screen. Chinese,
+Japanese and Korean need no quoting: a phrase matches as a phrase.
+
+⌘-click a `[[wikilink]]` to open the note it names — a note beside it, or anywhere in the
+Obsidian vault it belongs to. When several notes share the name, marktile asks which one.
+
+Menus and the editor speak English, Japanese, Korean and Traditional Chinese.
+
+## Get it
+
+marktile is coming to the Mac App Store. This page will link to it when it is there.
+
+## Support
+
+[Open an issue](https://github.com/CVERInc/marktile/issues/new/choose). Say what you did, what you
+expected and what happened instead, with your macOS version and marktile's version (marktile ▸
+About marktile). Please don't attach a private document — a few lines that show the problem are
+enough.
+
+## Privacy
+
+marktile collects nothing. No account, no analytics, no network requests of its own; your documents
+never leave your Mac. The details are in [PRIVACY.md](PRIVACY.md).
+
+## Where the code lives
+
+This repository is the app's home: support, privacy, and release notes. The code is open source
+(MIT) in two other places:
+
+- [CVERInc/tile](https://github.com/CVERInc/tile/tree/main/hosts/mac) — the Mac app, next to the
+  editor engine it shares with the marktile plugin for Obsidian, so the two cannot drift apart.
+- [CVERInc/flintfind](https://github.com/CVERInc/flintfind) — the search engine. It is also a
+  command-line tool, `ff`.
